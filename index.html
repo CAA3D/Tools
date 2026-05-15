@@ -137,7 +137,6 @@
         </div>
       </div>
     </details>
-    <button id="downloadFullToolsBtn" class="secondary-btn" type="button">Download full Tools.txt</button>
   </div>
 
   <div class="table-container">
@@ -164,8 +163,10 @@
       "Others"
     ];
 
+    const TOOL_FIELDS_ORDER = ["title", "description", "author", "tags", "category", "link"];
+
     const FALLBACK_CONFIG = {
-      availableFields: ["title", "description", "author", "tags", "category", "link"],
+      availableFields: [...TOOL_FIELDS_ORDER],
       defaultFields: ["title", "description", "author", "tags", "category"]
     };
 
@@ -181,16 +182,18 @@
         if (!res.ok) throw new Error(res.statusText);
 
         const config = await res.json();
-        const available = uniqueLowercaseArray(config.availableFields);
-        let defaults = uniqueLowercaseArray(config.defaultFields);
+        const available = uniqueLowercaseArray(config.availableFields)
+          .filter(f => TOOL_FIELDS_ORDER.includes(f));
+        let defaults = uniqueLowercaseArray(config.defaultFields)
+          .filter(f => TOOL_FIELDS_ORDER.includes(f));
 
         const safeAvailable = available.length ? available : [...FALLBACK_CONFIG.availableFields];
         defaults = defaults.filter(f => safeAvailable.includes(f));
         if (!defaults.length) defaults = [...FALLBACK_CONFIG.defaultFields];
 
         return {
-          availableFields: mergeUnique(safeAvailable, defaults),
-          defaultFields: defaults
+          availableFields: sortByToolFieldOrder(mergeUnique(safeAvailable, defaults)),
+          defaultFields: sortByToolFieldOrder(defaults)
         };
       } catch (err) {
         console.warn("Failed to load viewer.config.json, using fallback config.", err);
@@ -219,7 +222,6 @@
 
         renderFieldMenu();
         renderTable();
-        bindGlobalHandlers();
       } catch (err) {
         document.body.innerHTML += "<p>Error loading tool list: " + escapeHtml(String(err)) + "</p>";
       }
@@ -269,8 +271,11 @@
     function renderFieldMenu() {
       const fieldMenu = document.getElementById("fieldMenu");
       const resetBtn = document.getElementById("resetColumnsBtn");
+      const menuFields = sortByToolFieldOrder(
+        viewerConfig.availableFields.filter(f => TOOL_FIELDS_ORDER.includes(f))
+      );
 
-      fieldMenu.innerHTML = viewerConfig.availableFields.map(field => {
+      fieldMenu.innerHTML = menuFields.map(field => {
         const checked = visibleFields.includes(field) ? "checked" : "";
         return '<label><input type="checkbox" value="' + field + '" ' + checked + "> " + formatFieldLabel(field) + "</label>";
       }).join("");
@@ -279,22 +284,19 @@
         input.addEventListener("change", () => {
           visibleFields = Array.from(
             fieldMenu.querySelectorAll('input[type="checkbox"]:checked')
-          ).map(el => el.value);
+          )
+            .map(el => el.value)
+            .filter(f => TOOL_FIELDS_ORDER.includes(f));
+          visibleFields = sortByToolFieldOrder(visibleFields);
           renderTable();
         });
       });
 
       resetBtn.onclick = () => {
-        visibleFields = [...viewerConfig.defaultFields];
+        visibleFields = sortByToolFieldOrder([...viewerConfig.defaultFields]);
         renderFieldMenu();
         renderTable();
       };
-    }
-
-    function bindGlobalHandlers() {
-      const fullListBtn = document.getElementById("downloadFullToolsBtn");
-      fullListBtn.onclick = downloadFullToolList;
-      fullListBtn.textContent = "Download full Tools.txt";
     }
 
     function bindGotoHandlers() {
@@ -328,35 +330,27 @@
       return value;
     }
 
-    function downloadFullToolList() {
-      if (!toolListText) return;
-
-      const blob = new Blob([toolListText], { type: "text/plain" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "Tools.txt";
-      a.click();
-      URL.revokeObjectURL(url);
-    }
-
     function hydrateAvailableFields(discoveredHeaders) {
-      const discovered = uniqueLowercaseArray(discoveredHeaders || []);
-      viewerConfig.availableFields = mergeUnique(viewerConfig.availableFields, discovered);
+      const discovered = uniqueLowercaseArray(discoveredHeaders || [])
+        .filter(f => TOOL_FIELDS_ORDER.includes(f));
 
-      if (!viewerConfig.availableFields.includes("link")) {
-        viewerConfig.availableFields.push("link");
-      }
+      const merged = mergeUnique(viewerConfig.availableFields, discovered)
+        .filter(f => TOOL_FIELDS_ORDER.includes(f));
 
-      viewerConfig.defaultFields = viewerConfig.defaultFields.filter(f =>
-        viewerConfig.availableFields.includes(f)
-      );
+      viewerConfig.availableFields = sortByToolFieldOrder(merged);
+
+      viewerConfig.defaultFields = viewerConfig.defaultFields
+        .filter(f => viewerConfig.availableFields.includes(f));
 
       if (!viewerConfig.defaultFields.length) {
-        viewerConfig.defaultFields = viewerConfig.availableFields
-          .filter(f => f !== "link")
-          .slice(0, 5);
+        viewerConfig.defaultFields = [...FALLBACK_CONFIG.defaultFields];
       }
+
+      viewerConfig.defaultFields = sortByToolFieldOrder(viewerConfig.defaultFields);
+    }
+
+    function sortByToolFieldOrder(fields) {
+      return [...new Set(fields)].sort((a, b) => TOOL_FIELDS_ORDER.indexOf(a) - TOOL_FIELDS_ORDER.indexOf(b));
     }
 
     function formatFieldLabel(fieldName) {
@@ -388,7 +382,7 @@
       const entries = blocks.map(parseBlock).filter(entry => entry.title);
 
       return {
-        headers: ["title", "description", "author", "tags", "category", "link"],
+        headers: [...TOOL_FIELDS_ORDER],
         entries
       };
     }
