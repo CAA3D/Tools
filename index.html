@@ -154,19 +154,19 @@
 
   <script>
     const FALLBACK_CONFIG = {
-      availableFields: ["type", "doi", "author", "title", "keywords", "year", "journal", "booktitle", "publisher", "volume", "number", "pages", "url"],
-      defaultFields: ["doi", "author", "title", "keywords"]
+      availableFields: ["name", "category", "tag", "pricing", "price", "link"],
+      defaultFields: ["name", "category", "tag", "pricing", "price"]
     };
 
-    let bibEntries = [];
-    let bibText = "";
+    let toolEntries = [];
+    let toolListText = "";
     let viewerConfig = { ...FALLBACK_CONFIG };
     let visibleFields = [...FALLBACK_CONFIG.defaultFields];
     let dataTableInstance = null;
 
     async function loadConfig() {
       try {
-        const res = await fetch('viewer.config.json?t=' + Date.now());
+        const res = await fetch("viewer.config.json?t=" + Date.now());
         if (!res.ok) throw new Error(res.statusText);
 
         const config = await res.json();
@@ -182,69 +182,69 @@
           defaultFields: defaults
         };
       } catch (err) {
-        console.warn('Failed to load viewer.config.json, using fallback config.', err);
+        console.warn("Failed to load viewer.config.json, using fallback config.", err);
         return { ...FALLBACK_CONFIG };
       }
     }
 
-    async function loadBib() {
+    async function loadTools() {
       try {
         viewerConfig = await loadConfig();
 
-        const res = await fetch('references.bib');
+        const res = await fetch("toollist.txt?t=" + Date.now());
         if (!res.ok) throw new Error(res.statusText);
-        bibText = await res.text();
+        toolListText = await res.text();
 
-        const entries = parseBibTeX(bibText);
-        bibEntries = entries;
-        if (!entries.length) {
-          document.body.innerHTML += "<p>No entries found in references.bib</p>";
+        const parsed = parseToolList(toolListText);
+        toolEntries = parsed.entries;
+
+        if (!toolEntries.length) {
+          document.body.innerHTML += "<p>No entries found in toollist.txt</p>";
           return;
         }
 
-        hydrateAvailableFields(entries);
+        hydrateAvailableFields(parsed.headers);
         visibleFields = [...viewerConfig.defaultFields];
 
         renderFieldMenu();
         renderTable();
         bindGlobalHandlers();
       } catch (err) {
-        document.body.innerHTML += "<p>Error loading .bib file: " + err + "</p>";
+        document.body.innerHTML += "<p>Error loading tool list: " + err + "</p>";
       }
     }
 
     function renderTable() {
-      const headRow = document.getElementById('tableHeadRow');
-      const body = document.getElementById('tableBody');
+      const headRow = document.getElementById("tableHeadRow");
+      const body = document.getElementById("tableBody");
 
-      // Destroy DataTable before replacing headers/cells so column updates apply right away.
-      if ($.fn.DataTable.isDataTable('#bibTable') && dataTableInstance) {
+      if ($.fn.DataTable.isDataTable("#bibTable") && dataTableInstance) {
         dataTableInstance.destroy();
       }
 
       headRow.innerHTML = [
         '<th class="goto-column">Goto</th>',
         ...visibleFields.map(f => `<th>${formatFieldLabel(f)}</th>`)
-      ].join('');
+      ].join("");
 
-      body.innerHTML = bibEntries.map((entry, idx) => {
-        const doiUrl = getDoiUrl(entry);
-        const gotoButton = doiUrl
-          ? `<button class="goto-btn" data-idx="${idx}" title="Open DOI target">Goto</button>`
-          : '<button class="goto-btn" disabled title="No DOI found">Goto</button>';
+      body.innerHTML = toolEntries.map((entry, idx) => {
+        const linkUrl = getGotoUrl(entry);
+        const gotoButton = linkUrl
+          ? `<button class="goto-btn" data-idx="${idx}" title="Open tool link">Goto</button>`
+          : '<button class="goto-btn" disabled title="No link found">Goto</button>';
 
         return `
           <tr>
             <td class="goto-column">${gotoButton}</td>
-            ${visibleFields.map(f => `<td>${getFieldDisplayValue(entry, f)}</td>`).join("")}
+            ${visibleFields.map(f => `<td>${escapeHtml(getFieldDisplayValue(entry, f))}</td>`).join("")}
           </tr>
         `;
-      }).join('');
+      }).join("");
 
-      dataTableInstance = $('#bibTable').DataTable({
+      dataTableInstance = $("#bibTable").DataTable({
         paging: false,
         info: false,
-        scrollY: '70vh',
+        scrollY: "70vh",
         scrollX: true,
         scrollCollapse: true,
         searching: true,
@@ -256,17 +256,19 @@
     }
 
     function renderFieldMenu() {
-      const fieldMenu = document.getElementById('fieldMenu');
-      const resetBtn = document.getElementById('resetColumnsBtn');
+      const fieldMenu = document.getElementById("fieldMenu");
+      const resetBtn = document.getElementById("resetColumnsBtn");
 
       fieldMenu.innerHTML = viewerConfig.availableFields.map(field => {
-        const checked = visibleFields.includes(field) ? 'checked' : '';
+        const checked = visibleFields.includes(field) ? "checked" : "";
         return `<label><input type="checkbox" value="${field}" ${checked}> ${formatFieldLabel(field)}</label>`;
-      }).join('');
+      }).join("");
 
       fieldMenu.querySelectorAll('input[type="checkbox"]').forEach(input => {
-        input.addEventListener('change', () => {
-          visibleFields = Array.from(fieldMenu.querySelectorAll('input[type="checkbox"]:checked')).map(el => el.value);
+        input.addEventListener("change", () => {
+          visibleFields = Array.from(
+            fieldMenu.querySelectorAll('input[type="checkbox"]:checked')
+          ).map(el => el.value);
           renderTable();
         });
       });
@@ -279,59 +281,73 @@
     }
 
     function bindGlobalHandlers() {
-      const fullBibBtn = document.getElementById('downloadFullBibBtn');
-      fullBibBtn.onclick = downloadFullBib;
+      const fullListBtn = document.getElementById("downloadFullBibBtn");
+      fullListBtn.onclick = downloadFullToolList;
+      // Optional: rename button text without changing HTML markup.
+      fullListBtn.textContent = "Download full .txt";
     }
 
     function bindGotoHandlers() {
-      document.querySelectorAll('.goto-btn[data-idx]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const idx = Number(btn.getAttribute('data-idx'));
-          const url = getDoiUrl(bibEntries[idx]);
+      document.querySelectorAll(".goto-btn[data-idx]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const idx = Number(btn.getAttribute("data-idx"));
+          const url = getGotoUrl(toolEntries[idx]);
           if (!url) return;
-          window.open(url, '_blank', 'noopener');
+          window.open(url, "_blank", "noopener");
         });
       });
     }
 
-    function getDoiUrl(entry) {
-      const rawDoi = findField(entry.fields || {}, 'doi').trim();
-      if (!rawDoi) return "";
-      if (/^https?:\/\//i.test(rawDoi)) return rawDoi;
-      return `https://doi.org/${rawDoi}`;
+    function getGotoUrl(entry) {
+      const rawLink = (
+        findField(entry, "link") ||
+        findField(entry, "url")
+      ).trim();
+
+      if (!rawLink) return "";
+      if (/^https?:\/\//i.test(rawLink)) return rawLink;
+      return `https://${rawLink}`;
     }
 
     function getFieldDisplayValue(entry, fieldName) {
-      if (fieldName === 'type') {
-        return (entry.type || '').replace(/\s+/g, ' ');
-      }
-      return (findField(entry.fields || {}, fieldName) || '').replace(/\s+/g, ' ');
+      return String(findField(entry, fieldName) || "").replace(/\s+/g, " ").trim();
     }
 
-    function downloadFullBib() {
-      if (!bibText) return;
+    function downloadFullToolList() {
+      if (!toolListText) return;
 
-      const blob = new Blob([bibText], { type: 'text/plain' });
+      const blob = new Blob([toolListText], { type: "text/plain" });
       const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
+      const a = document.createElement("a");
       a.href = url;
-      a.download = 'references.bib';
+      a.download = "toollist.txt";
       a.click();
       URL.revokeObjectURL(url);
     }
 
-    function hydrateAvailableFields(entries) {
-      const discoveredFields = entries.flatMap(e => Object.keys(e.fields || {}));
-      viewerConfig.availableFields = mergeUnique(viewerConfig.availableFields, ['type', ...discoveredFields]);
-      viewerConfig.defaultFields = viewerConfig.defaultFields.filter(f => viewerConfig.availableFields.includes(f));
+    function hydrateAvailableFields(discoveredHeaders) {
+      const discovered = uniqueLowercaseArray(discoveredHeaders || []);
+      viewerConfig.availableFields = mergeUnique(viewerConfig.availableFields, discovered);
+
+      // Keep link selectable if you ever want to display it as a column.
+      if (!viewerConfig.availableFields.includes("link")) {
+        viewerConfig.availableFields.push("link");
+      }
+
+      viewerConfig.defaultFields = viewerConfig.defaultFields.filter(f =>
+        viewerConfig.availableFields.includes(f)
+      );
+
       if (!viewerConfig.defaultFields.length) {
-        viewerConfig.defaultFields = [...viewerConfig.availableFields.slice(0, 4)];
+        viewerConfig.defaultFields = viewerConfig.availableFields
+          .filter(f => f !== "link")
+          .slice(0, 5);
       }
     }
 
     function formatFieldLabel(fieldName) {
       return fieldName
-        .replace(/[_\-]+/g, ' ')
+        .replace(/[_\-]+/g, " ")
         .replace(/\b\w/g, c => c.toUpperCase());
     }
 
@@ -347,32 +363,93 @@
       return Array.from(new Set([...(primary || []), ...(secondary || [])]));
     }
 
-    function parseBibTeX(text) {
-      const entries = [];
-      const entryRegex = /@(\w+)\s*\{\s*([^,]+),([\s\S]*?)\n\}/g;
-      let match;
-      while ((match = entryRegex.exec(text)) !== null) {
-        const type = match[1].trim();
-        const key = match[2].trim();
-        const body = match[3];
-        const fields = {};
-        const fieldRegex = /([\w\-]+)\s*=\s*\{([\s\S]*?)\}/g;
-        let fmatch;
-        while ((fmatch = fieldRegex.exec(body)) !== null) {
-          fields[fmatch[1].trim().toLowerCase()] = fmatch[2].trim();
+    function parseToolList(text) {
+      const lines = String(text || "")
+        .split(/\r?\n/)
+        .map(line => line.trim())
+        .filter(line => line && !line.startsWith("#"));
+
+      if (!lines.length) return { headers: [], entries: [] };
+
+      const delimiter = detectDelimiter(lines[0]);
+      const headers = splitDelimitedLine(lines[0], delimiter)
+        .map(normalizeFieldName)
+        .filter(Boolean);
+
+      const entries = lines.slice(1).map(line => {
+        const cells = splitDelimitedLine(line, delimiter);
+        const entry = {};
+        headers.forEach((h, i) => {
+          entry[h] = (cells[i] || "").trim();
+        });
+        return entry;
+      });
+
+      return { headers, entries };
+    }
+
+    function detectDelimiter(line) {
+      if (line.includes("\t")) return "\t";
+      if (line.includes("|")) return "|";
+      return ",";
+    }
+
+    function splitDelimitedLine(line, delimiter) {
+      const result = [];
+      let current = "";
+      let inQuotes = false;
+
+      for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        const next = line[i + 1];
+
+        if (ch === '"') {
+          if (inQuotes && next === '"') {
+            current += '"';
+            i++;
+          } else {
+            inQuotes = !inQuotes;
+          }
+          continue;
         }
-        entries.push({ type, key, fields });
+
+        if (ch === delimiter && !inQuotes) {
+          result.push(current);
+          current = "";
+          continue;
+        }
+
+        current += ch;
       }
-      return entries;
+
+      result.push(current);
+      return result;
     }
 
-    function findField(fields, name) {
-      const possible = Object.keys(fields).find(k => k.toLowerCase().includes(name.toLowerCase()));
-      return possible ? fields[possible] : "";
+    function normalizeFieldName(name) {
+      return String(name || "").trim().toLowerCase();
     }
 
+    function findField(entry, name) {
+      const target = String(name || "").toLowerCase();
+      const keys = Object.keys(entry || {});
+      const exact = keys.find(k => k.toLowerCase() === target);
+      if (exact) return entry[exact];
 
-    loadBib();
+      const partial = keys.find(k => k.toLowerCase().includes(target));
+      return partial ? entry[partial] : "";
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    loadTools();
   </script>
 </body>
 </html>
