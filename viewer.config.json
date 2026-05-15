@@ -1,23 +1,4 @@
 {
-  "availableFields": [
-    "type",
-    "doi",
-    "author",
-    "title",
-    "keywords",
-    "year",
-    "journal",
-    "booktitle",
-    "publisher",
-    "volume",
-    "number",
-    "pages",
-    "url"
-  ],
-  "defaultFields": [
-    "author",
-    "title",
-    "keywords"
-  ]
+  "availableFields": ["title", "description", "author", "tags"],
+  "defaultFields": ["title", "description", "author", "tags"]
 }
-
