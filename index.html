@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BibTeX Viewer</title>
+  <title>Tool List Viewer</title>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
   <style>
     body {
@@ -137,7 +137,7 @@
         </div>
       </div>
     </details>
-    <button id="downloadFullBibBtn" class="secondary-btn" type="button">Download full .bib</button>
+    <button id="downloadFullToolsBtn" class="secondary-btn" type="button">Download full Tools.txt</button>
   </div>
 
   <div class="table-container">
@@ -153,9 +153,20 @@
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
   <script>
+    const TOOL_CATEGORIES = [
+      "Guides",
+      "Datasets",
+      "Libraries",
+      "Products",
+      "Scripts",
+      "Specifications",
+      "Software",
+      "Others"
+    ];
+
     const FALLBACK_CONFIG = {
-      availableFields: ["name", "category", "tag", "pricing", "price", "link"],
-      defaultFields: ["name", "category", "tag", "pricing", "price"]
+      availableFields: ["title", "description", "author", "tags", "category", "link"],
+      defaultFields: ["title", "description", "author", "tags", "category"]
     };
 
     let toolEntries = [];
@@ -191,7 +202,7 @@
       try {
         viewerConfig = await loadConfig();
 
-        const res = await fetch("toollist.txt?t=" + Date.now());
+        const res = await fetch("Tools.txt?t=" + Date.now());
         if (!res.ok) throw new Error(res.statusText);
         toolListText = await res.text();
 
@@ -199,7 +210,7 @@
         toolEntries = parsed.entries;
 
         if (!toolEntries.length) {
-          document.body.innerHTML += "<p>No entries found in toollist.txt</p>";
+          document.body.innerHTML += "<p>No entries found in Tools.txt</p>";
           return;
         }
 
@@ -210,7 +221,7 @@
         renderTable();
         bindGlobalHandlers();
       } catch (err) {
-        document.body.innerHTML += "<p>Error loading tool list: " + err + "</p>";
+        document.body.innerHTML += "<p>Error loading tool list: " + escapeHtml(String(err)) + "</p>";
       }
     }
 
@@ -224,21 +235,21 @@
 
       headRow.innerHTML = [
         '<th class="goto-column">Goto</th>',
-        ...visibleFields.map(f => `<th>${formatFieldLabel(f)}</th>`)
+        ...visibleFields.map(f => "<th>" + formatFieldLabel(f) + "</th>")
       ].join("");
 
       body.innerHTML = toolEntries.map((entry, idx) => {
         const linkUrl = getGotoUrl(entry);
         const gotoButton = linkUrl
-          ? `<button class="goto-btn" data-idx="${idx}" title="Open tool link">Goto</button>`
+          ? '<button class="goto-btn" data-idx="' + idx + '" title="Open tool link">Goto</button>'
           : '<button class="goto-btn" disabled title="No link found">Goto</button>';
 
-        return `
-          <tr>
-            <td class="goto-column">${gotoButton}</td>
-            ${visibleFields.map(f => `<td>${escapeHtml(getFieldDisplayValue(entry, f))}</td>`).join("")}
-          </tr>
-        `;
+        return (
+          "<tr>" +
+            '<td class="goto-column">' + gotoButton + "</td>" +
+            visibleFields.map(f => "<td>" + escapeHtml(getFieldDisplayValue(entry, f)) + "</td>").join("") +
+          "</tr>"
+        );
       }).join("");
 
       dataTableInstance = $("#bibTable").DataTable({
@@ -261,7 +272,7 @@
 
       fieldMenu.innerHTML = viewerConfig.availableFields.map(field => {
         const checked = visibleFields.includes(field) ? "checked" : "";
-        return `<label><input type="checkbox" value="${field}" ${checked}> ${formatFieldLabel(field)}</label>`;
+        return '<label><input type="checkbox" value="' + field + '" ' + checked + "> " + formatFieldLabel(field) + "</label>";
       }).join("");
 
       fieldMenu.querySelectorAll('input[type="checkbox"]').forEach(input => {
@@ -281,10 +292,9 @@
     }
 
     function bindGlobalHandlers() {
-      const fullListBtn = document.getElementById("downloadFullBibBtn");
+      const fullListBtn = document.getElementById("downloadFullToolsBtn");
       fullListBtn.onclick = downloadFullToolList;
-      // Optional: rename button text without changing HTML markup.
-      fullListBtn.textContent = "Download full .txt";
+      fullListBtn.textContent = "Download full Tools.txt";
     }
 
     function bindGotoHandlers() {
@@ -299,18 +309,23 @@
     }
 
     function getGotoUrl(entry) {
-      const rawLink = (
-        findField(entry, "link") ||
-        findField(entry, "url")
-      ).trim();
-
+      const rawLink = (findField(entry, "link") || findField(entry, "url") || "").trim();
       if (!rawLink) return "";
-      if (/^https?:\/\//i.test(rawLink)) return rawLink;
-      return `https://${rawLink}`;
+
+      const mdMatch = rawLink.match(/\[[^\]]+\]\(([^)]+)\)/);
+      const extracted = mdMatch ? mdMatch[1].trim() : rawLink;
+
+      if (!extracted) return "";
+      if (/^https?:\/\//i.test(extracted)) return extracted;
+      return "https://" + extracted;
     }
 
     function getFieldDisplayValue(entry, fieldName) {
-      return String(findField(entry, fieldName) || "").replace(/\s+/g, " ").trim();
+      const value = String(findField(entry, fieldName) || "").replace(/\s+/g, " ").trim();
+      if (fieldName.toLowerCase() === "category") {
+        return normalizeCategory(value, entry.title || "");
+      }
+      return value;
     }
 
     function downloadFullToolList() {
@@ -320,7 +335,7 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "toollist.txt";
+      a.download = "Tools.txt";
       a.click();
       URL.revokeObjectURL(url);
     }
@@ -329,7 +344,6 @@
       const discovered = uniqueLowercaseArray(discoveredHeaders || []);
       viewerConfig.availableFields = mergeUnique(viewerConfig.availableFields, discovered);
 
-      // Keep link selectable if you ever want to display it as a column.
       if (!viewerConfig.availableFields.includes("link")) {
         viewerConfig.availableFields.push("link");
       }
@@ -364,66 +378,76 @@
     }
 
     function parseToolList(text) {
-      const lines = String(text || "")
-        .split(/\r?\n/)
-        .map(line => line.trim())
-        .filter(line => line && !line.startsWith("#"));
-
-      if (!lines.length) return { headers: [], entries: [] };
-
-      const delimiter = detectDelimiter(lines[0]);
-      const headers = splitDelimitedLine(lines[0], delimiter)
-        .map(normalizeFieldName)
+      const blocks = String(text || "")
+        .split(/\r?\n\s*\r?\n+/)
+        .map(block => block.trim())
         .filter(Boolean);
 
-      const entries = lines.slice(1).map(line => {
-        const cells = splitDelimitedLine(line, delimiter);
-        const entry = {};
-        headers.forEach((h, i) => {
-          entry[h] = (cells[i] || "").trim();
+      if (!blocks.length) return { headers: [], entries: [] };
+
+      const entries = blocks.map(parseBlock).filter(entry => entry.title);
+
+      return {
+        headers: ["title", "description", "author", "tags", "category", "link"],
+        entries
+      };
+    }
+
+    function parseBlock(blockText) {
+      const entry = {};
+
+      blockText
+        .split(/\r?\n/)
+        .map(line => line.trim())
+        .filter(line => line && !line.startsWith("#"))
+        .forEach(line => {
+          const idx = line.indexOf("=");
+          if (idx <= 0) return;
+
+          const key = normalizeFieldName(line.slice(0, idx));
+          const value = line.slice(idx + 1).trim();
+          entry[key] = value;
         });
-        return entry;
-      });
 
-      return { headers, entries };
+      entry.title = String(entry.title || "").trim();
+      entry.description = String(entry.description || "").trim();
+      entry.author = String(entry.author || "").trim();
+      entry.tags = normalizeCommaList(entry.tags || "");
+      entry.link = String(entry.link || "").trim();
+      entry.category = normalizeCategory(entry.category || "", entry.title);
+
+      return entry;
     }
 
-    function detectDelimiter(line) {
-      if (line.includes("\t")) return "\t";
-      if (line.includes("|")) return "|";
-      return ",";
-    }
-
-    function splitDelimitedLine(line, delimiter) {
-      const result = [];
-      let current = "";
-      let inQuotes = false;
-
-      for (let i = 0; i < line.length; i++) {
-        const ch = line[i];
-        const next = line[i + 1];
-
-        if (ch === '"') {
-          if (inQuotes && next === '"') {
-            current += '"';
-            i++;
-          } else {
-            inQuotes = !inQuotes;
-          }
-          continue;
-        }
-
-        if (ch === delimiter && !inQuotes) {
-          result.push(current);
-          current = "";
-          continue;
-        }
-
-        current += ch;
+    function normalizeCategory(value, titleHint) {
+      const raw = String(value || "").trim();
+      if (raw) {
+        const exact = TOOL_CATEGORIES.find(c => c.toLowerCase() === raw.toLowerCase());
+        if (exact) return exact;
       }
+      return inferCategoryFromTitle(titleHint || "");
+    }
 
-      result.push(current);
-      return result;
+    function inferCategoryFromTitle(title) {
+      const t = String(title || "").toLowerCase();
+
+      if (/(tutorial|guide|workflow|how to|intro|introduction|course|lesson|manual)/.test(t)) return "Guides";
+      if (/(dataset|database|atlas|catalog|catalogue|archive|index|directory|corpus|bibliograph|list)/.test(t)) return "Datasets";
+      if (/(library|libraries|package|sdk|module|api|framework)/.test(t)) return "Libraries";
+      if (/(specification|spec\b|standard|schema|ontology|protocol|vocabular|reference model)/.test(t)) return "Specifications";
+      if (/(script|scripts|\.r$|\.py$|calculator|converter)/.test(t)) return "Scripts";
+      if (/(app|portal|platform|dashboard|viewer|service|website|webapp|product)/.test(t)) return "Products";
+      if (/(tool|software|program|plugin|kit|suite|system|os)/.test(t)) return "Software";
+
+      return "Others";
+    }
+
+    function normalizeCommaList(value) {
+      return String(value || "")
+        .split(",")
+        .map(part => part.trim())
+        .filter(Boolean)
+        .join(", ");
     }
 
     function normalizeFieldName(name) {

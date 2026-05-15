@@ -1,0 +1,3709 @@
+﻿Title=14C-power-sensitivity
+Description=How wrong is wrong and how good can it get? 14C chronological model power and sensitivity analyses with OxCal and R.
+author=pete-jacobsson
+link=https://github.com/pete-jacobsson/14C-power-sensitivity
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=3D libraries of ships
+Description=A 3D library of ancient (classical era) ships.
+author=iMare Culture
+link=https://imareculture.eu/downloads/project-tools/3d-libraries-of-ships/
+tags=3D modelling, Datasets
+Category=
+
+Title=3D-ORGAN
+Description=3D reconstruction of incomplete archaeological objects using a generative adversarial network (GAN).
+author=Renato Hermoza and Ivan Sipiran
+link=https://github.com/renato145/3D-ORGAN
+tags=3D modelling
+Category=
+
+Title=3D-survey-collection
+Description=Blender addon that simplifies the tasks involved in the management and optimization of the archaeological and architectonic 3D record.
+author=zalmoxes-laran
+link=https://github.com/zalmoxes-laran/3D-survey-collection
+tags=3D modelling
+Category=
+
+Title=3D_EdgeAngle
+Description=Semi-automated 3D digital method to systematically quantify stone tool edge angle and design.
+author=lschunk, Ivan Calandra and Konstantin Bob
+link=https://github.com/lschunk/3D_EdgeAngle
+tags=
+Category=
+
+Title=3d-ceramics
+Description=3d models of archaeological ceramics.
+author=sfsheath
+link=https://github.com/sfsheath/3d-ceramics
+tags=3D modelling, Ceramic analysis
+Category=
+
+Title=3d_spatial_ripley_analyses
+Description=Test spatial associations of objects in three dimensions by using the Ripley's K function.
+author=marchaeologist
+link=https://github.com/marchaeologist/3d_spatial_ripley_analyses
+tags=Site mapping, Spatial analysis
+Category=
+
+Title=A Mobile Data-Collection Workflow for Archaeologists
+Description=A list of tools and resource for data collection and processing in the field.
+author=isaacullah
+link=http://isaacullah.github.io/A-mobile-field-data-collection-workflow/
+tags=Educational resources and practical guides
+Category=
+
+Title=A bibliography of public archaeology and archaeological heritage management in the Mediterranean
+Description=A collection of references about public archaeology and archaeological heritage management in/from the Mediterranean.
+author=Jaime Almansa SÃ¡nchez
+link=https://digital.csic.es/handle/10261/223340
+tags=Bibliography, Public archaeology
+Category=
+
+Title=ABC of Archaeobotanical Open Science
+Description=A list of terms related to open archaeobotanical science.
+author=ekaroune
+link=https://ekaroune.github.io/The-Open-Archaeobotanist/abcofarchaeobotanicalopenscience/
+tags=Lists, Educational resources and practical guides
+Category=
+
+Title=ABM tutorials
+Description=A collection of tutorial on agent-based modelling for archaeologists.
+author=izaromanowska
+link=https://github.com/izaromanowska/ABM_tutorials
+tags=Educational resources and practical guides, Simulation
+Category=
+
+Title=ABMA
+Description=Code repository and website for Agent-Based Modeling for Archaeology.
+author=SantaFeInstitute
+link=https://github.com/SantaFeInstitute/ABMA
+tags=Educational resources and practical guides, Simulation
+Category=
+
+Title=ABMA_tutorials
+Description=A set of interactive tutorials to build agent-based models and how to use them in your work as archaeologist. These tutorials are both suitable for beginners and people who want to brush up their modelling skills.
+author=ABMArchaeologists, RonaldVisser and drocks13
+link=https://github.com/ABMArchaeologists/ABMA_tutorials
+tags=Educational resources and practical guides, Simulation
+Category=
+
+Title=ADMUR
+Description=Tools to directly model underlying population dynamics using chronological datasets (radiocarbon and other) with a variety of models, including Continuous Piecewise Linear (CPL) model framework, and model comparison framework using BIC. Package also calibrates 14C samples, and generates Summed Probability Distributions (SPD). CPL modelling directly estimates the most likely population trajectory given a dataset, using SPD simulation analysis to generate a Goodness-of-fit test for the best selected model.
+author=Adrian Timpson, Ramiro Barberena, Mark G. Thomas, CÃ©sar MÃ©ndez and Katie Manning
+link=https://github.com/UCL/ADMUR
+tags=Chronological modelling
+Category=
+
+Title=AIDA
+Description=Dataset of 4,010 radiocarbon dates from Italy from Late Mesolithic until Late Antiquity.
+author=apalmisano82
+link=https://github.com/apalmisano82/AIDA
+tags=Radiocarbon dating, calibration and sequencing, Datasets
+Category=
+
+Title=AIS
+Description=Archaeological Information System
+author=andredebuisne
+link=https://github.com/andredebuisne/AIS
+tags=Data management
+Category=
+
+Title=ARCSCore
+Description=ARCSCore is a metadata standard for organizing and sharing digital versions of non-digital documents created during the course of an archaeological investigation
+author=matrix-msu
+link=https://github.com/matrix-msu/ARCSCore
+tags=Schemas and ontologies
+Category=
+
+Title=ARFloorPlanApp
+Description=Floor plan app using augmented reality.
+author=carlsun98
+link=https://github.com/carlsun98/ARFloorPlanApp
+tags=
+Category=
+
+Title=ARK1
+Description=The ARK v1.1.2 Stable Release. ARK (The Archaeological Recording Kit) is a web-based 'toolkit' for the collection, storage and dissemination of archaeological data. It includes data-editing, data-creation, data-viewing and data-sharing tools, all of which are delivered using a web-based front-end.
+author=L-P Archaeology
+link=https://github.com/lparchaeology/ARK1
+tags=Data management
+Category=
+
+Title=ARQUB
+Description=Scripts at the ARQUB group to work with compositional data on archaeometric studies.
+author=jbuxeda
+link=https://github.com/jbuxeda/ARQUB
+tags=Statistical analysis
+Category=
+
+Title=ARchaeology
+Description=View the AR models on your phone.
+author=lili0824
+link=https://github.com/lili0824/ARchaeology
+tags=
+Category=
+
+Title=Akkademia
+Description=Translating Akkadian signs to transcriptions using NLP techniques such as HMM, MEMM and BiLSTM neural networks.
+author=gaigutherz, arielazary, ARomach and ireman
+link=https://github.com/gaigutherz/Akkademia
+tags=Machine learning, Literary analysis and epigraphy
+Category=
+
+Title=Al2O3_AnalysisApp
+Description=Shiny app to analyse Al2O3:C measurements
+author=RLumSK
+link=https://github.com/crp2a/Al2O3_AnalysisApp
+tags=Luminescence dating
+Category=
+
+Title=Alligator
+Description=A Web tool for converting CAs with dating information to relative time intervals as RDF.
+author=florianthiery and Allard Mees
+link=https://github.com/RGZM/alligator
+tags=Statistical analysis, Schemas and ontologies
+Category=
+
+Title=Analysing Stable Isotope Data
+Description=Tutorial on how to visualise, analyse and interpret  stable isotope data
+author=Brian Hayden
+link=https://sites.google.com/view/brianhayden/teaching/analyzing-stable-isotope-data
+tags=Educational resources and practical guides, Stable isotope analysis, Diagrams and visualizations
+Category=
+
+Title=Analysing-Archaeological-Radiocabon-Ages-Using-R
+Description=Practice some techniques for analysing archaeological radiocabon ages using R.
+author=benmarwick
+link=https://github.com/benmarwick/Analysing-Archaeological-Radiocabon-Ages-Using-R
+tags=Radiocarbon dating, calibration and sequencing, Educational resources and practical guides
+Category=
+
+Title=AncientMetagenomeDir
+Description=Repository containing lists of all published ancient metagenome samples (and related).
+author=SPAAM-community
+link=https://github.com/SPAAM-community/AncientMetagenomeDir
+tags=
+Category=
+
+Title=ArboDat
+Description=A program package for registering and importing data of archaeobotanical analyses including contexts of samples as well as evaluation tools.
+author=Angela Kreuz
+link=https://nihk.de/en/research/current-projects/arbodat-ape
+tags=Palaeobotany, Data management
+Category=
+
+Title=ArchAIDE
+Description=Tool for the automatic recognition of archaeological pottery.
+author=barak-itkin
+link=https://github.com/barak-itkin/archaide-software
+tags=Shape recognition, Ceramic analysis
+Category=
+
+Title=ArchJobCAD
+Description=Tasks for Excavations in AutoCAD
+author=ISAAKiel
+link=https://github.com/ISAAKiel/ArchJobCAD
+tags=Data management
+Category=
+
+Title=Archaeo-Term
+Description=Multilingual glossary designed to enhance access to archaeological data.
+author=Johanna Monti, Maria Pia di Buono, Giulia Speranza and Raffaele Manna
+link=https://docs.google.com/spreadsheets/d/1KYh9UUZTsc7BWfXh7YTqQqRz84cnJl3Y/edit#gid=802915297
+tags=Schemas and ontologies
+Category=
+
+Title=ArchaeoAstroInsight
+Description=QGIS Python script/plugin for computing azimuth, horizon altitude, and celestial declination of a specific bearing indicated by a line segment selected by a user.
+author=marcfrincu
+link=https://github.com/marcfrincu/ArchaeoAstroInsight
+tags=Spatial analysis
+Category=
+
+Title=ArchaeoCal
+Description=An R Interface to OxCal.
+author=ArchaeoStat
+link=https://github.com/ArchaeoStat/ArchaeoCal
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=ArchaeoChron
+Description=Bayesian Modeling of Archaeological Chronologies.
+author=ArchaeoStat
+link=https://github.com/ArchaeoStat/ArchaeoChron
+tags=Chronological modelling
+Category=
+
+Title=ArchaeoData
+Description=Models and data to reproduce results from ArchaeoPhases examples and vignettes.
+author=ArchaeoStat
+link=https://github.com/ArchaeoStat/ArchaeoData
+tags=Radiocarbon dating, calibration and sequencing, Datasets
+Category=
+
+Title=ArchaeoLines
+Description=The ArchaeoLines plugin displays any combination of declination arcs most relevant to archaeo- or ethnoastronomical studies.
+author=stellarium
+link=https://github.com/Stellarium/stellarium/tree/master/plugins/ArchaeoLines
+tags=Spatial analysis, Viewshed analysis
+Category=
+
+Title=ArchaeoMag
+Description=Program for the modelling of magnetic anomalies in archaeological research.
+author=antonio-schettino
+link=https://github.com/antonio-schettino/ArchaeoMag
+tags=Geophysical survey
+Category=
+
+Title=ArchaeoPhases
+Description=Tools for the post-processing of the Markov Chain simulated by any software used for the construction of archeological chronologies.
+author=ArchaeoStat
+link=https://github.com/ArchaeoStat/ArchaeoPhases
+tags=Chronological modelling
+Category=
+
+Title=ArchaeoPhases
+Description=Post-Processing of the Markov Chain Simulated by 'ChronoModel', 'Oxcal' or 'BCal'.
+author=marieannevibet
+link=https://github.com/marieannevibet/ArchaeoPhases
+tags=Chronological modelling
+Category=
+
+Title=ArchaeolPhytoliths
+Description=Automated detection and classification of multi-cell phytoliths at genera and species-level using Deep Learning algorithm.
+author=iberganzo
+link=https://github.com/iberganzo/ArchaeolPhytoliths
+tags=Palaeobotany, Machine learning, Shape recognition
+Category=
+
+Title=Archaeological Ethics Database
+Description=Brings together sources on archaeological ethics in a single place for the use of students, researchers, and professional archaeologists.
+author=Register of Professional Archaeologists and Chartered Institute for Archaeologists
+link=https://archaeologicalethics.org/
+tags=Ethics and professional development
+Category=
+
+Title=Archaeological_Catalogue_from_CSV_Spreadsheet
+Description=A template to create an archaeological catalogue from a spreadsheet using the LaTeX csvsimple package.
+author=latex-ninja
+link=https://github.com/latex-ninja/Archaeological_Catalogue_from_CSV_Spreadsheet
+tags=Writing, Templates
+Category=
+
+Title=ArchaeologyAdventure
+Description=A simple adventure game in Unity2D. Revolves around being an archaeologist exploring some ruin and digging up treasure/fossils
+author=Camology
+link=https://github.com/Camology/ArchaeologyAdventure
+tags=Games
+Category=
+
+Title=ArcheOS
+Description=Linux distribution with specialist software for archaeological purposes.
+author=archeos
+link=https://github.com/archeos/ArcheOS
+tags=Drivers and IO, Bits and bobs
+Category=
+
+Title=ArcheOS-software-list
+Description=A collection of open-source software and digital tools for archaeology.
+author=lucaarcteam
+link=https://github.com/lucaarcteam/ArcheOS-software-list
+tags=Lists
+Category=
+
+Title=ArcheoShape
+Description=Analysis tools for geometric models of archaeological pieces.
+author=omendoza83
+link=https://github.com/omendoza83/ArcheoShape
+tags=
+Category=
+
+Title=Ark2
+Description=ARK (The Archaeological Recording Kit) 2.0 Development Repository. ARK (The Archaeological Recording Kit) is a web-based 'toolkit' for the collection, storage and dissemination of archaeological data. It includes data-editing, data-creation, data-viewing and data-sharing tools, all of which are delivered using a web-based front-end.
+author=L-P Archaeology
+link=https://github.com/lparchaeology/ARK2
+tags=Data management
+Category=
+
+Title=ArkGrid
+Description=A QGIS plugin for local site grids.
+author=L-P Archaeology
+link=https://github.com/lparchaeology/ArkGrid
+tags=Site mapping
+Category=
+
+Title=ArkMatrix
+Description=A tool for creating and manipulating Harris Matrices, part of the Archaeological Recording Kit ARK.
+author=arklab
+link=https://gitlab.com/arklab/ArkMatrix
+tags=Harris matrix
+Category=
+
+Title=ArkScan
+Description=A simple gui app to simplify scanning single context plans.
+author=L-P Archaeology
+link=https://github.com/lparchaeology/ArkScan
+tags=Site mapping
+Category=
+
+Title=ArkSpatial
+Description=A QGIS plugin to simplfy digitization of archaeological plans drawn using the Museum of London Single Context Recording methodology.
+author=L-P Archaeology
+link=https://github.com/lparchaeology/ArkSpatial
+tags=Site mapping
+Category=
+
+Title=Arothron
+Description=Tools of Virtual Anthropology to build virtual cavities as endocasts, to align two disarticulated models belonging to the same specimen, and functions to import and export format files into another format.
+author=Arothron
+link=https://github.com/AProfico/Arothron
+tags=Biological anthropology, Zooarchaeology, Shape recognition, 3D modelling
+Category=
+
+Title=Arran
+Description=A benchmark dataset for automated detection of archaeological sites on LiDAR data.
+author=ickramer
+link=https://github.com/ickramer/Arran
+tags=
+Category=
+
+Title=Artifact_Class_Diversity
+Description=Estimates artifact class diversity in multiple geographic regions.
+author=taphocoenose
+link=https://github.com/taphocoenose/Artifact_Class_Diversity
+tags=Spatial analysis
+Category=
+
+Title=Artifacts-Analyzer
+Description=Python script for analyzing data sets of archaeological artifacts containing only Boolean and categorical variables.
+author=Eythan31
+link=https://github.com/Eythan31/Artifacts-Analyzer
+tags=Statistical analysis
+Category=
+
+Title=AtlantGIS
+Description=Faked GIS-Datasets, simulating an island in the Atlantic for educational purposes in using GIS in archaeology
+author=kacebe
+link=https://github.com/kacebe/AtlantGIS
+tags=Educational resources and practical guides
+Category=
+
+Title=AutArch
+Description=An AI-assisted workflow capable of creating uniform archaeological datasets from heterogeneous published resources.
+author=kevin-klein
+link=https://github.com/kevin-klein/AutArch
+tags=Machine learning, Data management
+Category=
+
+Title=BAM
+Description=A tool for the geospatial analysis, literary network visualization, and plot mapping of ancient texts.
+author=Big-Ancient-Mediterranean
+link=https://github.com/Big-Ancient-Mediterranean/BAM
+tags=Literary analysis and epigraphy
+Category=
+
+Title=BasicMapping
+Description=Working with map data in R.
+author=mpeeples2008
+link=http://www.mattpeeples.net/modules/BasicMapping.html
+tags=Statistical analysis
+Category=
+
+Title=BayLum
+Description=An R package for chronological Bayesian models integrated for Optically Stimulated OSL, Luminescence Dating
+author=R-Lum
+link=https://github.com/crp2a/BayLum
+tags=Luminescence dating
+Category=
+
+Title=Bchron
+Description=Radiocarbon Dating, Age-Depth Modelling, Relative Sea Level Rate Estimation, and Non-Parametric Phase Modelling
+author=andrewcparnell
+link=https://github.com/andrewcparnell/Bchron
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=Bibliographic Database of African Scholarship on African Archaeology
+Description=An open-access database of African archaeology publications by African and Afrodescendant scholars.
+author=J. Fleisher, M. Prendergast, K. Ranhorn and H. Woldekiros
+link=https://bibdaa.rice.edu/
+tags=Bibliography, Ethics and professional development, Educational resources and practical guides
+Category=
+
+Title=Binomial-Co-occurrence-Assessment
+Description=R script that implements a means for statistically assessing the degree of co-occurrence between classes within a dataset.
+author=mpeeples2008
+link=https://github.com/mpeeples2008/Binomial-Co-occurrence-Assessment
+tags=Statistical analysis
+Category=
+
+Title=BioArch_R
+Description=Apps and functions for use in Bioarchaeology
+author=AlisJay
+link=https://github.com/AlisJay/BioArch_R
+tags=Biological anthropology
+Category=
+
+Title=BioProfile
+Description=A shiny app which uses the results of standard osteological methods to create a basic biological profile
+author=AlisJay
+link=https://github.com/AlisJay/BioProfile
+tags=Biological anthropology
+Category=
+
+Title=Bonify
+Description=Access and visualize 3D models of faunal remains.
+author=garynobles, Canan Cakirlar and Nynke de Boer
+link=https://www.digitalbones.eu
+tags=3D modelling, Zooarchaeology
+Category=
+
+Title=Bootstrap-Correspondence-Analysis
+Description=R-script for conducting and evaluating bootstrapped correspondence analyses.
+author=mpeeples2008
+link=https://github.com/mpeeples2008/Bootstrap-Correspondence-Analysis
+tags=Statistical analysis
+Category=
+
+Title=BraDypUS
+Description=Creating, impementing and publishing relational databases on the Web, especially for the archaeolgical domain.
+author=lab-archeologia-digitale
+link=https://github.com/lab-archeologia-digitale/BraDypUS
+tags=Data management
+Category=
+
+Title=Brainerd-Robinson-Similarity-Coefficient-and-Sampling-Error-Assessment
+Description=Script for calculating Brainerd-Robinson coefficients based on tabular count or percent data. This script also estimates the probability that a given difference between two samples is the product of sampling error.
+author=mpeeples2008
+link=https://github.com/mpeeples2008/Brainerd-Robinson-Similarity-Coefficient-and-Sampling-Error-Assessment
+tags=Statistical analysis
+Category=
+
+Title=Bridging the Gap ENCODE Database
+Description=Shared definitions of digital competences needed by graduate students in the programmes focusing on written cultural heritage.
+author=Bridging the Gap ENCODE Database
+link=https://encode.uni-hamburg.de/index.html
+tags=Schemas and ontologies, Educational resources and practical guides, Ethics and professional development
+Category=
+
+Title=CAinterprTools
+Description=R package to help interpreting Correspondence Analysis' results.
+author=gianmarcoalberti
+link=https://github.com/gianmarcoalberti/CAinterprTools
+tags=Statistical analysis
+Category=
+
+Title=CAseriation
+Description=R Package for contingency tables seriation via Correspondence Analysis.
+author=gianmarcoalberti
+link=https://github.com/gianmarcoalberti/CAseriation
+tags=Statistical analysis, Seriation
+Category=
+
+Title=CHARM
+Description=Cultural heritage abstract reference model.
+author=CHARM
+link=http://www.charminfo.org/
+tags=Data management, Schemas and ontologies
+Category=
+
+Title=CSGR
+Description=Extracts and calculates from long bone cross sections, cortical thickness maps, and biomechanically pertinent cross-sectional geometric properties.
+author=Arothron
+link=https://github.com/Arothron/CSGR
+tags=Biological anthropology, Zooarchaeology, Shape recognition, 3D modelling
+Category=
+
+Title=CalPal-Database
+Description=CalPal 14C-Database created by Bernhard Weninger (UniversitÃ¤t zu KÃ¶ln) as part of the CalPal software package. This repository serves as an interface to access the data more easily.
+author=nevrome
+link=https://github.com/nevrome/CalPal-Database
+tags=Datasets, Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=CeraMatch
+Description=Visual shape-matching of ceramics profiles.
+author=demjanp
+link=https://github.com/demjanp/CeraMatch
+tags=Shape recognition, Ceramic analysis
+Category=
+
+Title=Ceramic-Frequency-Date-Plot
+Description=This R script produces a exploratory visual for assessing site date ranges originally suggested to me by Wesley Bernardini Redlands University
+author=mpeeples2008
+link=https://github.com/mpeeples2008/Ceramic-Frequency-Date-Plot
+tags=Diagrams and visualizations, Ceramic analysis
+Category=
+
+Title=CeramicApportioning
+Description=A method for chronological apportioning of ceramic assemblages that considers site occupation dates, ceramic production dates, and popularity distribution curves.
+author=mpeeples2008
+link=https://github.com/mpeeples2008/CeramicApportioning
+tags=Chronological modelling, Ceramic analysis
+Category=
+
+Title=Ceramic_Dashboard
+Description=Dashboard showing ceramic EDA and interaction network construction in the Late Prehistoric Central Illinois River Valley.
+author=ajupton
+link=https://github.com/ajupton/Ceramic_Dashboard
+tags=
+Category=
+
+Title=CharTool
+Description=CharTool is a macro tool for quantifying charcoal particles for paleoecological research applications.
+author=gsnitker
+link=https://github.com/gsnitker/CharTool
+tags=Palaeobotany
+Category=
+
+Title=ChronoLog
+Description=A tool for computer-assisted chronological research.
+author=Eythan Levy, FrÃ©dÃ©ric Pluquet and Gilles Geeraerts
+link=https://chrono.ulb.be/
+tags=Chronological modelling
+Category=
+
+Title=Chronophage
+Description=Applications for obtaining chronograms (quantified chronology diagrams) and time distribution curves of archaeological or historical units from quantified dating indicators treated as inaccuracy intervals.
+author=Bruno Desachy
+link=https://abp.hypotheses.org/4284
+tags=Chronological modelling
+Category=
+
+Title=Classical and ancient Linked Open Data
+Description=A list of linked open data repositories relating to classics and ancient history.
+author=Gabriel Bodard, Paula Granados GarcÃ­a, Sarah Middle and Elton Barker
+link=https://docs.google.com/spreadsheets/d/1aAssGGswX2WNMllV4kMYexBGS8miCywbW5XdcIeE22c/edit#gid=1033348216
+tags=Lists, Datasets
+Category=
+
+Title=CloudCal
+Description=This app will allow you to build & apply calibrations for the Tracer & Artax series of XRF devices
+author=leedrake5
+link=https://github.com/leedrake5/CloudCal
+tags=X-Ray Fluorescence
+Category=
+
+Title=CoccionCeramica
+Description=An application to generate temperature curves during pottery firing.
+author=marcelocardillo
+link=https://github.com/marcelocardillo/CoccionCeramica
+tags=Ceramic analysis
+Category=
+
+Title=Corallium Fabrica
+Description=Set of 3D models of coral skeletons, which may be used as a reference collection.
+author=Elise Rigot
+link=https://corallumfabrica.laas.fr/
+tags=3D modelling, Datasets
+Category=
+
+Title=CropPro
+Description=Data organisation, classification and visualisation of archaeobotanical data to understand crop processing stage.
+author=CropPro-package
+link=https://github.com/CropPro-package/CropPro
+tags=Palaeobotany, Data management
+Category=
+
+Title=Crop_Origins_Phylo
+Description=Repository of Crop Origins database and Phylo Food phylogeny.
+author=rubenmilla
+link=https://github.com/rubenmilla/Crop_Origins_Phylo
+tags=Palaeobotany
+Category=
+
+Title=Crossbones
+Description=Crossbones autogenerates 3D schematic skeletons, making rapid surveying and visualisation of dense skeletal assemblages a snap.
+author=Leif Isaksen
+link=http://oadigital.net/software/xbones.html
+tags=Zooarchaeology
+Category=
+
+Title=CuneiPainter
+Description=An App to recognize cuneiform characters on your Android phone.
+author=situx
+link=https://github.com/situx/CuneiPainter
+tags=Shape recognition
+Category=
+
+Title=Curso_Intro_R_Arqueologia
+Description=Introductory course to R for archaeologists (Spanish).
+author=Mcotsar
+link=https://github.com/Mcotsar/Curso_Intro_R_Arqueologia
+tags=Educational resources and practical guides
+Category=
+
+Title=DACORD
+Description=Computer-Assisted Drawing of Archaeological Pottery.
+author=jwilczek-dotcom
+link=https://github.com/jwilczek-dotcom/DACORD
+tags=
+Category=
+
+Title=DIGSS
+Description=A simulation tool to estimate the rate of success that surveys possessing user-specific characteristics have in identifying archaeological sites (or any groups of clouds of objects), given specific parameters of survey area, survey methods, and site properties.
+author=markhubbe
+link=https://github.com/markhubbe/DIGSS
+tags=Simulation, Statistical analysis
+Category=
+
+Title=DIYFieldworkDatabase
+Description=Documenting and sharing my ad-hoc fieldwork database setup
+author=zackbatist
+link=https://github.com/zackbatist/DIYFieldworkDatabase
+tags=Educational resources and practical guides
+Category=
+
+Title=DObsiSS
+Description=The Database of Obsidian Sourcing Studies
+author=zackbatist
+link=https://github.com/zackbatist/DObsiSS
+tags=Datasets
+Category=
+
+Title=DRAC-calculator
+Description=DRAC is a Dose Rate and Age Calculator which has been designed to calculate environmental dose rates (_) and ages for trapped charge dating applications
+author=DRAC-calculator
+link=https://github.com/DRAC-calculator/DRAC-calculator
+tags=Luminescence dating
+Category=
+
+Title=Day of Archaeology Archive
+Description=Archive of content shared during the annual Day of Archaeology from 2011-2017.
+author=Archaeology Data Service
+link=https://archaeologydataservice.ac.uk/blog/2021/03/archiving-day-of-archaeology-2011-2017/
+tags=Public archaeology
+Category=
+
+Title=Dendro_R
+Description=Small repository that lists R packages used in dendrochronology or tree-ring research.
+author=RonaldVisser
+link=https://github.com/RonaldVisser/Dendro_R
+tags=Dendrochronology, Lists
+Category=
+
+Title=Digital Encyclopedia of Archaeologists
+Description=A webpage containing brief biographical information about some iconic archaeologists.
+author=msu-anthropology
+link=https://github.com/msu-anthropology/deoa
+tags=Educational resources and practical guides
+Category=
+
+Title=DroneSurveyPlanner
+Description=This is a LibreOffice Calc spreadsheet designed to help you plan an aerial drone mapping survey mission.
+author=isaacullah
+link=https://github.com/isaacullah/DroneSurveyPlanner
+tags=Drones
+Category=
+
+Title=E5
+Description=E5 is a generalized data entry program intended for archaeologists that works with a configuration file where the data entry fields are defined
+author=surf3s
+link=https://github.com/surf3s/E5
+tags=Data management
+Category=
+
+Title=EDM
+Description=Configurable data collection program for archaeological survey and excavation.
+author=surf3s
+link=https://github.com/surf3s/EDM
+tags=Data collection, Data management
+Category=
+
+Title=EDMWIN
+Description=Configurable data collection program for archaeological survey and excavation.
+author=surf3s
+link=https://github.com/surf3s/EDMWIN
+tags=Data collection, Data management
+Category=
+
+Title=EM-blender-tools
+Description=Addon that brings the formal language Extended Matrix within the Blender 3D open-source software.
+author=zalmoxes-laran
+link=https://github.com/zalmoxes-laran/EM-blender-tools
+tags=3D modelling
+Category=
+
+Title=Electronic Babylonian Literature Project
+Description=Brings together ancient Near Eastern specialists and data scientists to revolutionize the way in which the literature of Iraq in the first millennium BCE is reconstructed and analyzed.
+author=Electronic Babylonian Literature Project
+link=https://www.ebl.lmu.de/
+tags=Schemas and ontologies
+Category=
+
+Title=ElementSourcing
+Description=Source archaeological artifacts using elemental composition.
+author=bischrob
+link=https://github.com/bischrob/ElementSourcing
+tags=X-Ray Fluorescence
+Category=
+
+Title=Excavation_data_viewer
+Description=R Shiny app for viewing archaeological excavation data in 3D.
+author=samclin
+link=https://github.com/samclin/Excavation_data_viewer
+tags=Data management, 3D modelling
+Category=
+
+Title=Explographe
+Description=Application (in LibreOffice Calc) for serializing a graphic matrix from counting tables. The application makes it possible to obtain either a serograph or a graph of the PVI matrograph type (visualization of the differences in independence from the percentages of independence values) which does not favor the vision of the variables over that of the lines and more suitable for non-chronological treatments.
+author=Bruno Desachy
+link=https://abp.hypotheses.org/le-programme-bassin-parisien/les-projets/les-projets-associes-au-programme/outils-danalyse-graphique-des-donnees
+tags=Statistical analysis
+Category=
+
+Title=ExtendedMatrix
+Description=A scientific method and formal language for the Cultural Heritage domain that formalises complex interpretative philological phenomena such as virtual reconstructive hypotheses in a transparent and robust manner.
+author=zalmoxes-laran, Bruno Fanini and Enzo Cocca
+link=https://github.com/zalmoxes-laran/ExtendedMatrix
+tags=Schemas and ontologies
+Category=
+
+Title=FISH Vocabularies
+Description=A suite of terminologies developed for indexing cultural heritage.
+author=Forum on Information Standards in Heritage
+link=http://www.heritage-standards.org.uk/fish-vocabularies/
+tags=Schemas and ontologies
+Category=
+
+Title=Fiche Stratigraphique NumÃ©rique (FSN)
+Description=Fiche Stratigraphique Numerique (FSN) is an application project for field recording and management of archaeological operations data.
+author=Bruno Desachy
+link=https://abp.hypotheses.org/le-programme-bassin-parisien/les-projets/les-projets-associes-au-programme/fsn
+tags=Data management
+Category=
+
+Title=Fix-exif-artist
+Description=Fix the Exif.Image.Artist tag based on user input depending from the camera model. Useful if you have a bunch of photographs from different people all mixed up.
+author=steko
+link=https://codeberg.org/steko/fix-exif-artist
+tags=Bits and bobs
+Category=
+
+Title=Ford-Diagram
+Description=This R Function creates a simple Ford diagram for archaeological seriation with error bars determined based on sample size were count data are given
+author=mpeeples2008
+link=https://github.com/mpeeples2008/Ford-Diagram
+tags=Diagrams and visualizations, Seriation
+Category=
+
+Title=FuzzyViewshed
+Description=ArcGIS toolbox for fuzzy viewshed calculation.
+author=gianmarcoalberti
+link=https://github.com/gianmarcoalberti/FuzzyViewshed
+tags=Spatial analysis, Viewshed analysis
+Category=
+
+Title=GCD
+Description=Global Charcoal Database
+author=oblarquez
+link=https://github.com/oblarquez/GCD
+tags=Datasets
+Category=
+
+Title=GIS-Projects
+Description=GIS Projects for teaching and learning about Computational Archaeology
+author=isaacullah
+link=https://github.com/isaacullah/GIS-Projects
+tags=Educational resources and practical guides
+Category=
+
+Title=Geostat
+Description=Code for Geostatistics in ethnographic contexts.
+author=cl379
+link=https://github.com/cl379/Geostat
+tags=Statistical analysis, Spatial analysis
+Category=
+
+Title=Git-to-the-Point
+Description=An open call to edit and revise current typological assignments and attributes associated with diagnostic artifacts found across the National Forests and Grasslands in Texas (NFGT).
+author=aksel-blaise
+link=https://github.com/aksel-blaise/git-to-the-point
+tags=Schemas and ontologies
+Category=
+
+Title=GlobaLID-App
+Description=The GlobaLID web app
+author=archmetalDBM
+link=https://github.com/archmetalDBM/GlobaLID-App
+tags=Datasets, Stable isotope analysis, Diagrams and visualizations
+Category=
+
+Title=GlobaLID-database
+Description=Facilitates the reconstruction of raw material provenances with lead isotopes.
+author=archmetalDBM
+link=https://github.com/archmetalDBM/GlobaLID-database
+tags=Datasets, Stable isotope analysis
+Category=
+
+Title=GmAMisc
+Description=A collection of functions that built in different points in time. The functions' aim spans from univariate outlier detection, to permutation t test, permutation chi-square test, calculation of Brainerd-Robinson similarity coefficient, validation of logistic regression models, point pattern analysis, and more.
+author=gianmarcoalberti
+link=https://github.com/gianmarcoalberti/GmAMisc
+tags=Bits and bobs
+Category=
+
+Title=Harris-matrix-legacy
+Description=Create a Harris Matrix from archaeological stratigraphy data using Python and Graphviz.
+author=steko and iosa
+link=https://codeberg.org/steko/harris-matrix-legacy
+tags=Harris matrix
+Category=
+
+Title=HumanOS
+Description=A mobile application for the intuitive recording of human bones from archaeological sites.
+author=Rozenn Colleter, Jean-Baptiste Romain and Jean-Baptiste Barreau
+link=https://www.humanos.cnrs.fr/
+tags=Zooarchaeology, Data management
+Category=
+
+Title=IOSACal
+Description=IOSACal is an open source tool for radiocarbon calibration
+author=iosa
+link=https://pypi.org/project/iosacal/
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=IntCal
+Description=The IntCal20 radiocarbon calibration curves are provided here in a single data package, together with previous IntCal curves and postbomb curves.
+author=Maarten14C
+link=https://github.com/Maarten14C/IntCal
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=IntChron
+Description=An indexing service for chronological information. Information can be viewed as webpages or downloaded as data files in different formats.
+author=Christopher Bronk Ramsey
+link=https://intchron.org/
+tags=Lists
+Category=
+
+Title=Iraq_mortar
+Description=Enables the creation of a high quality 3D model of an archaeological artefact via process known as photo-masking.
+author=apalmisano82
+link=https://github.com/apalmisano82/Iraq_mortar
+tags=3D modelling, Shape recognition
+Category=
+
+Title=Isaac's List of FOSS tools for academics... and what to use them for!
+Description=An annotated list of open source tools for academics.
+author=isaacullah
+link=http://isaacullah.github.io/List-of-FOSS-tools-for-academics/
+tags=Lists
+Category=
+
+Title=IsoArcH
+Description=Open access and collaborative isotope database for bioarcheological samples.
+author=IsoArcH
+link=https://twitter.com/isoarch_eu
+tags=Datasets
+Category=
+
+Title=IsoDataVis
+Description=Data visualization guidelines for stable isotopes graphs, with examples
+author=stantis
+link=https://github.com/stantis/IsoDataVis
+tags=Stable isotope analysis, Educational resources and practical guides, Diagrams and visualizations
+Category=
+
+Title=IsoMapNL
+Description=Data and script to generate a map of the Netherlands for isotopic analyses
+author=EstherPlomp
+link=https://github.com/EstherPlomp/IsoMapNL
+tags=Educational resources and practical guides, Stable isotope analysis, Diagrams and visualizations
+Category=
+
+Title=Isotope-Visualisation
+Description=Resources relevant to visualisation of isotopic results
+author=EstherPlomp
+link=https://github.com/EstherPlomp/Isotope-Visualisation
+tags=Stable isotope analysis, Diagrams and visualizations, Educational resources and practical guides
+Category=
+
+Title=Kmeans
+Description=Script for conducting K-means cluster analysis using R. This script provides output designed to help the user select an appropriate cluster solution.
+author=mpeeples2008
+link=https://github.com/mpeeples2008/Kmeans
+tags=Statistical analysis
+Category=
+
+Title=LA_ICP_MS-Routines_FMNH
+Description=Routines to read and analyze LA-ICP-MS data from the Field Museum's Elemental Analysis Facility
+author=ajupton
+link=https://github.com/ajupton/LA_ICP_MS-Routines_FMNH
+tags=Educational resources and practical guides
+Category=
+
+Title=LISA
+Description=Moran's I and Getis-Ord G* Analysis.
+author=mpeeples2008
+link=http://www.mattpeeples.net/modules/LISA.html
+tags=Statistical analysis
+Category=
+
+Title=Le Stratifiant
+Description=Application for creating stratigraphic diagrams and checking the consistency of the chronostratigraphic recording.
+author=Bruno Desachy
+link=https://abp.hypotheses.org/3965
+tags=Harris matrix
+Category=
+
+Title=Lithics3D
+Description=An R package for processing and analyzing 3D scans of archaeological lithics.
+author=cornelmpop
+link=https://github.com/cornelmpop/Lithics3D
+tags=3D modelling
+Category=
+
+Title=LumReader
+Description=R package to simulate a Luminescence Reader
+author=dstreble
+link=https://github.com/dstreble/LumReader
+tags=Luminescence dating
+Category=
+
+Title=Luminescence
+Description=Development version of the R package 'Luminescence'. The R package 'Luminescence' by the R-Luminescence Group provides a collection of various R functions for luminescence dating data analysis.
+author=R-Lum
+link=https://github.com/R-Lum/Luminescence
+tags=Luminescence dating
+Category=
+
+Title=MAX
+Description=An online tool for the comparative analysis of museum databases.
+author=stefanieschneider, Hubertus Kohle, Severin Burg and Helmut KÃ¼chenhoff
+link=https://github.com/stefanieschneider/MAX
+tags=Museums
+Category=
+
+Title=MapofComputationalArchaeology
+Description=Visualizes digital archaeology as a fantasy landscape.
+author=sslarch
+link=https://github.com/sslarch/MapofComputationalArchaeology
+tags=Diagrams and visualizations
+Category=
+
+Title=Mask_UAV
+Description=Software to annotate, train, using deep learning, and segment imagery data from UAVs or other platforms.
+author=maltaweel
+link=https://github.com/maltaweel/Mask_UAV
+tags=
+Category=
+
+Title=Mastodon-Archaeology
+Description=Simple web app that helps to bulk follow archaeologists on the FOSS microblogging service Mastodon.
+author=stark1tty
+link=https://github.com/stark1tty/Mastodon-Archaeology
+tags=Lists, Public archaeology
+Category=
+
+Title=Material Sources for Early Islam and Late Antique Near East
+Description=A list of resources and materials for research on the history of Early Islam and the Late Antique Near East.
+author=Hagit Nol
+link=https://materialsourcesforearlyislamandlateantiqueneareast.hcommons.org/
+tags=Lists
+Category=
+
+Title=Mean-Ceramic-Date-and-Error-Estimation
+Description=Script for calculating mean ceramic dates based on tabular data. This script also estimates sampling error using a bootstrapping procedure.
+author=mpeeples2008
+link=https://github.com/mpeeples2008/Mean-Ceramic-Date-and-Error-Estimation
+tags=Statistical analysis, Ceramic analysis
+Category=
+
+Title=MtreeRing
+Description=A tool for automatically measuring tree-ring width using image processing techniques.
+author=ropensci
+link=https://github.com/ropensci/MtreeRing
+tags=Bits and bobs
+Category=
+
+Title=Mycenaean Atlas Project
+Description=The purpose of the Mycenaean Atlas is to furnish accurate lat/lon pairs for Bronze Age sites in the central and eastern Mediterranean.
+author=Robert Consoli
+link=http://helladic.info/
+tags=Lists
+Category=
+
+Title=NAA analytical dashboard
+Description=Analytical Dashboard for conducting various analysis to group and assess groupings for Neutron Activation Analytical chemical compositional data
+author=mpeeples2008
+link=https://github.com/mpeeples2008/A_analytical_dashboard
+tags=
+Category=
+
+Title=NASSA-modules
+Description=The modular library of the Network for Agent-based modelling of Socio-ecological systems in Archaeology
+author=Archaeology-ABM
+link=https://github.com/Archaeology-ABM/SSA-modules
+tags=Simulation, Lists
+Category=
+
+Title=NERD
+Description=Dataset of 10,647 radiocarbon dates from the Near East from the Late Pleistocene until the Late Holocene (ca. 14 - 2 kya BP).
+author=apalmisano82
+link=https://github.com/apalmisano82/NERD
+tags=Datasets, Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=NRHP_Metadata_Scheme
+Description=Metadata scheme for National Register of Historic Places, transcribed from the National Park Service NPS Bulletin 16
+author=aejolene
+link=https://github.com/aejolene/NRHP_Metadata_Scheme
+tags=Schemas and ontologies
+Category=
+
+Title=Near-Presence-Analysis
+Description=R script for analyzing presence/absence data in irregularly distributed archaeological survey units.
+author=eweaverdyck
+link=https://github.com/eweaverdyck/Near-Presence-Analysis
+tags=Statistical analysis, Spatial analysis
+Category=
+
+Title=OA-Archaeology
+Description=List of open access archaeology journals.
+author=AQueff
+link=https://github.com/AQueff/OA-Archaeology
+tags=Platforms and publications, Writing
+Category=
+
+Title=ODATE
+Description=An introduction to the issues, methods, and techniques of digital archaeology, integrated with working code and virtual computing environments or 'notebooks' written in Python or R.
+author=o-date
+link=https://github.com/o-date/draft
+tags=Educational resources and practical guides
+Category=
+
+Title=ODK-forms-archaeology
+Description=Forms for the Open Data Kit mobile data collection app.
+author=isaacullah
+link=https://github.com/isaacullah/ODK-forms-archaeology
+tags=Templates, Data collection
+Category=
+
+Title=ODKArchForms
+Description=Open Data Kit forms and conversion scripts used in archaeology. Including New Mexico LA Forms, photologs, etc
+author=UNMOCA
+link=https://github.com/UNMOCA/ODKArchForms
+tags=Data management
+Category=
+
+Title=OHM Data Index
+Description=The data index considers a collection of research areas that broadly stroke an idea of the level of completeness in the knowledge of a given period and timeframe.
+author=openhistorymap
+link=https://index.openhistorymap.org/
+tags=Site mapping, Public archaeology, Data management
+Category=
+
+Title=Open Access Archaeology
+Description=OpenAccessArchaeology.org is dedicated to helping people discover and use Open Access resources in the field of Archaeology.
+author=Doug Rocks-Macqueen, Lorna Richardson, Emma O'Riordan and Katrina Urban
+link=https://twitter.com/OpenAccessArch
+tags=Lists
+Category=
+
+Title=Open History Map
+Description=A web-GIS platform containing spatial historical and archaeological data.
+author=openhistorymap
+link=https://github.com/openhistorymap
+tags=Site mapping, Public archaeology
+Category=
+
+Title=Open-Science-in-Phytolith-Research
+Description=Project to create community awareness of open science practices, provide training and establish a working group for open science.
+author=ekaroune
+link=https://github.com/EKaroune/Open-Science-in-Phytolith-Research
+tags=Educational resources and practical guides
+Category=
+
+Title=OpenArchaeology.net
+Description=Open Archaeology hosts a number of sub-projects that while functional at a component level are intended to interoperate creating a complete AIS (Archaeological Information System), including the components necessary to manage the organisation carrying out the archaeology.
+author=openarchaeology
+link=https://launchpad.net/openarchaeology
+tags=Lists
+Category=
+
+Title=OpenAtlas
+Description=An open source, web based database system for complex archaeological, historical and geospatial data.
+author=CRAWS
+link=https://github.com/craws/OpenAtlas
+tags=Data management
+Category=
+
+Title=OpenLidarToolbox
+Description=A QGIS plug-in that provides one-step-processing of airborne LiDAR data from point cloud to LiDAR visualisations.
+author=stefaneichert
+link=https://github.com/stefaneichert/OpenLidarToolbox
+tags=
+Category=
+
+Title=PAThs Simple Vectorization Protocol
+Description=Protocol to vecotorize archaeological or architectonic legacy data.
+author=PAThs
+link=https://docs.paths-erc.eu/data/svp
+tags=Site mapping, 3D modelling
+Category=
+
+Title=PLC
+Description=Pure Locational Clustering.
+author=mpeeples2008
+link=http://www.mattpeeples.net/modules/PLC.html
+tags=Statistical analysis
+Category=
+
+Title=PhotoCaptionTool
+Description=Automatically generates a photo log using photographs' exif data.
+author=Lugal-PCZ
+link=https://github.com/Lugal-PCZ/PhotoCaptionTool
+tags=Photography, Data management, Bits and bobs
+Category=
+
+Title=PleistoDist
+Description=Distance matrices between islands normalised over Pleistocene time.
+author=g33k5p34k
+link=https://github.com/g33k5p34k/PleistoDist
+tags=Spatial analysis
+Category=
+
+Title=PleistoDistR
+Description=Distance matrices between islands normalised over Pleistocene time. A complete ground-up rebuild of PleistoDist for use with R.
+author=g33k5p34k
+link=https://github.com/g33k5p34k/PleistoDistR
+tags=Spatial analysis
+Category=
+
+Title=Plotting Dental Inventory with ggplot2
+Description=tutorial on an intuitive way to visualise a dental inventory in a sample
+author=bbartholdy
+link=https://bjorn.rbind.io/post/dental-inv-plot/
+tags=Educational resources and practical guides, Stable isotope analysis, Diagrams and visualizations
+Category=
+
+Title=Pofatu
+Description=An open-access database for geochemical sourcing of archaeological materials.
+author=pofatu
+link=https://github.com/pofatu/pofatu-data
+tags=Datasets, Geoarchaeology
+Category=
+
+Title=PointPattern
+Description=Point Pattern Analysis.
+author=mpeeples2008
+link=http://www.mattpeeples.net/modules/PointPattern.html
+tags=Statistical analysis
+Category=
+
+Title=Potential datasets for PhD projects
+Description=A Google Doc with different archaeological and anthropological datasets and resources for students who need to make changes to their project due to COVID-19
+author=Taryn Bell
+link=https://docs.google.com/document/d/1BuIJ0ZXzzh838qvMOu59dLCCEz9xE3JnC76oHN-kMTU/edit
+tags=Lists
+Category=
+
+Title=QGIS-scripts
+Description=Some scripts that could be useful for QGIS users.
+author=zoran-cuckovic
+link=https://github.com/zoran-cuckovic/QGIS-scripts
+tags=Bits and bobs
+Category=
+
+Title=QGIS-topographic-networks
+Description=Models relationships between elements in a terrain model, connecting pixels according to their height difference.
+author=zoran-cuckovic
+link=https://github.com/zoran-cuckovic/QGIS-topographic-networks
+tags=Spatial analysis
+Category=
+
+Title=QGIS-visibility-analysis
+Description=Calculates visible surface from a given observer point over a digital elevation model. The plugin is intended for more complex modelling, such as the depth below the visible horizon or generation of intervisibilty networks between groups of points. It is particularly performant for multiple viewshed calculations form a set of fixed points.
+author=zoran-cuckovic
+link=https://github.com/zoran-cuckovic/QGIS-visibility-analysis
+tags=Spatial analysis, Viewshed analysis
+Category=
+
+Title=QuARI
+Description=A database interface designed to facilitate the irregular, iterative, and non-linear workflows that are commonly employed in lithic analysis.
+author=zackbatist, dcontre and Ciara Zogheib
+link=https://github.com/zackbatist/QuARI
+tags=Data collection, Lithic analysis
+Category=
+
+Title=R for data analysis and visualization of Archaological Data
+Description=Data Analysis and Visualization in R for Archaologists, modified from the Data Carpentry R Workshop for Ecologists.
+author=carpentries-incubator, Alison Clarke, FranÃ§ois Michonneau and Auriel Fournier
+link=https://github.com/carpentries-incubator/R-archaeology-lesson
+tags=Educational resources and practical guides
+Category=
+
+Title=R-Scripts
+Description=This contains a set of data about human mobility, subsistance, population, and environmental productivity derived from the Standard Cross Cultural Sample
+author=isaacullah
+link=https://github.com/isaacullah/R-Scripts
+tags=Datasets
+Category=
+
+Title=RACORD
+Description=Computer-Assisted Shape Classification of Archaeological Pottery Fragments.
+author=jwilczek-dotcom
+link=https://github.com/jwilczek-dotcom/RACORD
+tags=
+Category=
+
+Title=RGPR
+Description=RGPR is a free and open-source software package to read, export, analyse, process and visualise ground-penetrating radar (GPR) data
+author=emanuelhuber
+link=https://github.com/emanuelhuber/RGPR
+tags=Geophysical survey
+Category=
+
+Title=RJradiocarbon
+Description=Radiocarbon calibration of multiple 14C samples using reversible jump poisson process.
+author=sara-amira-alassam
+link=https://github.com/sara-amira-alassam/RJradiocarbon
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=RLumModel
+Description=Solving Ordinary Differential Equations to Understand Luminescence
+author=R-Lum
+link=https://github.com/R-Lum/RLumModel
+tags=Luminescence dating
+Category=
+
+Title=RTIBuilder
+Description=A software interface to a set of tools that process your captured image set to produce the final RTI files. The RTIBuilder download includes the Hemispherical Harmonics (HSH) fitter to create .rti files.
+author=culturalheritageimaging
+link=http://culturalheritageimaging.org/What_We_Offer/Downloads/Process/index.html
+tags=Photogrammetry
+Category=
+
+Title=RTIViewer
+Description=Enables you to view and explore Reflectance Transformation Imaging (RTI) files at very high resolution (Polynomial Texture Maps, Hemispherical Harmonics Map, and Multiview RTI). You can view image files stored on your local file system, and remote files through HTTP.
+author=culturalheritageimaging
+link=http://culturalheritageimaging.org/What_We_Offer/Downloads/View/index.html
+tags=Photogrammetry
+Category=
+
+Title=Rcarb
+Description=The R package 'RCarb' provides a collection of various R functions to model dose rates in carbonate-rich samples. The package is a translation of the 'MATLAB' program Carb by Roger P. Nathan
+author=R-Lum
+link=https://github.com/R-Lum/RCarb
+tags=Luminescence dating
+Category=
+
+Title=Roman-material-database-info
+Description=An interactive database of construction materials used in antiquity meant to enable creation of 3D and virtual reality (VR) models of historic structures.
+author=rkn2
+link=https://github.com/rkn2/Roman-material-database-info
+tags=Datasets
+Category=
+
+Title=RoomAccum
+Description=Room Accumulation Simulation ro estimate archaeological population growth rates.
+author=kintigh
+link=https://github.com/kintigh/RoomAccum
+tags=Simulation, Cultural evolution
+Category=
+
+Title=Roundup of Resources on Ancient Geography
+Description=Included in the following list are links to digital project dealing with geography and the ancient world.
+author=Charles E. Jones
+link=https://twitter.com/AWOL_tweets
+tags=Lists
+Category=
+
+Title=SCEM
+Description=Performs the Splitting-Coalescence-Estimation Method to model birth seasonality in studies of herd animals.
+author=kserkcho, Hannah Chazin, Soudeep Deb, Joshua Falk and Arun Srinivasan
+link=https://github.com/kserkcho/SCEM
+tags=Zooarchaeology, Stable isotope analysis
+Category=
+
+Title=SEAHORS
+Description=R Shiny application that allows easy and quick exploration of the spatial distribution of archaeological objects.
+author=AurelienRoyer
+link=https://github.com/AurelienRoyer/SEAHORS
+tags=Spatial analysis
+Category=
+
+Title=SPARTAAS
+Description=Statistical pattern recognition and dating using archaeological artefacts assemblages.
+author=Lise Bellanger, Philippe Husi, Arthur Coulon, Bruno Desachy and Benjamin Martineau
+link=https://cran.r-project.org/package=SPARTAAS
+tags=Statistical analysis
+Category=
+
+Title=Scroll Viewer
+Description=Viewer for the Herculaneum Papyri segments.
+author=atiro
+link=https://github.com/atiro/scroll-viewer
+tags=Literary analysis and epigraphy, 3D modelling
+Category=
+
+Title=Seriation
+Description=Algorithms, implementations, manuscripts, and test cases for iterative deterministic frequency seriation done by agglomeration.
+author=clipo
+link=https://github.com/clipo/Seriation
+tags=Statistical analysis, Seriation
+Category=
+
+Title=Seriographe EPPM
+Description=The EPPM serograph is a graphical tool for chronological serialization of archaeological furniture counting tables.
+author=Bruno Desachy
+link=https://abp.hypotheses.org/le-programme-bassin-parisien/les-projets/les-projets-associes-au-programme/outils-danalyse-graphique-des-donnees
+tags=Chronological modelling
+Category=
+
+Title=SexEst
+Description=Uses machine learning models to predict the Sex of unknown skeletons based on their cranial and postcranial measurements.
+author=cconsta1
+link=https://github.com/cconsta1/SexEst
+tags=Biological anthropology, Shape recognition
+Category=
+
+Title=ShootPoints-Web
+Description=A set of programs for total station surveying.
+author=Lugal-PCZ
+link=https://github.com/Lugal-PCZ/ShootPoints-Web
+tags=Site mapping, Data collection
+Category=
+
+Title=SiteSyncro
+Description=Site-specific chronological modeling and synchronization.
+author=demjanp
+link=https://github.com/demjanp/SiteSyncro
+tags=Chronological modelling, Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=StoneAdvisor
+Description=Explore and share your favourite archaeological sites and itineraries.
+author=rbbristow
+link=https://github.com/rbbristow/StoneAdvisor
+tags=Public archaeology, Museums
+Category=
+
+Title=Stratibase
+Description=Stratibase is a minimal field recording database application (currently in FileMaker FP7 format software), aimed at the simplest structure possible to perform the basic functions of a stratigraphic recording.
+author=Bruno Desachy
+link=https://abp.hypotheses.org/le-programme-bassin-parisien/les-projets/les-projets-associes-au-programme/fsn
+tags=Data management
+Category=
+
+Title=SurveyeR
+Description=Uses a Dirichlet process to probabilistically assess the phase of undated archaeological assemblages.
+author=acortell3
+link=https://github.com/acortell3/SurveyeR
+tags=Seriation
+Category=
+
+Title=SÃ©riation de matrice en prÃ©sence/absence
+Description=Excel file containing macro commands making it possible to transform a 1/0 table (presence / absence) into a graphic matrix treated by matrix permutations; it is possible to take into account the uncertain presence of a character. The instructions for use are contained in the file.
+author=Bruno Desachy
+link=https://abp.hypotheses.org/le-programme-bassin-parisien/les-projets/les-projets-associes-au-programme/outils-danalyse-graphique-des-donnees
+tags=Bits and bobs, Seriation
+Category=
+
+Title=THANADOS
+Description=An open source, web application for the presentation of archaeological data especially for burial studies.
+author=stefaneichert
+link=https://github.com/stefaneichert/thanados
+tags=
+Category=
+
+Title=TPQ-Composer
+Description=Utility for graphically displaying a set of termini post quem induced from stratified archaeological artifacts.
+author=Eythan31
+link=https://github.com/Eythan31/TPQ-Composer
+tags=Chronological modelling
+Category=
+
+Title=TRANSIT
+Description=GIS toolbox for estimating the duration of ancient sail-powered navigation.
+author=gianmarcoalberti
+link=https://github.com/gianmarcoalberti/TRANSIT
+tags=Spatial analysis
+Category=
+
+Title=Tachy2GIS
+Description=Enables you to create geometries directly from tachymeter input while at the same time adding vertices manually.
+author=Archaeological-Museum-Hamburg and chris-jan-trapp
+link=https://github.com/Archaeological-Museum-Hamburg/Tachy2GIS
+tags=Drivers and IO
+Category=
+
+Title=Tachy2GIS_arch
+Description=QGIS plugin for documentation of archaeological features using Tachy2GIS.
+author=Landesamt-fuer-Archaeologie-Sachsen
+link=https://github.com/Landesamt-fuer-Archaeologie-Sachsen/Tachy2GIS_arch
+tags=Data collection, Site mapping
+Category=
+
+Title=The ABM in Archaeology Bibliography
+Description=A selected yet comprehensive list of literature and resources on Agent Based Models (ABM) in Archaeology.
+author=izaromanowska and ArchoLen
+link=https://github.com/ArchoLen/The-ABM-in-Archaeology-Bibliography
+tags=Bibliography
+Category=
+
+Title=The AWOL Index
+Description=This publication systematically describes ancient-world information resources on the world-wide web. The bibliographic data presented herein has been programmatically extracted from the content of AWOL - The Ancient World Online (ISSN 2156-2253) and formatted in accordance with a structured data model.
+author=Charles E. Jones and Tom Elliott
+link=http://isaw.nyu.edu/publications/awol-index/
+tags=Lists
+Category=
+
+Title=The Southwestern Taphonomic Protocol
+Description=A set of analyses to control for variable taphonomic impacts on archaeological faunal datasets.
+author=bocinsky
+link=https://github.com/bocinsky/swtp
+tags=Schemas and ontologies
+Category=
+
+Title=Tldating
+Description=R package for TL dating
+author=dstreble
+link=https://github.com/dstreble/TLdating
+tags=Luminescence dating
+Category=
+
+Title=Tools for Quantitative Archaeology
+Description=Keith KintighTools for Quantitative Archaeology TFQA, is a package of more than 45 PC programs developed to satisfy several unusual analytical needs of archaeologists.
+author=kintigh
+link=http://tfqa.com/
+tags=Lists
+Category=
+
+Title=Transect-Calculator
+Description=A simple script that outputs the number of transects, direction of each transect, and locations of the first sensor, centerline, and last sensor along the baseline of a rectangular survey unit.
+author=Lugal-PCZ
+link=https://github.com/Lugal-PCZ/Transect-Calculator
+tags=Site mapping, Geophysical survey, Bits and bobs
+Category=
+
+Title=TransmissionBias
+Description=Includes an agent-based model (ABM) of cultural transmission that simulates the three main forms of transmission bias: content bias, frequency bias, and demonstrator bias.
+author=masonyoungblood
+link=https://github.com/masonyoungblood/TransmissionBias
+tags=Simulation, Cultural evolution
+Category=
+
+Title=UThwigl
+Description=Compute closed- and open-system uranium-thorium (U-Th) ages of geological and archaeological samples.
+author=tonydoss
+link=https://github.com/tonydoss/UThwigl
+tags=Stable isotope analysis, Chronological modelling
+Category=
+
+Title=UnconstrainedClustering
+Description=Unconstrained Clustering.
+author=mpeeples2008
+link=http://www.mattpeeples.net/modules/UnconstrainedClustering.html
+tags=Statistical analysis
+Category=
+
+Title=UniformProbabilityDensityAnalysis
+Description=R implementation of the Uniform Probability Density Analysis approach
+author=mpeeples2008
+link=https://github.com/mpeeples2008/UniformProbabilityDensityAnalysis
+tags=Statistical analysis, Spatial analysis
+Category=
+
+Title=Vessel-Measuring-Tool
+Description=Digitize archeological drawings of vessels in order to calculate their capacity and weight.
+author=alessandrobattisti
+link=https://github.com/alessandrobattisti/Vessel-Measuring-Tool
+tags=
+Category=
+
+Title=WeedEco
+Description=Classification of unknown cases (e.g. archaeobotanical data or other modern weed survey data) using linear discriminant analysis to understand farming regimes.
+author=WeedEco
+link=https://github.com/WeedEco/WeedEco
+tags=Palaeobotany
+Category=
+
+Title=ZooarchMixMod
+Description=Produce mixture models of zooarchaeological measurement data to estimate the proportion of immature, adult-sized female, and adult-sized male specimens in an assemblage.
+author=wolfhagenj
+link=https://github.com/wolfhagenj/ZooarchMixMod
+tags=Zooarchaeology
+Category=
+
+Title=a-scientific-computing-environment-for-archaeology.txt
+Description=Scientific Computing Environment for archaeology: Installing R, Rstudio and other things on a lightweight Linux in a VirtualBox virtual machine
+author=benmarwick
+link=https://gist.github.com/benmarwick/11204658
+tags=Educational resources and practical guides
+Category=
+
+Title=aDRAC
+Description=The Archive des datations radiocarbones d'Afrique centrale (archive for radiocarbon datings from Central Africa, aDRAC) provides a catalogue of available radiocarbon dates from Central Africa. The data cover published radiocarbon dates and essential metadata for each date as well as available references.
+author=dirkseidensticker
+link=https://github.com/dirkseidensticker/aDRAC
+tags=Datasets, Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=aca_data_collection
+Description=collection of archaeological data for training purposes.
+author=archca
+link=https://github.com/archca/aca_data_collection
+tags=Datasets
+Category=
+
+Title=aion
+Description=Provides a system of classes and methods to represent and work with time-series.
+author=tesselle
+link=https://github.com/tesselle/aion
+tags=Chronological modelling
+Category=
+
+Title=alkahest
+Description=Pre-Processing XY Data from Experimental Methods.
+author=tesselle
+link=https://github.com/tesselle/alkahest
+tags=Statistical analysis
+Category=
+
+Title=allen-relations
+Description=Allen relations from Bayesian calibration: R function to compare two indefinite intervals produced by a Bayesian calibration using the Allen algebra.
+author=tsdye
+link=https://github.com/tsdye/allen-relations
+tags=Chronological modelling
+Category=
+
+Title=allen.archaeology
+Description=Allen's Interval Algebra for Archaeologists.
+author=tsdye
+link=https://github.com/tsdye/allen.archaeology
+tags=Statistical analysis
+Category=
+
+Title=anatolia-bibliography-map
+Description=The goal of this project is to spatially locate bibliographic resources regarding the archaeology of Anatolia (modern Turkey). This takes the bibliography of archaeology to the next level by showing not only the topics and authors, but where the archaeological research is being done.
+author=anatolian
+link=https://github.com/anatolian/anatolia-bibliography-map
+tags=Writing
+Category=
+
+Title=ancient-artifacts
+Description=Dynamic image analysis to identify ancient artifacts in soil samples.
+author=vanderbilt-data-science
+link=https://github.com/vanderbilt-data-science/ancient-artifacts
+tags=Shape recognition, Spatial analysis
+Category=
+
+Title=ancient-ceramic-kilns
+Description=GeoJSON files for ceramic kilns of the ancient world, no chronological/spatial boundaries
+author=steko
+link=https://codeberg.org/steko/ancient-ceramic-kilns
+tags=Datasets, Ceramic analysis
+Category=
+
+Title=anthroFun
+Description=Functions to help with the preprocessing steps in anthropological research.
+author=ElaineYChu
+link=https://github.com/ElaineYChu/anthroFun
+tags=Bits and bobs
+Category=
+
+Title=anthropmmd
+Description=An R package for Smith's Mean Measure of Divergence (MMD), with a graphical user interface, facilities for trait selection and graphical representations.
+author=frederic-santos
+link=https://github.com/frederic-santos/anthropmmd
+tags=Cultural evolution, Statistical analysis
+Category=
+
+Title=aoristAAR
+Description=A R package for the aoristic analysis of archaeological data.
+author=ISAAKiel
+link=https://github.com/ISAAKiel/aoristAAR
+tags=Chronological modelling
+Category=
+
+Title=aoristic
+Description=R package for aoristic analysis; the goal of aoristic is to make sense of temporally vague data.
+author=jerryratcliffe
+link=https://github.com/jerryratcliffe/aoristic
+tags=Chronological modelling
+Category=
+
+Title=aoristic-analysis
+Description=Estimate probabilities of find numbers per period.
+author=LimesLimits
+link=https://github.com/LimesLimits/aoristic-analysis
+tags=Statistical analysis
+Category=
+
+Title=archSeries
+Description=Frequency time-series tools for archaeology.
+author=davidcorton
+link=https://github.com/davidcorton/archSeries
+tags=Chronological modelling
+Category=
+
+Title=archaeo-CRF
+Description=Conditional Random Fields model for NER in Dutch Archaeology.
+author=alexbrandsen
+link=https://github.com/alexbrandsen/archaeo-CRF
+tags=Machine learning, Schemas and ontologies
+Category=
+
+Title=archaeo-db-workshop
+Description=Information and guidelines for a workshop about managing archaeological databases
+author=zackbatist
+link=https://github.com/zackbatist/archaeo-db-workshop
+tags=Educational resources and practical guides
+Category=
+
+Title=archaeological-SNA-R-demo
+Description=A quick demo of archaeological social network analysis in R
+author=deanthebox
+link=https://github.com/deanthebox/archaeological-S-R-demo
+tags=Educational resources and practical guides
+Category=
+
+Title=archaeological-fields-and-methods
+Description=A curated collection of archaeological disciplines, methods, and techniques, along with key resources for learning, research, and tools.
+author=jonaschlegel
+link=https://github.com/jonaschlegel/archaeological-fields-and-methods
+tags=Lists
+Category=
+
+Title=archaeological-object-sharing
+Description=An online space for sharing data, 3d models, etc about archaeological objects to enable the comparison of these objects.
+author=anatolian
+link=https://github.com/anatolian/archaeological-object-sharing
+tags=Platforms and publications
+Category=
+
+Title=archaeological-survey-location-collector
+Description=An app for use in archaeological field survey to collect high-accurate point locations, photographs, and other data.
+author=anatolian
+link=https://github.com/anatolian/archaeological-survey-location-collector
+tags=Site mapping
+Category=
+
+Title=archaeology
+Description=A directory of GitHub projects by OR for archaeologists.
+author=steko
+link=https://github.com/archaeology/archaeology
+tags=Lists
+Category=
+
+Title=archaeology-data-service
+Description=An app to collect data on archaeological objects.
+author=anatolian
+link=https://github.com/anatolian/archaeology-data-service
+tags=
+Category=
+
+Title=archaeology-grand-challenges.r
+Description=Sketch of a look at the 'grand challenges' of Kintigh et al. 2014.
+author=benmarwick
+link=https://gist.github.com/benmarwick/d3eb3167ccb2116197ca
+tags=
+Category=
+
+Title=archaeology-machine-learning
+Description=Machine learning techniques for archaeology.
+author=lakillo
+link=https://github.com/lakillo/archaeology-machine-learning
+tags=Lists, Machine learning
+Category=
+
+Title=archaeology-object-data-collector-app
+Description=archaeology-object-data-collector-app
+author=anatolian
+link=https://github.com/anatolian/archaeology-object-data-collector-app
+tags=Data management
+Category=
+
+Title=archaeology_on_wikipedia.R
+Description=How does wikipedia see archaeology?
+author=benmarwick
+link=https://gist.github.com/benmarwick/0d5e6526604e755b556f
+tags=Public archaeology
+Category=
+
+Title=archaeosrp
+Description=Read PDFs with archaeological site report information and return the information in the forms as a dataframe.
+author=seanbergin
+link=https://github.com/seanbergin/archaeosrp
+tags=Writing
+Category=
+
+Title=archchron
+Description=For handling archaeological chronological data.
+author=oliver.nakoinz
+link=https://gitlab.com/oliver.nakoinz/archchron
+tags=Chronological modelling
+Category=
+
+Title=archdata
+Description=The archdata package provides several types of data that are typically used in archaeological research
+author=David L. Carlson and Georg Roth
+link=https://cran.rstudio.com/web/packages/archdata/index.html
+tags=Datasets
+Category=
+
+Title=archeo-bertje
+Description=A Dutch BERT model for the Archaeology domain.
+author=alexbrandsen
+link=https://github.com/alexbrandsen/archeo-bertje
+tags=Machine learning, Schemas and ontologies
+Category=
+
+Title=archeoViz
+Description=A packaged R 'Shiny' application for the visualisation, interactive exploration, and web communication of archaeological spatial data.
+author=sebastien-plutniak
+link=https://github.com/sebastien-plutniak/archeoviz
+tags=Diagrams and visualizations, Spatial analysis, Site mapping
+Category=
+
+Title=archeoViz Portal
+Description=An R Shiny application to gather and map datasets visualised using the archeoViz application
+author=sebastien-plutniak
+link=https://github.com/sebastien-plutniak/archeoviz-portal
+tags=Platforms and publications, Data collection, Datasets
+Category=
+
+Title=archeofrag
+Description=R package for the analysis of the fragmentation of archeological objects.
+author=sebastien-plutniak
+link=https://github.com/sebastien-plutniak/archeofrag
+tags=Spatial analysis, Simulation, Statistical analysis
+Category=
+
+Title=arches
+Description=Arches is a web platform for creating, managing, & visualizing geospatial data. Arches was inspired by the needs of the Cultural Heritage community, particularly the widespread need of organizations to build & manage cultural heritage inventories.
+author=archesproject
+link=https://github.com/archesproject/arches
+tags=Data management
+Category=
+
+Title=arches-via-docker
+Description=Deployment of Arches via Docker for archaeology and related instruction.
+author=opencontext
+link=https://github.com/opencontext/arches-via-docker
+tags=Drivers and IO
+Category=
+
+Title=archiedb
+Description=A light-weight database application designed to standardize and simplify data entry of archaeological or historical artifacts
+author=archie
+link=https://github.com/archiedb/archie
+tags=Data management
+Category=
+
+Title=archstopmo
+Description=An Archaeology Stop Motion Movie Festival!
+author=shawngraham
+link=https://github.com/shawngraham/archstopmo
+tags=Public archaeology
+Category=
+
+Title=archvocab
+Description=The ArchVocab ontologies by Leif Isaksen
+author=steko
+link=https://github.com/archaeology/archvocab
+tags=Schemas and ontologies
+Category=
+
+Title=ark-addons
+Description=This is a Django project to obtain statistical information from an ARK project. It is aimed to mine data from archaeological databases and create customizable visualizations, querying both text and geographical data.
+author=fradeve
+link=https://github.com/fradeve/ark-addons
+tags=Data management
+Category=
+
+Title=arkhe
+Description=A Collection of R S4 Classes that Represent Archaeological Data.
+author=nfrerebeau and tesselle
+link=https://github.com/tesselle/arkhe
+tags=Schemas and ontologies
+Category=
+
+Title=arqueologiaSVG
+Description=Displays SVG files of archaeological sites.
+author=weberjavi
+link=https://github.com/weberjavi/arqueologiaSVG
+tags=Site mapping, Diagrams and visualizations
+Category=
+
+Title=arshm-release
+Description=Experimental mobile app demoing cultural heritage documentation tools in augmented reality. Supports capturing and annotating photos in 3D space. Proof-of-concept features in the app include image anchoring and surface drawing tools.
+author=zacharyliu
+link=https://github.com/zacharyliu/arshm-release
+tags=
+Category=
+
+Title=artefact-morpho.R
+Description=R code for converting B&W jpgs of artefact silhouettes to matrices and computing basic Elliptical Fourier statistics, including PCA and MANOVA.
+author=benmarwick
+link=https://gist.github.com/benmarwick/6260541
+tags=Shape recognition
+Category=
+
+Title=babylonian-hours
+Description=A digital clock which computes your local time in 'seasonal-hours'.
+author=willismonroe
+link=https://github.com/willismonroe/babylonian-hours
+tags=Simulation
+Category=
+
+Title=baorista
+Description=Provides a Bayesian inferential tool for analysing time-frequencies of archaeological events associated with time spans typically obtained from relative chronological sequences (e.g. periods and phases).
+author=ercrema
+link=https://github.com/ercrema/baorista
+tags=Chronological modelling, Data management
+Category=
+
+Title=baydem
+Description=Bayesian tools for reconstructing past demography.
+author=MichaelHoltonPrice and bocinsky
+link=https://github.com/eehh-stanford/baydem
+tags=Radiocarbon dating, calibration and sequencing, Palaeobotany
+Category=
+
+Title=benmarwickDY-XYZ-data-on-an-irregular-grid-to-an-interpolated-raster.r
+Description=Plotting remote sensing data, especially how to go from XYZ data on an irregular grid to an interpolated raster
+author=benmarwick
+link=https://gist.github.com/benmarwick/7331879
+tags=
+Category=
+
+Title=benmarwickopencontext.r
+Description=Experimenting with the opencontext.org API using R
+author=benmarwick
+link=https://gist.github.com/benmarwick/50aa4c39b7d955d0ec40
+tags=
+Category=
+
+Title=binford
+Description=Datasets used in Binford's 2001 book "Constructing Frames of Reference: An Analytical Method for Archaeological Theory Building Using Ethnographic and Environmental Data Sets
+author=benmarwick
+link=https://github.com/benmarwick/binford
+tags=Datasets
+Category=
+
+Title=bioanth
+Description=An R package that provides datasets useful for biological and forensic anthropology.
+author=geanes
+link=https://github.com/geanes/bioanth
+tags=Biological anthropology
+Category=
+
+Title=bleiglas
+Description=An R package that provides functions for 3D tessellation with Voro++ and subsequent horizontal cutting of the resulting polygons for 2D plotting. It was developed for archaeological spatiotemporal data, but may as well be used for other three dimensional contexts.
+author=nevrome and stschiff
+link=https://github.com/nevrome/bleiglas
+tags=Spatial analysis, 3D modelling
+Category=
+
+Title=c14
+Description=R package for tidy radiocarbon data.
+author=joeroe
+link=https://github.com/joeroe/c14
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=c14-date-extractor
+Description=Script for extracting c14 dates from text.
+author=alexbrandsen
+link=https://github.com/alexbrandsen/c14-date-extractor
+tags=Bits and bobs, Radiocarbon dating, calibration and sequencing, Writing
+Category=
+
+Title=c14-laboratory-code
+Description=List of all past and present radiocarbon laboratory codes known to have been used in published references.
+author=letreiro
+link=https://github.com/letreiro/c14-laboratory-code
+tags=Datasets, Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=c14Intervals
+Description=R package for calculating probability intervals and point estimates for calibrated radiocarbon dates.
+author=jallison7
+link=https://github.com/jallison7/c14Intervals
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=c14bazAAR
+Description=R package to query different openly accessible radiocarbon date databases, allowing for basic data cleaning, calibration and merging
+author=ISAAKiel
+link=https://github.com/ropensci/c14bazAAR
+tags=
+Category=
+
+Title=cTransmission
+Description=An Approximate Bayesian Computation Framework for inferring patterns of cultural transmission from frequency data.
+author=ercrema and Anne Kandler
+link=https://github.com/ercrema/cTransmission
+tags=Statistical analysis, Cultural evolution
+Category=
+
+Title=ca
+Description=R Script for Seriation Using Correspondence Analysis.
+author=mpeeples2008
+link=http://www.mattpeeples.net/ca.html
+tags=Statistical analysis, Seriation
+Category=
+
+Title=caa
+Description=Statistical methods for archaeological data analysis, course website repository.
+author=BernCoDALab
+link=https://github.com/BernCoDALab/caa
+tags=Educational resources and practical guides
+Category=
+
+Title=caa2019_halfway_house
+Description=This poster presents an approach that helps archaeological projects maintain an authoritative database, while retaining the flexibility and accessibility needed for ongoing research with multiple collaborators, by implementing a server-client architecture to maintain a single, consistent research database.
+author=joeroe
+link=https://github.com/joeroe/caa2019_halfway_house
+tags=Data management
+Category=
+
+Title=caddonet
+Description=Peer reviewed and indexed articles published on Caddo archaeology since 2000.
+author=aksel-blaise
+link=https://github.com/aksel-blaise/caddonet
+tags=Datasets, Bibliography
+Category=
+
+Title=calibrator
+Description=Small command line tool for 14C calibration.
+author=ISAAKiel
+link=https://github.com/ISAAKiel/calibrator
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=carbon14
+Description=The goal of carbon14 is to provide a tidy interface to radiocarbon dating, to promote its inclusion in reproducible manuscripts
+author=paleolimbot
+link=https://github.com/paleolimbot/carbon14
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=carbonara_poc
+Description=A proof of concept for a potential bayesian sequential calibration software.
+author=MartinHinz
+link=https://github.com/MartinHinz/carbonara_poc
+tags=Chronological modelling, Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=carbondate
+Description=R package to analyse multiple radiocarbon determinations.
+author=TJHeaton and sara-amira-alassam
+link=https://github.com/TJHeaton/carbondate
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=caribbean-14C
+Description=A compilation of anthropogenic radiocarbon dates for the Caribbean region.
+author=philriris
+link=https://github.com/philriris/caribbean-14C
+tags=Datasets, Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=cawd
+Description=An R package that collects together data for the ancient world
+author=sfsheath
+link=https://github.com/sfsheath/cawd
+tags=
+Category=
+
+Title=cca
+Description=Colossal Cave Adventure digital palaeography and epigraphy project.
+author=adreinhard
+link=https://github.com/adreinhard/cca
+tags=Games
+Category=
+
+Title=ceramic-computation
+Description=R scripts for digitizing, processing, analyzing, and comparing archaeological ceramic 2d profile drawings, photographs, and other data.
+author=anatolian
+link=https://github.com/anatolian/ceramic-computation
+tags=Shape recognition, Ceramic analysis
+Category=
+
+Title=charcoalhearths
+Description=Work with geotifs to detect charcoal hearths
+author=jeffblackadar
+link=https://github.com/jeffblackadar/charcoalhearths
+tags=
+Category=
+
+Title=cherish
+Description=Cherish is a tool that aids archaeologists and designers to represent historical, urban and archaeological structures and sites in 3D by means of image manipulation and sketching. Combine disparate data types such as photographs, illustrations, diagrams, text annotations, point cloud representation, etc, into a comprehensive 3D space, to make 3D sense of the data.
+author=vicrucann
+link=https://github.com/vicrucann/cherish
+tags=3D modelling
+Category=
+
+Title=chi-field-manual
+Description=A bookdown powered manual for the small scale cultural heritage organization looking to leverage various chi techniques for their own collections.
+author=XLabCU
+link=https://github.com/XLabCU/chi-field-manual
+tags=Educational resources and practical guides, Statistical analysis
+Category=
+
+Title=chrongler
+Description=Provides convenience functions that are helpful for working with archaeological or historical data, where chronological information is stored as a period.
+author=lsteinmann
+link=https://github.com/lsteinmann/chrongler
+tags=Chronological modelling, Data management
+Category=
+
+Title=chrono_spatial_modelling
+Description=This is an example implementation of chrono-spatial modelling of settlement activities.
+author=demjanp
+link=https://github.com/demjanp/chrono_spatial_modelling
+tags=Spatial analysis
+Category=
+
+Title=chronochrt
+Description=Building chronological charts easily with R.
+author=roset
+link=https://gitlab.com/roset/chronochrt
+tags=Chronological modelling
+Category=
+
+Title=chronologr
+Description=R package for chronological graph modelling (port of ChronoLog).
+author=joeroe
+link=https://github.com/joeroe/chronologr
+tags=Chronological modelling
+Category=
+
+Title=chronomodel
+Description=Chronological Modelling of Archaeological Data using Bayesian Statistics.
+author=Chronomodel
+link=https://github.com/Chronomodel/chronomodel
+tags=Chronological modelling
+Category=
+
+Title=chronos
+Description=Provides a system of classes and methods to represent and work with such time-series.
+author=tesselle
+link=https://github.com/tesselle/chronos
+tags=Chronological modelling
+Category=
+
+Title=chronup
+Description=Tools for chronological uncertainty propagation.
+author=wccarleton
+link=https://github.com/wccarleton/chronup
+tags=Chronological modelling, Statistical analysis
+Category=
+
+Title=civ5-prehistoric
+Description=Extends the game back millions years and multiple eras into the days when "man" first descended from the trees!
+author=carlosfhernandez
+link=https://github.com/carlosfhernandez/civ5-prehistoric
+tags=Games
+Category=
+
+Title=clam
+Description=A package for classical age-depth modelling of cores from deposits.
+author=Maarten14C
+link=https://github.com/Maarten14C/clam
+tags=Chronological modelling, Geophysical survey
+Category=
+
+Title=cleanc14
+Description=Provides some utility functions for cleaning radiocarbon data in R.
+author=joeroe
+link=https://github.com/joeroe/cleanc14
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=clustering_14C
+Description=A python implementation of the method of clustering radiocarbon dates in order to determine whether they represent separate events, or phases in time
+author=demjanp
+link=https://github.com/demjanp/clustering_14C
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=coffee
+Description=Uses Bayesian methods to enforce the chronological ordering of radiocarbon and other dates.
+author=Maarten14C
+link=https://github.com/Maarten14C/coffee
+tags=Chronological modelling, Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=course-guide
+Description=Guide with practical exercises for the MA course Agent-based modelling for archaeologists: From concept to application and publication.
+author=CoDArchLab-ABM and Andros-Spica
+link=https://github.com/CoDArchLab-ABM/course-guide
+tags=Educational resources and practical guides, Simulation
+Category=
+
+Title=cran-JSDNE
+Description=JSDNE is an age estimation methods with 3D reconstructed auricular surface.
+author=jisunjang19
+link=https://github.com/jisunjang19/cran-JSDNE
+tags=
+Category=
+
+Title=cranial-sex-estimation-code
+Description=Data analysis implementation for evaluating a novel sex estimation method based on skullanalyzer data.
+author=pr0m1th3as
+link=https://github.com/pr0m1th3as/cranial-sex-estimation-code
+tags=Biological anthropology, Zooarchaeology
+Category=
+
+Title=crom
+Description=Python library to make creation of CIDOC CRM easier by mapping classes/predicates to python objects.
+author=thegetty
+link=https://github.com/thegetty/crom
+tags=Schemas and ontologies
+Category=
+
+Title=crp2a
+Description=Dose Rate Estimation from In-Situ Gamma-Ray Spectrometry Measurements for Luminescence Dating
+author=gamma
+link=https://github.com/crp2a/gamma
+tags=Luminescence dating
+Category=
+
+Title=ctv-archaeology
+Description=This CRAN Task View contains a list of packages useful for scientific work in Archaeology.
+author=benmarwick
+link=https://github.com/benmarwick/ctv-archaeology
+tags=Lists
+Category=
+
+Title=currycarbon
+Description=App to run C14 calibration on the command line. Includes and is based on a calibration module written in and for Haskell.
+author=nevrome
+link=https://github.com/nevrome/currycarbon
+tags=Radiocarbon dating, calibration and sequencing, Chronological modelling
+Category=
+
+Title=dateback
+Description=A platform for the exploration and analysis of date palm archaeobotanical remains.
+author=Margot Besseiche
+link=https://forge.ird.fr/diade/besseiche/dateback
+tags=Palaeobotany
+Category=
+
+Title=datplot
+Description=Converting date ranges into dating 'steps' eases the visualization of changes in e.g. pottery consumption, style and other variables over time. This package provides tools to process and prepare data for visualization.
+author=lsteinmann and Barbora Weissova
+link=https://github.com/lsteinmann/datplot
+tags=Chronological modelling
+Category=
+
+Title=dayofarchaeology
+Description=A Distant Reading of the Day of Archaeology
+author=benmarwick
+link=https://github.com/benmarwick/dayofarchaeology
+tags=Public archaeology
+Category=
+
+Title=dayofarchaeology
+Description=export of posts from dayofarchaeology.com
+author=drmattlaw
+link=https://github.com/drmattlaw/dayofarchaeology
+tags=Public archaeology
+Category=
+
+Title=dedalo
+Description=Dedalo is a knowledge management system for Cultural Heritage (tangible and intangible), Natural Heritage and Oral History/Memory.
+author=renderpci
+link=https://github.com/renderpci/dedalo
+tags=Data management
+Category=
+
+Title=demjanp
+Description=Radiocarbon Dating Resolution Calculator.
+author=demjanp
+link=https://github.com/demjanp/Res14C
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=dendroNetwork
+Description=Enables researchers to easily construct a network of dendrochronological series based on the similarity and find patterns of matching tree-ring material.
+author=ropensci and RonaldVisser
+link=https://github.com/ropensci/dendroNetwork/
+tags=Dendrochronology, Chronological modelling
+Category=
+
+Title=diamond
+Description=A collection diamond open access archaeology journals.
+author=open-archaeo
+link=https://github.com/open-archaeo/diamond
+tags=Platforms and publications, Writing
+Category=
+
+Title=digging.digital.data
+Description=Various legacy archaeology datasets for use as practical pedagogical case studies.
+author=chrinne
+link=https://github.com/chrinne/digging.digital.data
+tags=Educational resources and practical guides, Datasets
+Category=
+
+Title=dimensio
+Description=Simple Principal Components Analysis (PCA) and Correspondence Analysis (CA) based on the Singular Value Decomposition (SVD). This package provides S4 classes and methods to compute, extract, summarize and visualize results of multivariate data analysis. It also includes methods for partial bootstrap validation.
+author=nfrerebeau and tesselle
+link=https://github.com/tesselle/dimensio
+tags=Statistical analysis
+Category=
+
+Title=disastermap
+Description=Proof of concept map for disaster response and archaeology
+author=aejolene
+link=https://github.com/aejolene/disastermap
+tags=Public policy and civic action
+Category=
+
+Title=dplR
+Description=Perform tree-ring analyses such as detrending, chronology building, and crossdating.
+author=AndyBunn
+link=https://github.com/AndyBunn/dplR
+tags=Dendrochronology, Chronological modelling
+Category=
+
+Title=ede_interpolation
+Description=A QGIS 3 plugin for spatio-temporal interpolation of archaeological settlement evidence.
+author=demjanp
+link=https://github.com/demjanp/ede_interpolation
+tags=Spatial analysis
+Category=
+
+Title=elemSource
+Description=R Package for sourcing elements.
+author=bischrob
+link=https://github.com/bischrob/elemSource
+tags=X-Ray Fluorescence
+Category=
+
+Title=era
+Description=R package for year-based time scales
+author=joeroe
+link=https://github.com/joeroe/era
+tags=Schemas and ontologies
+Category=
+
+Title=eratosthenes
+Description=Provides a coherent foundation for archaeological chronology-building by incorporating, computationally, all relevant sources of information on uncertain archaeological or historical dates.
+author=scollinselliott
+link=https://github.com/scollinselliott/eratosthenes
+tags=Chronological modelling
+Category=
+
+Title=ethnobotanyR
+Description=R package for calculating quantitative ethnobotany indices.
+author=CWWhitney
+link=https://github.com/CWWhitney/ethnobotanyR
+tags=Palaeobotany
+Category=
+
+Title=evoarchdata
+Description=Datasets from studies of cultural evolution in Archaeology
+author=benmarwick
+link=https://github.com/benmarwick/evoarchdata
+tags=Datasets, Cultural evolution
+Category=
+
+Title=expotime
+Description=What is the correlation between the exposure time of your photographs and the time of the day?
+author=steko
+link=https://codeberg.org/steko/expotime
+tags=Photography
+Category=
+
+Title=fabryka
+Description=Shiny app fabric analysis.
+author=marchaeologist
+link=https://github.com/marchaeologist/fabryka
+tags=Site mapping, Spatial analysis
+Category=
+
+Title=fastmaRching
+Description=An R implementation of the Fast Marching Method (FMM), first developed by Sethian (1996), with the modifications of Silva and Steele (2012, 2014). Also included is a spatial wrapper function that makes it easier to model dispersal scenarios in geospatial domains, as originally envisaged for the study and simulation of prehistoric dispersals
+author=f-silva-archaeo
+link=https://github.com/f-silva-archaeo/fastmaRching
+tags=Spatial analysis
+Category=
+
+Title=fellingDateR
+Description=Compute and combine felling date estimates for historical tree-ring series with (incomplete) sapwood.
+author=hanecakr
+link=https://github.com/hanecakr/fellingDateR
+tags=Chronological modelling, Dendrochronology
+Category=
+
+Title=field-photographs
+Description=Android apps for archaeology that enable photography during field work.
+author=anatolian
+link=https://github.com/anatolian/field-photographs
+tags=Site mapping
+Category=
+
+Title=fieldwalkr
+Description=Spatial Sampling and Survey Simulation Tools.
+author=joeroe
+link=https://github.com/joeroe/fieldwalkr
+tags=Site mapping
+Category=
+
+Title=folio
+Description=Datasets for teaching quantitative approaches and modeling in archaeology and paleontology. This package provides several types of data related to broad topics (cultural evolution, radiocarbon dating, paleoenvironments, etc.), which can be used to illustrate statistical methods in the classroom (multivariate data analysis, compositional data analysis, diversity measurement, etc.).
+author=nfrerebeau and tesselle
+link=https://github.com/tesselle/folio
+tags=Educational resources and practical guides
+Category=
+
+Title=folio
+Description=Datasets for Teaching Archaeology and Palaeontology.
+author=tesselle
+link=https://github.com/tesselle/folio
+tags=Datasets, Educational resources and practical guides
+Category=
+
+Title=geoCore
+Description=Constructs a graphical representation of petrographic drilling profiles.
+author=Gerrit Bette and Moritz Mennenga
+link=https://github.com/t-systems-on-site-services-gmbh/geoCore
+tags=Diagrams and visualizations
+Category=
+
+Title=gia
+Description=This course provides a basic introduction to the archaeological use of GIS, focusing on the techniques for spatial data collection, management, and visualization, as well as key analysis tools.
+author=BernCoDALab and MartinHinz
+link=https://github.com/BernCoDALab/gia
+tags=Educational resources and practical guides, Spatial analysis
+Category=
+
+Title=gitMuseum
+Description=A repository listing Museums active on GitHub, written in Rstats.
+author=BritishMuseum
+link=https://github.com/BritishMuseum/gitMuseum
+tags=Lists
+Category=
+
+Title=gods_on_the_barge
+Description=Inspired by the research project of historiography of ancient Graeco-Roman religions, the main goal is to spread a selected cult successfully across the ancient Mediterranean
+author=adammertel
+link=https://github.com/adammertel/gods-on-the-barge
+tags=Games
+Category=
+
+Title=gorbit
+Description=Making the freely available and excellent Orbis data just a little bit more easy to use.
+author=sfsheath
+link=https://github.com/sfsheath/gorbit
+tags=Datasets
+Category=
+
+Title=grass-arch
+Description=A LaTeX textbook devoted to explain how archaeologists can work with GRASS GIS
+author=fradeve
+link=https://github.com/fradeve/grass-arch
+tags=Educational resources and practical guides
+Category=
+
+Title=hammurabi-markov
+Description=Simple VueJS page generating fake laws of Hammurabi.
+author=willismonroe
+link=https://github.com/willismonroe/hammurabi-markov
+tags=Simulation, Literary analysis and epigraphy
+Category=
+
+Title=harris-matrix
+Description=Write Graphviz dot files for archaeological sequence diagrams and Bayesian chronological models.
+author=tsdye
+link=https://github.com/tsdye/harris-matrix/
+tags=Harris matrix
+Category=
+
+Title=harris-matrix
+Description=Harris Matrix Visualization for the web using D3 + KLayJS-D3.
+author=semerj
+link=https://github.com/semerj/harris-matrix
+tags=Harris matrix
+Category=
+
+Title=harris-matrix-data-package
+Description=A Data Package specification for archaeological stratigraphy data following the Harris Matrix convention.
+author=steko
+link=https://codeberg.org/steko/harris-matrix-data-package
+tags=Harris matrix, Schemas and ontologies
+Category=
+
+Title=harris2graph
+Description=harris2graph is a script to help migrate data from the LST file format used by the BASP Harris, Stratify and ArchEd packages into modern graph file formats.
+author=L-P Archaeology
+link=https://github.com/lparchaeology/harris2graph/
+tags=Harris matrix
+Category=
+
+Title=heurist
+Description=A web-based data management infrastructure that allows researchers to design, create, manage, analyse and publish their own richly-structured database(s) through a simple web interface, without the need for programmers or consultants.
+author=HeuristNetwork
+link=https://github.com/HeuristNetwork/heurist
+tags=Data management
+Category=
+
+Title=historical-geocoding-assistant
+Description=Tool for assisted geocoding of historical datasets (something between a manual table editing and automated geocoding script)
+author=adammertel
+link=https://github.com/adammertel/historical-geocoding-assistant
+tags=Data management
+Category=
+
+Title=hsv-api
+Description=Historical Street View API
+author=openhistorymap
+link=https://github.com/openhistorymap/hsv-api
+tags=Site mapping, Public archaeology, Drivers and IO
+Category=
+
+Title=iDAI.field
+Description=The German Archaeological Institute's (DAI) new take on a field research documentation system. Combining features of GIS, photo management, and database management systems in a unique and integrating manner, it aims at facilitating archaeological workflows by reducing the overhead of using multiple systems. Developed in-house by the DAI's information technology department, it targets primarily the needs of the institute's excavations, older ones as well as those to come. Yet, due to the nature of its adjustable data model and the fact it is open source software, any interested third party is free to reuse and adjust it to their needs.
+author=daiinst
+link=https://github.com/dainst/idai-field
+tags=Data management
+Category=
+
+Title=iconr
+Description=Set of formal methods for studying archaeological iconographic datasets (rock-art, pottery decoration, stelae, etc.) using network and spatial analysis.
+author=zoometh, josempozo and Craig Alexander
+link=https://github.com/zoometh/iconr
+tags=Iconography
+Category=
+
+Title=idaifieldR
+Description=The goal of idaifieldR is to flexibly get data from the idaifield database into R.
+author=lsteinmann
+link=https://github.com/lsteinmann/idaifieldR
+tags=
+Category=
+
+Title=inclusions
+Description=Shortcodes to describe inclusions in ceramic bodies.
+author=steko
+link=https://codeberg.org/steko/inclusions
+tags=Schemas and ontologies, Ceramic analysis
+Category=
+
+Title=ishtar
+Description=Ishtar is a database project for managing archaeological data and documentation from archaeological operations, that prioritizes maximum traceability of the information. Designed to enable inter-database communication, the Ishtar project aims rather to a distributed information model than a centralized one: communication between the databases is favored.
+author=iggdrasil
+link=https://gitlab.com/iggdrasil/ishtar
+tags=Data management
+Category=
+
+Title=isopleuros
+Description=Ternary plots made simple.
+author=tesselle
+link=https://github.com/tesselle/isopleuros
+tags=Diagrams and visualizations
+Category=
+
+Title=italy-3d-amphitheaters
+Description=3D amphitheatres.
+author=sfsheath
+link=https://github.com/sfsheath/italy-3d-amphitheaters
+tags=3D modelling
+Category=
+
+Title=ithaca
+Description=Restoring and attributing ancient texts using deep neural networks.
+author=deepmind
+link=https://github.com/deepmind/ithaca
+tags=Literary analysis and epigraphy, Shape recognition
+Category=
+
+Title=joint-disease-tool
+Description=Interactively guides the user through a number of questions, ending in a specific pathology diagnosis.
+author=alexbrandsen
+link=https://github.com/alexbrandsen/joint-disease-tool
+tags=Biological anthropology
+Category=
+
+Title=kairos
+Description=Analysis of Chronological Patterns from Archaeological Count Data.
+author=nfrerebeau and tesselle
+link=https://github.com/tesselle/kairos
+tags=Chronological modelling
+Category=
+
+Title=kart4arch
+Description=Tutorial to drive step by step any practitioner interested in learning how to use Kart.
+author=UnitoAssyrianGovernance, andreatitolo and apalmisano82
+link=https://github.com/UnitoAssyrianGovernance/kart4arch
+tags=Data management, Educational resources and practical guides
+Category=
+
+Title=katun
+Description=Tools for converting between Maya and Western calendars.
+author=jgregoriods
+link=https://github.com/jgregoriods/katun
+tags=Chronological modelling
+Category=
+
+Title=khroma
+Description=Colour Schemes for Archaeological Data Visualization
+author=nfrerebeau and tesselle
+link=https://github.com/tesselle/khroma
+tags=Diagrams and visualizations
+Category=
+
+Title=kidstats
+Description=Shiny application that provides subadult age estimations based on dental and skeletal development and skeletal diaphyseal metrics using pre-optimized mixed cumulative probit models.
+author=ElaineYChu
+link=https://github.com/ElaineYChu/kidstats
+tags=Biological anthropology
+Category=
+
+Title=kotyle
+Description=Calculate the capacity of a ceramic vessel, like an amphora.
+author=iosa
+link=https://codeberg.org/steko/kotyle
+tags=
+Category=
+
+Title=kriging
+Description=Codes for performing kriging for ethnographic and archaeological data.
+author=cl379
+link=https://github.com/cl379/kriging
+tags=Statistical analysis
+Category=
+
+Title=lakhesis
+Description=Provides an interactive platform and critical measures for seriating binary data matrices through the exploration, selection, and consensus of partially seriated sequences.
+author=scollinselliott
+link=https://github.com/scollinselliott/lakhesis
+tags=Statistical analysis
+Category=
+
+Title=leastcostpath
+Description=Provides the functionality to calculate Least Cost Paths (LCPs) which are often, but not exclusively, used in archaeological research. This package can be used to apply multiple cost functions when approximating the difficulty of moving across a landscape, as well as taking into account traversing across slope and other costs such as landscape features. This package also provides functionality to validate the accuracy of the computed LCP relative to another path.
+author=josephlewis
+link=https://github.com/josephlewis/leastcostpath
+tags=Spatial analysis
+Category=
+
+Title=lecAAR
+Description=Tool for calculating the largest empty circles and estimation of archaeological sites theoretically to be expected in region of interest, an implementation of the method published by Andreas Zimmermann and Karl Peter Wendt (2003).
+author=yesdavid, nevrome, nmueller18, whamer and dakni
+link=https://github.com/ISAAKiel/lecAAR
+tags=Statistical analysis, Spatial analysis
+Category=
+
+Title=levant-zooarch
+Description=Table of faunal analyses from archaeological sites in the Levant.
+author=sarahkansa
+link=https://github.com/sarahkansa/levant-zooarch
+tags=Lists
+Category=
+
+Title=lithic3dslicer
+Description=.obj slicing for lithic 3d morphometrics.
+author=kotdijian
+link=https://github.com/kotdijian/lithic3dslicer
+tags=
+Category=
+
+Title=long-bone-diaphyseal-CSG-Toolkit
+Description=A GNU Octave toolkit for analyzing diaphyseal long bone cross sectional geometry.
+author=pr0m1th3as
+link=https://github.com/pr0m1th3as/long-bone-diaphyseal-CSG-Toolkit
+tags=Biological anthropology, Zooarchaeology
+Category=
+
+Title=maacgis
+Description=Climate Response and Virginia Archaeology: Maps from Different Points of View
+author=aejolene
+link=https://github.com/aejolene/maacgis
+tags=Public policy and civic action
+Category=
+
+Title=mafa
+Description=Computes morphological indices of spatial entities (e.g. parcels, buildings).
+author=JGravier
+link=https://github.com/JGravier/mafa
+tags=Spatial analysis
+Category=
+
+Title=magAAR
+Description=Analyse geomagnetic data from archaeological context
+author=ISAAKiel
+link=https://github.com/ISAAKiel/magAAR
+tags=Geophysical survey
+Category=
+
+Title=map-of-Ancient-Egypt
+Description=Known pyramids of Ancient Egypt using python + OpenStreetMap.
+author=LSIND
+link=https://github.com/LSIND/map-of-Ancient-Egypt
+tags=Datasets
+Category=
+
+Title=marbleplan
+Description=Loading a Marble Plan fragment.
+author=rybesh
+link=https://github.com/rybesh/marbleplan
+tags=3D modelling, Educational resources and practical guides
+Category=
+
+Title=maya-calendar
+Description=Tools for converting between Maya and Western calendars.
+author=jgregoriods
+link=https://github.com/jgregoriods/maya-calendar
+tags=Chronological modelling
+Category=
+
+Title=meshlab
+Description=These tools are meant to help you render orthographic views of 3D models for archaeological publication by simplifying, segmenting, cleaning and rendering 3D meshes.
+author=KevinCain
+link=https://github.com/KevinCain/meshlab
+tags=3D modelling
+Category=
+
+Title=missing
+Description=You have a sequence of numbered items and want to check if any are missing.
+author=steko
+link=https://codeberg.org/steko/missing
+tags=Bits and bobs
+Category=
+
+Title=mobest
+Description=An R package that provides types and functions for spatiotemporal interpolation of human genetic ancestry components, probabilistic similarity search and the calculation of a derived measure for mobility estimation.
+author=nevrome
+link=https://github.com/nevrome/mobest
+tags=
+Category=
+
+Title=morphalr
+Description=Morphological analysis for archaeology.
+author=JGravier
+link=https://github.com/JGravier/morphalr
+tags=Spatial analysis
+Category=
+
+Title=morphotype
+Description=Provide a pipeline from shape data extraction to typological arrangement of pottery profiles.
+author=kafetzakid
+link=https://github.com/kafetzakid/morphotype
+tags=
+Category=
+
+Title=morphotypeShiny
+Description=Shiny implementation of morphotype.
+author=kafetzakid
+link=https://github.com/kafetzakid/morphotypeShiny
+tags=
+Category=
+
+Title=mortAAR
+Description=Analysis of Archaeological Mortality Data.
+author=ISAAKiel
+link=https://github.com/ISAAKiel/mortAAR
+tags=Zooarchaeology
+Category=
+
+Title=munsell
+Description=Provides easy access to, and manipulation of, the Munsell colours
+author=cwickham
+link=https://github.com/cwickham/munsell/
+tags=Diagrams and visualizations
+Category=
+
+Title=munsell-plot.R
+Description=Make a stratigraphic-style plot-schematic of sediment colour using munsell values
+author=benmarwick
+link=https://gist.github.com/benmarwick/f32cbc2fe7297ec9f276b52c118a249a
+tags=Diagrams and visualizations
+Category=
+
+Title=murature
+Description=This Python library was written as an help for the study of stone walls, mainly through the quantitative analysis of spatial dimensions of stones.
+author=steko and iosa
+link=https://codeberg.org/steko/murature
+tags=Shape recognition
+Category=
+
+Title=nearpresence
+Description=Implements Near Presence Cluster Analysis, a statistical method for identifying spatial clustering within presence / absence data observed in irregularly distributed areal observation units.
+author=eweaverdyck
+link=https://github.com/eweaverdyck/nearpresence
+tags=Statistical analysis, Spatial analysis
+Category=
+
+Title=neiman1995
+Description=R Shiny Document - Visualizing model functions in Neimans 'Stylistic variation in evolutionary perspective' with an interactive document.
+author=nevrome
+link=https://github.com/nevrome/neiman1995
+tags=Educational resources and practical guides, Cultural evolution
+Category=
+
+Title=neolithicR
+Description=Shiny app to search and filter radiocarbon dates from various source databases, based on the R package c14bazAAR.
+author=nevrome and dirkseidensticker
+link=https://github.com/nevrome/neolithicR
+tags=
+Category=
+
+Title=neonet
+Description=NeoNet serves as a framework to study the transition from the Late Mesolithic to the Early Neolithic through spatio-temporal modeling of radiocarbon dates
+author=zoometh
+link=https://github.com/zoometh/neonet
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=neotoma
+Description=Programmatic R interface to the Neotoma Paleoecological Database
+author=ropensci
+link=https://github.com/ropensci/neotoma
+tags=
+Category=
+
+Title=nervia
+Description=Management system for physical storage of archaeological finds
+author=steko
+link=https://github.com/steko/nervia
+tags=Data management
+Category=
+
+Title=nexus
+Description=Sourcing Archaeological Materials by Chemical Composition.
+author=nfrerebeau, Anne Philippe and tesselle
+link=https://github.com/tesselle/nexus
+tags=X-Ray Fluorescence
+Category=
+
+Title=nimbleCarbon
+Description=The nimbleCarbon package provides utility functions and bespoke probability distributions for the Bayesian analyses of radiocarbon dates using the NIMBLE framework. The package is particularly dedicated to demographic inferences based on changing frequencies of radiocarbon dates.
+author=ercrema
+link=https://github.com/ercrema/nimbleCarbon
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=non-metric-trait-analysis
+Description=A set of GNU Octave functions for biodistance analysis based on non-metric traits.
+author=pr0m1th3as
+link=https://github.com/pr0m1th3as/non-metric-trait-analysis
+tags=Biological anthropology, Zooarchaeology
+Category=
+
+Title=nonekXML
+Description=Exchange data format (XML) for NoNeK (NordmitteleuropÃ¤ische Neolithische Keramik).
+author=MoritzMennenga and chrinne
+link=https://github.com/ISAAKiel/nonekXML
+tags=Schemas and ontologies
+Category=
+
+Title=open-archaeo
+Description=A list of open source archaeological software and resources.
+author=zackbatist
+link=https://github.com/zackbatist/open-archaeo
+tags=Lists
+Category=
+
+Title=open-context-py
+Description=This project represents the current evolution of Open Context. It's intended to be an easier to maintain code-base, and to make the data published by Open Context easier to maintain.
+author=ekansa
+link=https://github.com/ekansa/open-context-py
+tags=Platforms and publications
+Category=
+
+Title=opencontext
+Description=An R API client for the Open Context archaeological data repository.
+author=ropensci
+link=https://github.com/ropensci/opencontext
+tags=
+Category=
+
+Title=osl_calibration.r
+Description=osl_calibration
+author=benmarwick
+link=https://gist.github.com/benmarwick/5f996a0f52ba1d92f76968119f941bd8
+tags=Luminescence dating
+Category=
+
+Title=osteoGIS
+Description=Plot data on skeletal templates quickly
+author=davidcorton
+link=https://github.com/davidcorton/osteoGIS
+tags=Diagrams and visualizations
+Category=
+
+Title=osteometric-sorting
+Description=Tools for osteometric sorting of human remains.
+author=pr0m1th3as
+link=https://github.com/pr0m1th3as/osteometric-sorting
+tags=Biological anthropology, Zooarchaeology
+Category=
+
+Title=outlineR
+Description=An R package to derive outline shapes from (multiple) artefacts on JPEG images.
+author=yesdavid
+link=https://github.com/yesdavid/outlineR
+tags=
+Category=
+
+Title=outliner
+Description=A simple app for tracing outlines of an irregular shape and exporting the coordinates of the outline.
+author=benmarwick
+link=https://github.com/benmarwick/outliner
+tags=
+Category=
+
+Title=oxcAAR
+Description=A collection of functions that can be used to execute OxCal from within R.
+author=MartinHinz, nevrome, dakni and ctietze91
+link=https://github.com/ISAAKiel/oxcAAR
+tags=Radiocarbon dating, calibration and sequencing, Chronological modelling
+Category=
+
+Title=p2pPerm
+Description=A function for retrieving metrics for resistance-resilience from rcarbon permTest objects.
+author=philriris
+link=https://github.com/philriris/p2pPerm
+tags=Radiocarbon dating, calibration and sequencing, Statistical analysis
+Category=
+
+Title=p3k14c
+Description=Global archaeological radiocarbon dataset
+author=people3k
+link=https://github.com/people3k/p3k14c
+tags=Radiocarbon dating, calibration and sequencing, Datasets
+Category=
+
+Title=p3k14c-data-scrubbing
+Description=Scrubbing program for the global archaeological radiocarbon dataset
+author=people3k
+link=https://github.com/people3k/p3k14c-data-scrubbing
+tags=Radiocarbon dating, calibration and sequencing, Data management
+Category=
+
+Title=pXRF
+Description=R package for processing pXRF data.
+author=MartinHinz
+link=https://github.com/MartinHinz/pXRF
+tags=X-Ray Fluorescence
+Category=
+
+Title=paleocar
+Description=An R package implementing functions to perform spatio-temporal paleoclimate reconstruction from tree-rings using the CAR (Correlation Adjusted corRelation) approach of Zuber and Strimmer.
+author=bocinsky
+link=https://github.com/bocinsky/paleocar
+tags=Palaeobotany, Statistical analysis
+Category=
+
+Title=paleocore
+Description=Towards a data standard for paleoanthropology.
+author=paleocore
+link=https://github.com/paleocore/paleocore-retired
+tags=Platforms and publications
+Category=
+
+Title=paleocoreR
+Description=R package for interacting with the Paleocore API
+author=paleocore
+link=https://github.com/paleocore/paleocoreR
+tags=
+Category=
+
+Title=paleofire
+Description=An R package to analyse sedimentary charcoal records from the Global Charcoal Database to reconstruct past biomass burning
+author=oblarquez
+link=https://github.com/oblarquez/paleofire
+tags=
+Category=
+
+Title=paleographic-networks
+Description=Explore networks consisting of paleographic features connected by their co-occurrence on the same inscription.
+author=Eythan31
+link=https://github.com/Eythan31/paleographic-networks
+tags=Iconography
+Category=
+
+Title=paleoxrf
+Description=The goal of paleoxrf is to simplify reading data from Acadia's paleoenvironmental X-Ray Fluorescence laboratory
+author=paleolimbot
+link=https://github.com/paleolimbot/paleoxrf
+tags=X-Ray Fluorescence
+Category=
+
+Title=pastclim
+Description=Methods to easily extract and manipulate palaeoclimate reconstructions for ecological and anthropological analyses.
+author=EvolEcolGroup, Michela Leonardi, Emily Y. Hallet, Robert Beyer and Mario Krapp
+link=https://github.com/EvolEcolGroup/pastclim/
+tags=Simulation, Palaeoclimate modelling
+Category=
+
+Title=pathAAR
+Description=R Package to reconstruct paths using archaeological monuments, model parameters of infrastructure and evaluate those parameters, model parameters of infrastructure and evaluate those parameters.
+author=ISAAKiel
+link=https://github.com/ISAAKiel/pathAAR
+tags=Spatial analysis
+Category=
+
+Title=pdf-to-nested-xml
+Description=Script to convert a folder of Dutch archaeological reports (PDFs) to XML files nested by section, chapter, heading.
+author=alexbrandsen
+link=https://github.com/alexbrandsen/pdf-to-nested-xml
+tags=Bits and bobs, Writing
+Category=
+
+Title=pe-dictionary
+Description=Proto-Elamite sign list.
+author=willismonroe
+link=https://github.com/willismonroe/pe-dictionary
+tags=Datasets, Literary analysis and epigraphy
+Category=
+
+Title=photogrammetry-object-scannner
+Description=Created for the very-specific purpose of communicating via android with a raspberry pi running a scanner.
+author=anatolian
+link=https://github.com/anatolian/photogrammetry-object-scannner
+tags=Photogrammetry
+Category=
+
+Title=photogrammetry_datasets
+Description=This is a collection of datasets for photogrammetry.
+author=culturalheritageimaging
+link=https://github.com/natowi/photogrammetry_datasets
+tags=Photogrammetry
+Category=
+
+Title=piwigo-3dhop
+Description=Piwigo plugin for viewing 3D models using 3DHOP.
+author=joeroe
+link=https://github.com/joeroe/piwigo-3dhop
+tags=3D modelling
+Category=
+
+Title=pleiades.datasets
+Description=Platform-independent versions of Pleiades gazetteer data.
+author=isawnyu
+link=https://github.com/isawnyu/pleiades.datasets
+tags=Datasets
+Category=
+
+Title=pollen_data_processing
+Description=some tools in respect to pollen data processing.
+author=MartinHinz
+link=https://github.com/MartinHinz/pollen_data_processing
+tags=Palaeobotany
+Category=
+
+Title=pollencount
+Description=This simulation tool aims to help students and researchers to start to see what pollen looks like under the microscope, and start to identify common pollen grains.
+author=Maarten14C
+link=https://github.com/Maarten14C/pollencount
+tags=Palaeobotany, Educational resources and practical guides
+Category=
+
+Title=poseidon-framework
+Description=Poseidon is a framework that seeks to provide standardized ways to store and share archaeogenetic, and perhaps more broadly, molecular archaeological datasets.
+author=poseidon-framework
+link=https://github.com/poseidon-framework/poseidon-hs
+tags=Schemas and ontologies
+Category=
+
+Title=postAAR
+Description=An automated process to detect buildings within large sets of postholes in multi-occupational sites, similar to the obsolete Windows-software "posthole" by Irwin Scollar.
+author=nmueller18 and chrinne
+link=https://github.com/ISAAKiel/postAAR
+tags=Shape recognition
+Category=
+
+Title=postAAR-python
+Description=Python implementation of postAAR.
+author=chrinne and WerthersEchte
+link=https://github.com/ISAAKiel/postAAR-python
+tags=Shape recognition
+Category=
+
+Title=pred_map_tut
+Description=A tutorial for (archaeological) predictive mapping using r
+author=archca
+link=https://github.com/archca/pred_map_tut
+tags=Educational resources and practical guides
+Category=
+
+Title=predictSource
+Description=A package to analyze data used to determine whether samples from multiple sources can be separated, to predict the sources of samples from unknown sources, and to evaluation the validity of those predictions. Sample data can include both quantitative and qualitative data. The package includes functions for creating an analysis file from multiple files and exploratory data analysis, as well as multivariate statistical methods to determine source separation, predict sources of unknown samples, and evaluate the validity of the predictions (principal components, classification trees, and random forests).
+author=benmarwick
+link=https://github.com/benmarwick/predictSource
+tags=Statistical analysis
+Category=
+
+Title=profileAAR
+Description=python qgis plugin of recexcavAAR's archprofile
+author=ISAAKiel
+link=https://github.com/ISAAKiel/profileAAR
+tags=Data management
+Category=
+
+Title=pta_data
+Description=An open access digital archive of antique Christian texts.
+author=PatristicTextArchive
+link=https://github.com/PatristicTextArchive/pta_data
+tags=Literary analysis and epigraphy, Datasets
+Category=
+
+Title=pyArchInit
+Description=A python plugin for QGIS aimed at managing data from archaeological contexts on the GIS platform
+author=pyarchinit
+link=https://sites.google.com/site/pyarchinit/
+tags=Data management
+Category=
+
+Title=pygeoroc
+Description=Python library to access data in the GEOROC database.
+author=potafu
+link=https://github.com/pofatu/pygeoroc
+tags=Drivers and IO, Geoarchaeology, Datasets
+Category=
+
+Title=pypofatu
+Description=A python package to curate Pofatu data.
+author=pofatu
+link=https://github.com/pofatu/pypofatu
+tags=Drivers and IO, Geoarchaeology, Datasets
+Category=
+
+Title=qrcode-storage
+Description=Scripts to create QR-Code images for storage boxes. Each box has an associated web page describing its content, and the QR-Code serves as a short-link from the physical object to the web page.
+author=steko
+link=https://codeberg.org/steko/qrcode-storage
+tags=Bits and bobs
+Category=
+
+Title=quantAAR
+Description=R Library for Quantitative Analysis in Archaeology.
+author=ISAAKiel
+link=https://github.com/ISAAKiel/quantAAR
+tags=Statistical analysis
+Category=
+
+Title=quantatools
+Description=Finding quantum in archaeological data using cosine quantogram and related statistical methods.
+author=maciejkasinski
+link=https://github.com/maciejkasinski/quantatools
+tags=Statistical analysis
+Category=
+
+Title=quantum-archeo
+Description=Set of quantitative tools for finding a common measurement unit (quantum) in archeological research.
+author=maciejkasinski
+link=https://github.com/maciejkasinski/quantum-archeo
+tags=Statistical analysis
+Category=
+
+Title=racisminarchy
+Description=Contains data and R code for our article on computational text analysis of racism in archaeology.
+author=parkgayoung
+link=https://github.com/parkgayoung/racisminarchy
+tags=Datasets, Ethics and professional development
+Category=
+
+Title=radiocarbon-scrapers
+Description=Scrapers for public radiocarbon databases
+author=steko
+link=https://codeberg.org/steko/radiocarbon-scrapers
+tags=
+Category=
+
+Title=radon
+Description=Backend for one of the largest 14C-Database online.
+author=ISAAKiel
+link=https://github.com/ISAAKiel/radon
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=ramphs
+Description=Roman amphitheater data as R package
+author=sfsheath
+link=https://github.com/sfsheath/ramphs
+tags=Datasets
+Category=
+
+Title=rapanui-radiocarbon
+Description=A repository of radiocarbon data for Rapa Nui.
+author=clipo and rdinapoli
+link=https://github.com/clipo/rapanui-radiocarbon
+tags=Datasets, Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=rarcheo
+Description=Online textbook about how tackle a wide range of problems using R.
+author=nfrerebeau
+link=https://github.com/nfrerebeau/rarcheo
+tags=Educational resources and practical guides
+Category=
+
+Title=rbacon
+Description=A package for Bayesian age-depth modelling of sediment cores, constrained by prior information on sedimentation rates and their variability.
+author=Maarten14C
+link=https://github.com/Maarten14C/rbacon
+tags=Chronological modelling, Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=rcarbon
+Description=Methods for calibrating and analysing radiocarbon dates
+author=ahb108
+link=https://github.com/ahb108/rcarbon
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=rdss
+Description=An R package to facilitate the use of Murail et al.'s (1999) approach of sex estimation in past populations.
+author=frederic-santos
+link=https://github.com/frederic-santos/rdss
+tags=Cultural evolution, Statistical analysis
+Category=
+
+Title=recexcavAAR
+Description=R package for 3D reconstruction of archaeological excavations.
+author=ISAAKiel
+link=https://github.com/ISAAKiel/recexcavAAR/
+tags=3D modelling
+Category=
+
+Title=recmod
+Description=Tools for estimating parameters for Radiocarbon-dated Event Count (REC) Models.
+author=wccarleton
+link=https://github.com/wccarleton/recmod
+tags=Chronological modelling, Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=rekrei
+Description=Platform for crowdsourcing the digital recreation of lost heritage
+author=rekrei
+link=https://github.com/rekrei/rekrei
+tags=Platforms and publications
+Category=
+
+Title=rintchron
+Description=rintchron provides an R interface to IntChron, an indexing service and exchange format for chronological data such as radiocarbon dates.
+author=joeroe
+link=https://github.com/joeroe/rintchron
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=rock-art-radnet
+Description=Rock art object detection model.
+author=Swedish-Rock-Art-Research-Archives
+link=https://github.com/Swedish-Rock-Art-Research-Archives/rock-art-radnet
+tags=Shape recognition, Iconography
+Category=
+
+Title=rock-art-ratopoviz
+Description=Create visualizations from laserscans.
+author=Swedish-Rock-Art-Research-Archives
+link=https://github.com/Swedish-Rock-Art-Research-Archives/rock-art-ratopoviz
+tags=Shape recognition, Iconography
+Category=
+
+Title=rock-art-transfer-learning
+Description=Reconstructing rock art chronology with transfer learning
+author=keeeal
+link=https://github.com/keeeal/rock-art-transfer-learning
+tags=Shape recognition, Chronological modelling, Iconography
+Category=
+
+Title=rockart-textanalysis
+Description=A text analysis program to explore online content about prehistoric rock art.
+author=lakillo
+link=https://github.com/lakillo/rockart-textanalysis
+tags=Public archaeology, Machine learning
+Category=
+
+Title=roev
+Description=Functions for analysing and visualizing rates of evolution.
+author=benmarwick
+link=https://github.com/benmarwick/roev
+tags=Statistical analysis
+Category=
+
+Title=roman-amphitheaters
+Description=A dataset and discussion relating to Roman amphitheaters
+author=sfsheath
+link=https://github.com/sfsheath/roman-amphitheaters
+tags=Datasets
+Category=
+
+Title=roman-amphitheaters
+Description=A dataset of Roman amphitheaters.
+author=roman-amphitheaters
+link=https://github.com/roman-amphitheaters/roman-amphitheaters
+tags=Datasets
+Category=
+
+Title=roman-empire
+Description=Map of the Roman Empire made with vector tiles
+author=klokantech
+link=https://github.com/klokantech/roman-empire
+tags=Datasets
+Category=
+
+Title=roman-maps
+Description=These are geojson files relevant to Roman history. Initially they are all derived from the Ancient World Mapping Center's set of CC-BY-NC licensed shapefiles.
+author=sfsheath
+link=https://github.com/sfsheath/roman-maps
+tags=Datasets
+Category=
+
+Title=rorbium
+Description=Orbis data as an R package
+author=sfsheath
+link=https://github.com/sfsheath/rorbium
+tags=Datasets
+Category=
+
+Title=rpaleoclim
+Description=R interface for open paleoclimate data.
+author=joeroe
+link=https://github.com/joeroe/rpaleoclim
+tags=
+Category=
+
+Title=rppsfs
+Description=Roman Peasant Project Small Finds Ontology
+author=scollinselliott
+link=https://github.com/scollinselliott/rppsf
+tags=Schemas and ontologies
+Category=
+
+Title=rtefact
+Description=Brings together a range of methods for analysing the time series, shapes and other properties of archaeological artefacts.
+author=ahb108
+link=https://github.com/ahb108/rtfact
+tags=
+Category=
+
+Title=rti
+Description=Series of common tols used by most Reflectance Transformation Imaging (RTI) projects, plus some custom programs to help with the workflow from the camera to the output.
+author=kmartinez
+link=https://github.com/kmartinez/rti
+tags=Photogrammetry
+Category=
+
+Title=ruby-radiocarbon
+Description=Ruby gem for fast radiocarbon calibration.
+author=joeroe
+link=https://github.com/joeroe/ruby-radiocarbon
+tags=Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=rxpand
+Description=Radiocarbon dates for the spread of farming and ceramics in tropical South America.
+author=jgregoriods
+link=https://github.com/jgregoriods/rxpand
+tags=Datasets, Radiocarbon dating, calibration and sequencing
+Category=
+
+Title=rxylib
+Description=R package: wrapper for the C+library xylib
+author=R-Lum
+link=https://github.com/R-Lum/rxylib
+tags=Luminescence dating
+Category=
+
+Title=sdsanalysis
+Description=dsanalysis is the backbone of the sdsbrowser webapp, and can be employed to analyse SDS stone artefact data in R.
+author=Johanna-Mestorf-Academy
+link=https://github.com/Johanna-Mestorf-Academy/sdsanalysis
+tags=
+Category=
+
+Title=sdsbrowser
+Description=sdsbrowser is an R Shiny WebApp developed to make the available SDS datasets (following the Systematic and Digital Documentation of Stone Artefacts recording system) more accessible. It is designed to give you a quick overview on the spatial and temporal scope of sites previously analysed with SDS and the distribution of artefacts within these sites.
+author=Johanna-Mestorf-Academy
+link=https://github.com/Johanna-Mestorf-Academy/sdsbrowser
+tags=
+Category=
+
+Title=senscape
+Description=A toolbox for modelling human perception of topography for QGIS, based on QGIS viewshed module.
+author=zoran-cuckovic
+link=https://github.com/zoran-cuckovic/senscape
+tags=Spatial analysis, Viewshed analysis
+Category=
+
+Title=seriation
+Description=R package that provides the infrastructure for ordering objects with an implementation of several seriation/sequencing/ordination techniques to reorder matrices, dissimilarity matrices, and dendrograms (see below for a full list). Also provides (optimally) reordered heatmaps, color images and clustering visualizations like dissimilarity plots, and visual assessment of cluster tendency plots (VAT and iVAT).
+author=mhahsler, Christian Buchta, Kurt Hornik, Fionn Murtagh and Michael Brusco, Stephanie Stahl, and Hans-Friedrich Koehn
+link=https://github.com/mhahsler/seriation
+tags=Statistical analysis, Seriation
+Category=
+
+Title=shapAAR
+Description=This is an R package for the extraction, analysis and classification of (not only) archaeological objects derived from scanned images. Especially it aims at the analysis of the shapes/profiles of eg. ceramic vessels or arrow heads.
+author=ISAAKiel
+link=https://github.com/ISAAKiel/shapAAR
+tags=Shape recognition
+Category=
+
+Title=shiny_DRAC
+Description=graphical interface for DRAC
+author=dstreble
+link=https://github.com/dstreble/shiny_DRAC
+tags=Luminescence dating
+Category=
+
+Title=shiny_Tldating
+Description=Shiny app for TL dating
+author=dstreble
+link=https://github.com/dstreble/shiny_TLdating
+tags=Luminescence dating
+Category=
+
+Title=shkrdata
+Description=Package for downloading and preparing shkr data for archaeological analysis
+author=ISAAKiel
+link=https://github.com/ISAAKiel/shkrdata
+tags=
+Category=
+
+Title=shoredate
+Description=Offers methods to shoreline date Stone Age sites located along the Norwegian Skagerrak coast based on their present-day elevation and the trajectory of past relative sea-level change.
+author=isakro
+link=https://github.com/isakro/shoredate
+tags=Spatial analysis, Chronological modelling
+Category=
+
+Title=signboardr
+Description=Extract text from archaeological photos containing a sign board and tag as metadata.
+author=mrecos
+link=https://github.com/mrecos/signboardr
+tags=Shape recognition, Photography
+Category=
+
+Title=sindwem
+Description=This R package contains exactly one function, that calculates the "sum of individual weighted means" according to a methodology that is quite common among archaeologists and was first published in 1988 by Elisabeth Fentress and Philip Perkins.
+author=steko
+link=https://bitbucket.org/steko/mpi.r/src/default/
+tags=Statistical analysis
+Category=
+
+Title=sipontomedievale
+Description=This repo contains the code for an interactive website created to illustrate historical background, findings and data of the Siponto excavation site (Manfredonia, Italy)
+author=fradeve
+link=https://github.com/fradeve/sipontomedievale
+tags=Public archaeology
+Category=
+
+Title=sitedefinition
+Description=The goal of sitedefinition is to see how feature densities might be used for site definition.
+author=SCSchmidt
+link=https://github.com/SCSchmidt/sitedefinition
+tags=Site mapping
+Category=
+
+Title=skeletal-sex-estimation
+Description=A GNU Octave function for skeletal sex estimation.
+author=pr0m1th3as
+link=https://github.com/pr0m1th3as/skeletal-sex-estimation
+tags=Biological anthropology, Zooarchaeology
+Category=
+
+Title=skullanalyzer
+Description=A concrete way of extracting cranial mophometric features.
+author=pr0m1th3as
+link=https://github.com/pr0m1th3as/skullanalyzer
+tags=Biological anthropology, Zooarchaeology
+Category=
+
+Title=skyscapeR
+Description=An R package for data reduction, visualization and analysis in skyscape archaeology, archaeoastronomy and cultural astronomy.
+author=f-silva-archaeo
+link=https://github.com/f-silva-archaeo/skyscapeR
+tags=
+Category=
+
+Title=smada
+Description=Course website for Statistical Methods for Archaeological Data Analysis.
+author=BernCoDALab and MartinHinz
+link=https://github.com/BernCoDALab/smada
+tags=Educational resources and practical guides, Statistical analysis
+Category=
+
+Title=soiltexture
+Description=The Soil Texture Wizard is a set of R functions designed to produce texture triangles (also called texture plots, texture diagrams, texture ternary plots), classify and transform soil textures data
+author=julienmoeys
+link=https://github.com/julienmoeys/soiltexture
+tags=Bits and bobs
+Category=
+
+Title=spDates
+Description=Analysis of spatial gradients in radiocarbon dates.
+author=jgregoriods
+link=https://github.com/jgregoriods/spDates
+tags=Radiocarbon dating, calibration and sequencing, Spatial analysis, Statistical analysis
+Category=
+
+Title=sparch
+Description=A set of extra utilities that extend the functionlaity provided by core packages for spatial data management and analysis in R.
+author=ahb108
+link=https://github.com/ahb108/sparch
+tags=Bits and bobs
+Category=
+
+Title=statuAAR
+Description=Estimation of human stature from long bone measurements according to several well established estimation formula.
+author=chrinne, capsizingHR, AnKaLoy and FrankSiegmund
+link=https://github.com/ISAAKiel/statuAAR
+tags=
+Category=
+
+Title=stratigraphr
+Description=R package for archaeological stratigraphy and chronological sequences.
+author=joeroe
+link=https://github.com/joeroe/stratigraphr
+tags=Chronological modelling, Harris matrix
+Category=
+
+Title=svg-pottery
+Description=A set of best practices, how-tos and implementations for publishing pottery drawings on the Web
+author=steko
+link=https://codeberg.org/steko/svg-pottery
+tags=Educational resources and practical guides, Ceramic analysis
+Category=
+
+Title=swapdata
+Description=A collection of archaeological datasets and tools related to the prehistory of Southwest Asia.
+author=joeroe
+link=https://github.com/joeroe/swapdata
+tags=Datasets
+Category=
+
+Title=synthkat
+Description=Synthetic Categories for Archaeological Vessel Comparison.
+author=scollinselliott
+link=https://github.com/scollinselliott/synthkat
+tags=Shape recognition
+Category=
+
+Title=tRauma
+Description=Interactive graphical user interface to aid in the interpretation of blunt-force rib trauma in forensic anthropology casework.
+author=ElaineYChu
+link=https://github.com/ElaineYChu/tRauma
+tags=Biological anthropology
+Category=
+
+Title=tabula
+Description=Analysis, Seriation and Visualization of Archaeological Count Data.
+author=nfrerebeau and tesselle
+link=https://github.com/tesselle/tabula
+tags=Statistical analysis, Seriation
+Category=
+
+Title=tavo-a27
+Description=Ancient animal occurrence data from Uerpmann 1987, *The Ancient Distribution of Ungulate Mammals in the Middle East*, TAVO A27.
+author=joeroe
+link=https://github.com/joeroe/tavo-a27
+tags=Datasets, Palaeobotany
+Category=
+
+Title=tdar
+Description=R package that allows programmatic access to the Digital Archaeological Record (tDAR), a service of Digital Antiquity.
+author=bocinsky
+link=https://github.com/bocinsky/tdar
+tags=
+Category=
+
+Title=teaching-rome
+Description=A collection of texts, 3d models, and maybe other resources useful for teaching about the Roman Empire.
+author=sfsheath
+link=https://github.com/sfsheath/teaching-rome
+tags=Educational resources and practical guides
+Category=
+
+Title=teethr
+Description=Calculate dental indices and lesion ratios.
+author=bbartholdy
+link=https://github.com/bbartholdy/teethr
+tags=Zooarchaeology
+Category=
+
+Title=tempo
+Description=Provides a formal representation of intervals between two points in time (periods) and the potential logical relations between them.
+author=joeroe
+link=https://github.com/joeroe/tempo
+tags=Chronological modelling
+Category=
+
+Title=tfqar
+Description=Tools for Quantitative Archaeology - in R.
+author=sslarch
+link=https://github.com/sslarch/tfqar
+tags=Statistical analysis
+Category=
+
+Title=tidypaleo
+Description=This package simplifies a few workflows when working with multi-proxy paleo-archive data
+author=paleolimbot
+link=https://github.com/paleolimbot/tidypaleo
+tags=Data management, Palaeoclimate modelling
+Category=
+
+Title=timeperiod2daterange
+Description=Converts time period entities to standardised date ranges.
+author=alexbrandsen
+link=https://github.com/alexbrandsen/timeperiod2daterange
+tags=Chronological modelling, Bits and bobs
+Category=
+
+Title=tipom
+Description=TIPOM is based on a methodology that was developed in the 1960s by Bernardino Bagolini. The basic idea is to use the three simple dimensions of length, width and thickness of each lithic artefact to classify them in discrete groups and infer their function.
+author=iosa
+link=https://cran.r-project.org/web/packages/tipom/index.html
+tags=
+Category=
+
+Title=tosca
+Description=Tool for Online Seriation and Correspondence Analysis.
+author=ISAAKiel
+link=https://github.com/ISAAKiel/tosca
+tags=Statistical analysis
+Category=
+
+Title=total-station-manuals
+Description=Manuals for total stations
+author=steko
+link=https://codeberg.org/steko/total-station-manuals
+tags=Drivers and IO
+Category=
+
+Title=totalopenstation
+Description=Total Open Station downloads and exports survey data from your total station.
+author=steko
+link=https://github.com/steko/totalopenstation
+tags=Drivers and IO
+Category=
+
+Title=totalopenstationToQgis
+Description=A plugin to connect with totalopenstation software developed as part of the IOSA project.
+author=enzococca
+link=https://github.com/enzococca/totalopenstationToQgis
+tags=Drivers and IO, Spatial analysis
+Category=
+
+Title=totalstation-tools
+Description=Tools to use and manipulate total station data
+author=WiseLabCMU
+link=https://github.com/WiseLabCMU/totalstation-tools
+tags=Drivers and IO
+Category=
+
+Title=trenchdrawer
+Description=Plugin for drawing trenches.
+author=MikeJJohnson
+link=https://github.com/MikeJJohnson/trenchdrawer
+tags=Site mapping
+Category=
+
+Title=tridas
+Description=TRiDaS is a universal data exchange standard for the dendrochronology community. This project contains the data standard itself as well as libraries and tools useful for reading, writing and converting dendro data files.
+author=steko
+link=https://codeberg.org/steko/tridas
+tags=Schemas and ontologies, Dendrochronology
+Category=
+
+Title=tutorial-autocad2018
+Description=AutoCAD tutotial for archaeologists.
+author=chrinne
+link=https://github.com/chrinne/tutorial-autocad2018
+tags=Educational resources and practical guides, 3D modelling
+Category=
+
+Title=tutorials
+Description=Tutorials on quantitative archaeology.
+author=oliver.nakoinz
+link=https://gitlab.com/oliver.nakoinz/tutorials
+tags=Educational resources and practical guides, Statistical analysis
+Category=
+
+Title=tweet-edits-to-archaeology-articles.R
+Description=Using R with wikipedia for various things
+author=benmarwick
+link=https://gist.github.com/benmarwick/ac394fd61f481393b0ae
+tags=Public archaeology
+Category=
+
+Title=unstruwwel
+Description=Detect and Parse Historic Dates in R.
+author=stefanieschneider
+link=https://github.com/stefanieschneider/unstruwwel
+tags=Chronological modelling
+Category=
+
+Title=vici.org
+Description=A community driven archaeological map of classical antiquity, inspired by and modelled after Wikipedia.
+author=renevoorburg
+link=https://github.com/renevoorburg/vici.org
+tags=Public archaeology, Spatial analysis, Datasets
+Category=
+
+Title=vitutr
+Description=A page for video tutorials on R, specifically for archaeology
+author=MartinHinz
+link=https://github.com/MartinHinz/vitutr
+tags=Educational resources and practical guides
+Category=
+
+Title=web_geochemistry
+Description=Visualizing XRF and NAA geochemistry concentrations.
+author=arf-berkeley
+link=https://github.com/arf-berkeley/web_geochemistry
+tags=X-Ray Fluorescence
+Category=
+
+Title=xDateR
+Description=Shiny app for interactive crossdating of tree-ring data.
+author=AndyBunn
+link=https://github.com/AndyBunn/xDateR
+tags=Dendrochronology, Chronological modelling
+Category=
+
+Title=xrf
+Description=The goal of xrf is to provide tools to read, plot, and interpret X-Ray fluorescence spectra
+author=paleolimbot
+link=https://github.com/paleolimbot/xrftools
+tags=X-Ray Fluorescence
+Category=
+
+Title=xronos.R
+Description=A worldwide database of chronological information from archaeological contexts, including radiocarbon and dendrochronological data.
+author=xronos-ch
+link=https://github.com/xronos-ch/xronos.R
+tags=Radiocarbon dating, calibration and sequencing, Datasets
+Category=
+
+Title=yada
+Description=yada, which stands for Yet Another Demographic Analysis package, supports a variety of demographic tasks, with most applications drawn from forensic anthroplogy and archaeology.
+author=MichaelHoltonPrice
+link=https://github.com/eehh-stanford/yada
+tags=
+Category=
+
+Title=zooaRch
+Description=The zooaRch package provides analytical tools to make inferences on zooarchaeological data.
+author=Erik Otarola-Castillo, Jesse Wolfhagen, Max D. Price and zooaRch
+link=https://cran.r-project.org/web/packages/zooaRch/
+tags=Zooarchaeology
+Category=
+
+Title=zooaRchGUI
+Description=The zooaRchGUI package provides a Graphical User Interface (GUI) to analytical tools for zooarchaeological data in the R package.
+author=zooaRchGUI
+link=https://github.com/zooaRchGUI/zooaRchGUI
+tags=Zooarchaeology
+Category=
+
+Title=zoolog
+Description=Manipulate log-ratios (also known as log size index (LSI) values) from measurements obtained on zooarchaeological material.
+author=josempozo, Silvia Valenzuela-Lamas, Angela Trentacoste, Ariadne Nieto-Espinet and Silvia GuimarÃ£es Chiarelli
+link=https://github.com/josempozo/zoolog
+tags=Zooarchaeology
+Category=
