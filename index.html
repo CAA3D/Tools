@@ -124,6 +124,27 @@
       overflow: auto;
       width: 100%;
     }
+
+    /* Column resize UI */
+    .dataTables_scrollHead th.resizable {
+      position: relative;
+    }
+
+    .col-resize-handle {
+      position: absolute;
+      top: 0;
+      right: -3px;
+      width: 6px;
+      height: 100%;
+      cursor: col-resize;
+      user-select: none;
+      touch-action: none;
+      z-index: 2;
+    }
+
+    .col-resize-handle:hover {
+      background: rgba(0, 0, 0, 0.08);
+    }
   </style>
 </head>
 <body>
@@ -266,6 +287,14 @@
       });
 
       bindGotoHandlers();
+
+      $("#bibTable")
+        .off("draw.dt.colresize")
+        .on("draw.dt.colresize", () => {
+          requestAnimationFrame(enableColumnResize);
+        });
+
+      enableColumnResize();
     }
 
     function renderFieldMenu() {
@@ -467,77 +496,73 @@
         .replace(/'/g, "&#39;");
     }
 
-function enableColumnResize() {
-  const wrapper = document.querySelector("#bibTable")?.closest(".dataTables_wrapper");
-  if (!wrapper) return;
+    function enableColumnResize() {
+      const wrapper = document.querySelector("#bibTable")?.closest(".dataTables_wrapper");
+      if (!wrapper) return;
 
-  const headThs = wrapper.querySelectorAll(".dataTables_scrollHead thead th");
-  if (!headThs.length) return;
+      const headThs = wrapper.querySelectorAll(".dataTables_scrollHead thead th");
+      if (!headThs.length) return;
 
-  // Remove old handles before re-adding (table redraws can recreate headers)
-  wrapper.querySelectorAll(".col-resize-handle").forEach(h => h.remove());
+      wrapper.querySelectorAll(".col-resize-handle").forEach(h => h.remove());
 
-  headThs.forEach((th, colIndex) => {
-    // Skip goto button column (optional)
-    if (th.classList.contains("goto-column")) return;
+      headThs.forEach((th, colIndex) => {
+        if (th.classList.contains("goto-column")) return;
 
-    th.classList.add("resizable");
+        th.classList.add("resizable");
 
-    const handle = document.createElement("div");
-    handle.className = "col-resize-handle";
+        const handle = document.createElement("div");
+        handle.className = "col-resize-handle";
 
-    let startX = 0;
-    let startWidth = 0;
-    let dragging = false;
+        let startX = 0;
+        let startWidth = 0;
+        let dragging = false;
 
-    const onMouseMove = (e) => {
-      if (!dragging) return;
-      const delta = e.clientX - startX;
-      const next = Math.max(80, startWidth + delta); // minimum column width
-      setColumnWidth(wrapper, colIndex, next);
-    };
+        const onMouseMove = (e) => {
+          if (!dragging) return;
+          const delta = e.clientX - startX;
+          const next = Math.max(80, startWidth + delta);
+          setColumnWidth(wrapper, colIndex, next);
+        };
 
-    const onMouseUp = () => {
-      dragging = false;
-      document.body.style.cursor = "";
-      document.body.style.userSelect = "";
-      document.removeEventListener("mousemove", onMouseMove);
-      document.removeEventListener("mouseup", onMouseUp);
-    };
+        const onMouseUp = () => {
+          dragging = false;
+          document.body.style.cursor = "";
+          document.body.style.userSelect = "";
+          document.removeEventListener("mousemove", onMouseMove);
+          document.removeEventListener("mouseup", onMouseUp);
+        };
 
-    handle.addEventListener("mousedown", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
+        handle.addEventListener("mousedown", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
 
-      dragging = true;
-      startX = e.clientX;
-      startWidth = th.getBoundingClientRect().width;
+          dragging = true;
+          startX = e.clientX;
+          startWidth = th.getBoundingClientRect().width;
 
-      document.body.style.cursor = "col-resize";
-      document.body.style.userSelect = "none";
+          document.body.style.cursor = "col-resize";
+          document.body.style.userSelect = "none";
 
-      document.addEventListener("mousemove", onMouseMove);
-      document.addEventListener("mouseup", onMouseUp);
-    });
+          document.addEventListener("mousemove", onMouseMove);
+          document.addEventListener("mouseup", onMouseUp);
+        });
 
-    // Prevent accidental sort click on handle
-    handle.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-    });
+        handle.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+        });
 
-    th.appendChild(handle);
-  });
-}
+        th.appendChild(handle);
+      });
+    }
 
     function setColumnWidth(wrapper, colIndex, widthPx) {
       const px = widthPx + "px";
       const col = colIndex + 1;
 
-      // Header clone + body table cells (DataTables scrollX uses separate tables)
       const selectors = [
-        `.dataTables_scrollHead thead th:nth-child(${col})`,
-        `.dataTables_scrollBody tbody tr td:nth-child(${col})`
+        ".dataTables_scrollHead thead th:nth-child(" + col + ")",
+        ".dataTables_scrollBody tbody tr td:nth-child(" + col + ")"
       ];
 
       selectors.forEach(sel => {
@@ -548,7 +573,6 @@ function enableColumnResize() {
         });
       });
 
-      // Keep DataTables layout in sync after manual width update
       if (dataTableInstance && typeof dataTableInstance.columns === "function") {
         dataTableInstance.columns.adjust();
       }
