@@ -467,6 +467,93 @@
         .replace(/'/g, "&#39;");
     }
 
+function enableColumnResize() {
+  const wrapper = document.querySelector("#bibTable")?.closest(".dataTables_wrapper");
+  if (!wrapper) return;
+
+  const headThs = wrapper.querySelectorAll(".dataTables_scrollHead thead th");
+  if (!headThs.length) return;
+
+  // Remove old handles before re-adding (table redraws can recreate headers)
+  wrapper.querySelectorAll(".col-resize-handle").forEach(h => h.remove());
+
+  headThs.forEach((th, colIndex) => {
+    // Skip goto button column (optional)
+    if (th.classList.contains("goto-column")) return;
+
+    th.classList.add("resizable");
+
+    const handle = document.createElement("div");
+    handle.className = "col-resize-handle";
+
+    let startX = 0;
+    let startWidth = 0;
+    let dragging = false;
+
+    const onMouseMove = (e) => {
+      if (!dragging) return;
+      const delta = e.clientX - startX;
+      const next = Math.max(80, startWidth + delta); // minimum column width
+      setColumnWidth(wrapper, colIndex, next);
+    };
+
+    const onMouseUp = () => {
+      dragging = false;
+      document.body.style.cursor = "";
+      document.body.style.userSelect = "";
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+    };
+
+    handle.addEventListener("mousedown", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      dragging = true;
+      startX = e.clientX;
+      startWidth = th.getBoundingClientRect().width;
+
+      document.body.style.cursor = "col-resize";
+      document.body.style.userSelect = "none";
+
+      document.addEventListener("mousemove", onMouseMove);
+      document.addEventListener("mouseup", onMouseUp);
+    });
+
+    // Prevent accidental sort click on handle
+    handle.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    th.appendChild(handle);
+  });
+}
+
+    function setColumnWidth(wrapper, colIndex, widthPx) {
+      const px = widthPx + "px";
+      const col = colIndex + 1;
+
+      // Header clone + body table cells (DataTables scrollX uses separate tables)
+      const selectors = [
+        `.dataTables_scrollHead thead th:nth-child(${col})`,
+        `.dataTables_scrollBody tbody tr td:nth-child(${col})`
+      ];
+
+      selectors.forEach(sel => {
+        wrapper.querySelectorAll(sel).forEach(cell => {
+          cell.style.width = px;
+          cell.style.minWidth = px;
+          cell.style.maxWidth = px;
+        });
+      });
+
+      // Keep DataTables layout in sync after manual width update
+      if (dataTableInstance && typeof dataTableInstance.columns === "function") {
+        dataTableInstance.columns.adjust();
+      }
+    }
+
     loadTools();
   </script>
 </body>
