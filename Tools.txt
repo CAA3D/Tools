@@ -3226,13 +3226,6 @@ tags=Statistical analysis
 Category=
 
 Title=roman-amphitheaters
-Description=A dataset and discussion relating to Roman amphitheaters
-author=sfsheath
-link=https://github.com/sfsheath/roman-amphitheaters
-tags=Datasets
-Category=
-
-Title=roman-amphitheaters
 Description=A dataset of Roman amphitheaters.
 author=roman-amphitheaters
 link=https://github.com/roman-amphitheaters/roman-amphitheaters
