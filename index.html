@@ -3,129 +3,396 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tool List Viewer</title>
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <title>Tools</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"
+  />
+
   <style>
+    :root {
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --surface-soft: #f9fafb;
+      --border: #e5e7eb;
+      --border-strong: #d1d5db;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --radius: 10px;
+      --shadow: 0 1px 3px rgba(0,0,0,.06);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
     body {
-      font-family: system-ui, sans-serif;
-      padding: 2rem;
-      background: #fafafa;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background: var(--bg);
     }
 
-    .toolbar {
-      margin-bottom: 1rem;
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+
+    /* APP HEADER */
+
+    .app-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1600px;
+      margin: auto;
+      padding: 18px 24px;
+    }
+
+    .header-top {
       display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
       align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 16px;
     }
 
-    details.menu {
-      display: inline-block;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 0.35rem 0.6rem;
-    }
-
-    details.menu summary {
-      cursor: pointer;
-      user-select: none;
-      font-weight: 600;
-    }
-
-    .menu-content {
-      margin-top: 0.65rem;
-      display: grid;
-      gap: 0.4rem;
-      min-width: 260px;
-    }
-
-    .field-list {
-      max-height: 220px;
-      overflow-y: auto;
-      border: 1px solid #eee;
-      border-radius: 5px;
-      padding: 0.5rem;
-      background: #fafafa;
-    }
-
-    .field-list label {
-      display: block;
-      margin-bottom: 0.35rem;
-    }
-
-    .menu-buttons {
+    .brand {
       display: flex;
-      gap: 0.5rem;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
     }
 
-    .secondary-btn {
-      border: 1px solid #d0d0d0;
-      background: #fff;
-      border-radius: 5px;
-      padding: 0.35rem 0.6rem;
-      cursor: pointer;
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--accent);
+      color: white;
+      font-size: 18px;
     }
 
-    .secondary-btn:hover {
-      background: #f4f4f4;
+    .brand-title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -.02em;
     }
 
-    table.dataTable {
-      width: 100% !important;
+    .brand-subtitle {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 12px;
     }
 
-    .dataTables_wrapper {
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    /* BUTTONS */
+
+    .btn {
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .15s ease;
+    }
+
+    .btn:hover {
+      background: var(--surface-soft);
+      border-color: #b8bec8;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+    }
+
+    .btn-quiet {
+      border-color: transparent;
+      background: transparent;
+    }
+
+    .btn-quiet:hover { background: var(--surface-soft); }
+
+    /* SEARCH */
+
+    .search-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-box {
+      position: relative;
+      flex: 1;
+    }
+
+    .search-box input {
       width: 100%;
+      height: 42px;
+      padding: 0 42px;
+      border: 1px solid var(--border-strong);
+      border-radius: 9px;
+      outline: none;
+      background: white;
+      color: var(--text);
     }
 
-    .dataTables_wrapper .dataTables_scroll {
+    .search-box input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37,99,235,.1);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    .clear-search {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      display: none;
+      font-size: 18px;
+    }
+
+    /* ACTIVE FILTERS */
+
+    .filter-row {
+      max-width: 1600px;
+      margin: auto;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
       overflow-x: auto;
     }
 
-    #bibTable th,
-    #bibTable td {
-      max-width: 25vw;
+    .filter-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 9px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: white;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .chip button {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: 0;
+      line-height: 1;
+      font-size: 14px;
+    }
+
+    /* CONTENT */
+
+    .content {
+      max-width: 1600px;
+      margin: auto;
+      padding: 20px 24px 50px;
+    }
+
+    .table-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .table-header {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .table-container {
+      max-height: calc(100vh - 250px);
+      overflow: auto;
+    }
+
+    /* TABLE */
+
+    #bibTable {
+      width: 100% !important;
+      border-collapse: collapse;
+    }
+
+    #bibTable thead th {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: #f9fafb;
+      border-bottom: 1px solid var(--border);
+      color: #4b5563;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-weight: 700;
+      padding: 11px 14px;
+      white-space: nowrap;
+    }
+
+    #bibTable tbody td {
+      padding: 13px 14px;
+      border-bottom: 1px solid #f0f1f3;
+      vertical-align: top;
+      font-size: 13px;
+      max-width: 420px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
-    #bibTable th.goto-column,
-    #bibTable td.goto-column {
-      min-width: 3rem;
-      max-width: 3rem;
-      width: 3rem;
+    #bibTable tbody tr:hover { background: #fafcff; }
+
+    #bibTable tbody tr:last-child td { border-bottom: 0; }
+
+    .title-cell {
+      font-weight: 600;
+      color: #1f2937;
+      white-space: normal !important;
+      line-height: 1.4;
+    }
+
+    .description-cell {
+      color: #4b5563;
+      white-space: normal !important;
+      line-height: 1.45;
+    }
+
+    .author-cell {
+      color: #4b5563;
+      white-space: normal !important;
+      line-height: 1.4;
+    }
+
+    .tags-cell {
+      white-space: normal !important;
+    }
+
+    .tag {
+      display: inline-block;
+      margin: 2px 3px 2px 0;
+      padding: 3px 7px;
+      border-radius: 5px;
+      background: #f3f4f6;
+      color: #4b5563;
+      font-size: 11px;
+    }
+
+    .category-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      color: #4b5563;
+      font-size: 11px;
+      font-weight: 600;
     }
 
     .goto-btn {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: background-color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      background: white;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+      padding: 0;
     }
 
     .goto-btn:hover {
-      background-color: #45a049;
+      background: var(--accent-soft);
+      border-color: #bfdbfe;
     }
 
     .goto-btn:disabled {
-      background-color: #b5b5b5;
-      cursor: not-allowed;
+      color: #c7cbd1;
+      cursor: default;
+      background: white;
     }
 
-    .table-container {
-      max-height: 75vh;
-      overflow: auto;
+    /* DATATABLE: use our own app chrome */
+
+    .dataTables_wrapper {
       width: 100%;
     }
 
-    /* Column resize UI */
+    .dataTables_wrapper .dataTables_filter,
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_wrapper .dataTables_info,
+    .dataTables_wrapper .dataTables_paginate {
+      display: none;
+    }
+
+    /* COLUMN RESIZING */
+
     .dataTables_scrollHead th.resizable {
       position: relative;
     }
@@ -143,36 +410,441 @@
     }
 
     .col-resize-handle:hover {
-      background: rgba(0, 0, 0, 0.08);
+      background: rgba(0,0,0,.08);
+    }
+
+    /* DRAWER */
+
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15,23,42,.3);
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s;
+    }
+
+    .drawer-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: min(390px, 92vw);
+      height: 100vh;
+      background: white;
+      z-index: 201;
+      transform: translateX(100%);
+      transition: transform .22s ease;
+      box-shadow: -10px 0 30px rgba(0,0,0,.12);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .drawer.open { transform: translateX(0); }
+
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .drawer-title {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .drawer-body {
+      padding: 18px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .drawer-footer {
+      padding: 14px 18px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .filter-section {
+      margin-bottom: 24px;
+    }
+
+    .filter-section h3 {
+      margin: 0 0 9px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--muted);
+    }
+
+    .filter-section select,
+    .filter-section input[type="text"] {
+      width: 100%;
+      border: 1px solid var(--border-strong);
+      border-radius: 7px;
+      padding: 9px 10px;
+      background: white;
+      outline: none;
+    }
+
+    .filter-section select:focus,
+    .filter-section input[type="text"]:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37,99,235,.08);
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .field-search {
+      margin-bottom: 8px;
+    }
+
+    .field-list {
+      max-height: 300px;
+      overflow-y: auto;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+    }
+
+    .field-list label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      font-size: 13px;
+    }
+
+    .field-list label:hover {
+      background: var(--surface-soft);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+      .header-inner,
+      .content,
+      .filter-row {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .header-top {
+        align-items: flex-start;
+      }
+
+      .brand-subtitle {
+        display: none;
+      }
+
+      .header-actions .label {
+        display: none;
+      }
+
+      .search-row {
+        display: block;
+      }
+
+      .table-container {
+        max-height: none;
+      }
+
+      #bibTable thead {
+        display: none;
+      }
+
+      #bibTable,
+      #bibTable tbody,
+      #bibTable tr,
+      #bibTable td {
+        display: block;
+        width: 100% !important;
+      }
+
+      #bibTable tr {
+        position: relative;
+        padding: 14px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      #bibTable td {
+        border: 0;
+        padding: 3px 0;
+        max-width: none;
+        white-space: normal;
+        overflow: visible;
+      }
+
+      #bibTable td::before {
+        content: attr(data-label);
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      #bibTable td.goto-column {
+        position: absolute;
+        right: 14px;
+        top: 14px;
+        width: auto !important;
+      }
+
+      #bibTable td.goto-column::before {
+        display: none;
+      }
+
+      .table-header span:last-child {
+        display: none;
+      }
     }
   </style>
 </head>
-<body>
-  <div class="toolbar">
-    <details class="menu">
-      <summary>Columns</summary>
-      <div class="menu-content">
-        <div id="fieldMenu" class="field-list"></div>
-        <div class="menu-buttons">
-          <button id="resetColumnsBtn" class="secondary-btn" type="button">Reset to defaults</button>
-        </div>
-      </div>
-    </details>
-  </div>
 
-  <div class="table-container">
-    <table id="bibTable" class="display nowrap" style="width:100%">
-      <thead>
-        <tr id="tableHeadRow"></tr>
-      </thead>
-      <tbody id="tableBody"></tbody>
-    </table>
-  </div>
+<body>
+
+  <header class="app-header">
+    <div class="header-inner">
+
+      <div class="header-top">
+
+        <div class="brand">
+          <div class="brand-icon">⚒</div>
+
+          <div>
+            <h1 class="brand-title">Tools</h1>
+            <div class="brand-subtitle">
+              <span id="toolCount">Loading tools…</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button class="btn" id="filtersBtn">
+            ☷ <span class="label">Filters</span>
+          </button>
+
+          <button class="btn" id="columnsBtn">
+            ▦ <span class="label">Columns</span>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="search-row">
+
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search tools, descriptions, authors, tags…"
+            autocomplete="off"
+          />
+
+          <button
+            class="clear-search"
+            id="clearSearch"
+            type="button"
+          >×</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="filter-row" id="activeFilters">
+      <span class="filter-label">Filters:</span>
+      <span id="noFilters">None</span>
+    </div>
+  </header>
+
+
+  <main class="content">
+
+    <div class="table-card">
+
+      <div class="table-header">
+        <span id="resultSummary">Loading…</span>
+        <span>Click ↗ to open the tool</span>
+      </div>
+
+      <div class="table-container">
+        <table id="bibTable" class="display nowrap">
+          <thead>
+            <tr id="tableHeadRow"></tr>
+          </thead>
+
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- Drawer -->
+
+  <div
+    class="drawer-backdrop"
+    id="drawerBackdrop"
+  ></div>
+
+  <aside
+    class="drawer"
+    id="drawer"
+  >
+
+    <div class="drawer-header">
+      <h2 class="drawer-title" id="drawerTitle">
+        Filters
+      </h2>
+
+      <button
+        class="btn btn-quiet"
+        id="closeDrawer"
+        type="button"
+      >×</button>
+    </div>
+
+
+    <div class="drawer-body">
+
+      <!-- FILTER PANEL -->
+
+      <div id="filterPanel">
+
+        <div class="filter-section">
+
+          <h3>Category</h3>
+
+          <select id="categoryFilter">
+            <option value="">All categories</option>
+          </select>
+
+        </div>
+
+
+        <div class="filter-section">
+
+          <h3>Author</h3>
+
+          <select id="authorFilter">
+            <option value="">All authors</option>
+          </select>
+
+        </div>
+
+
+        <div class="filter-section">
+
+          <h3>Tags</h3>
+
+          <input
+            id="tagFilter"
+            type="text"
+            placeholder="e.g. virtual reality"
+          />
+
+        </div>
+
+
+        <div class="filter-section">
+
+          <h3>Link</h3>
+
+          <label class="checkbox-row">
+            <input
+              id="linkedOnly"
+              type="checkbox"
+            />
+
+            Only show tools with a link
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <!-- COLUMNS PANEL -->
+
+      <div
+        id="columnsPanel"
+        style="display:none"
+      >
+
+        <div class="filter-section">
+
+          <h3>Visible columns</h3>
+
+          <input
+            class="field-search"
+            id="fieldSearch"
+            type="text"
+            placeholder="Find a field…"
+          />
+
+          <div
+            class="field-list"
+            id="fieldMenu"
+          ></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="drawer-footer">
+
+      <button
+        class="btn"
+        id="resetDrawerBtn"
+        type="button"
+      >
+        Reset
+      </button>
+
+      <button
+        class="btn btn-primary"
+        id="closeDrawerBtn"
+        type="button"
+      >
+        Done
+      </button>
+
+    </div>
+
+  </aside>
+
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
   <script>
+
+    /* ============================================================
+       CONFIGURATION
+    ============================================================ */
+
     const TOOL_CATEGORIES = [
       "Guides",
       "Datasets",
@@ -184,401 +856,2038 @@
       "Others"
     ];
 
-    const TOOL_FIELDS_ORDER = ["title", "description", "author", "tags"];
+    const TOOL_FIELDS_ORDER = [
+      "title",
+      "description",
+      "author",
+      "tags"
+    ];
 
     const FALLBACK_CONFIG = {
       availableFields: [...TOOL_FIELDS_ORDER],
-      defaultFields: ["title", "description", "author", "tags"]
+      defaultFields: [...TOOL_FIELDS_ORDER]
     };
+
+
+    /* ============================================================
+       STATE
+    ============================================================ */
 
     let toolEntries = [];
     let toolListText = "";
-    let viewerConfig = { ...FALLBACK_CONFIG };
-    let visibleFields = [...FALLBACK_CONFIG.defaultFields];
+
+    let viewerConfig = {
+      ...FALLBACK_CONFIG
+    };
+
+    let visibleFields = [
+      ...FALLBACK_CONFIG.defaultFields
+    ];
+
     let dataTableInstance = null;
 
+    let filters = {
+      category: "",
+      author: "",
+      tags: "",
+      linkedOnly: false
+    };
+
+
+    /* ============================================================
+       LOADING
+    ============================================================ */
+
     async function loadConfig() {
+
       try {
-        const res = await fetch("viewer.config.json?t=" + Date.now());
-        if (!res.ok) throw new Error(res.statusText);
+
+        const res = await fetch(
+          "viewer.config.json?t=" + Date.now()
+        );
+
+        if (!res.ok) {
+          throw new Error(res.statusText);
+        }
 
         const config = await res.json();
-        const available = uniqueLowercaseArray(config.availableFields)
-          .filter(f => TOOL_FIELDS_ORDER.includes(f));
-        let defaults = uniqueLowercaseArray(config.defaultFields)
-          .filter(f => TOOL_FIELDS_ORDER.includes(f));
 
-        const safeAvailable = available.length ? available : [...FALLBACK_CONFIG.availableFields];
-        defaults = defaults.filter(f => safeAvailable.includes(f));
-        if (!defaults.length) defaults = [...FALLBACK_CONFIG.defaultFields];
+        const available =
+          uniqueLowercaseArray(
+            config.availableFields
+          ).filter(
+            f => TOOL_FIELDS_ORDER.includes(f)
+          );
+
+        let defaults =
+          uniqueLowercaseArray(
+            config.defaultFields
+          ).filter(
+            f => TOOL_FIELDS_ORDER.includes(f)
+          );
+
+        const safeAvailable =
+          available.length
+            ? available
+            : [...FALLBACK_CONFIG.availableFields];
+
+        defaults =
+          defaults.filter(
+            f => safeAvailable.includes(f)
+          );
+
+        if (!defaults.length) {
+          defaults = [
+            ...FALLBACK_CONFIG.defaultFields
+          ];
+        }
 
         return {
-          availableFields: sortByToolFieldOrder(mergeUnique(safeAvailable, defaults)),
-          defaultFields: sortByToolFieldOrder(defaults)
+          availableFields:
+            sortByToolFieldOrder(
+              mergeUnique(
+                safeAvailable,
+                defaults
+              )
+            ),
+
+          defaultFields:
+            sortByToolFieldOrder(defaults)
         };
+
       } catch (err) {
-        console.warn("Failed to load viewer.config.json, using fallback config.", err);
-        return { ...FALLBACK_CONFIG };
+
+        console.warn(
+          "Failed to load viewer.config.json. " +
+          "Using fallback config.",
+          err
+        );
+
+        return {
+          ...FALLBACK_CONFIG
+        };
       }
     }
 
+
     async function loadTools() {
+
       try {
-        viewerConfig = await loadConfig();
 
-        const res = await fetch("Tools.txt?t=" + Date.now());
-        if (!res.ok) throw new Error(res.statusText);
-        toolListText = await res.text();
+        viewerConfig =
+          await loadConfig();
 
-        const parsed = parseToolList(toolListText);
-        toolEntries = parsed.entries;
+        const res =
+          await fetch(
+            "Tools.txt?t=" + Date.now()
+          );
+
+        if (!res.ok) {
+          throw new Error(res.statusText);
+        }
+
+        toolListText =
+          await res.text();
+
+        const parsed =
+          parseToolList(toolListText);
+
+        toolEntries =
+          parsed.entries;
 
         if (!toolEntries.length) {
-          document.body.innerHTML += "<p>No entries found in Tools.txt</p>";
+
+          document.getElementById(
+            "resultSummary"
+          ).textContent =
+            "No entries found in Tools.txt";
+
           return;
         }
 
-        hydrateAvailableFields(parsed.headers);
-        visibleFields = [...viewerConfig.defaultFields];
+        hydrateAvailableFields(
+          parsed.headers
+        );
 
+        visibleFields =
+          [...viewerConfig.defaultFields];
+
+        buildFilters();
         renderFieldMenu();
         renderTable();
+
       } catch (err) {
-        document.body.innerHTML += "<p>Error loading tool list: " + escapeHtml(String(err)) + "</p>";
+
+        console.error(err);
+
+        document.getElementById(
+          "resultSummary"
+        ).textContent =
+          "Error loading tool list.";
+
       }
     }
 
-    function renderTable() {
-      const headRow = document.getElementById("tableHeadRow");
-      const body = document.getElementById("tableBody");
 
-      if ($.fn.DataTable.isDataTable("#bibTable") && dataTableInstance) {
+    /* ============================================================
+       TABLE
+    ============================================================ */
+
+    function renderTable() {
+
+      const headRow =
+        document.getElementById(
+          "tableHeadRow"
+        );
+
+      const body =
+        document.getElementById(
+          "tableBody"
+        );
+
+
+      if (
+        $.fn.DataTable.isDataTable(
+          "#bibTable"
+        ) &&
+        dataTableInstance
+      ) {
+
         dataTableInstance.destroy();
       }
 
+
       headRow.innerHTML = [
-        '<th class="goto-column">Goto</th>',
-        ...visibleFields.map(f => "<th>" + formatFieldLabel(f) + "</th>")
+        '<th class="goto-column">Open</th>',
+
+        ...visibleFields.map(
+          f =>
+            "<th>" +
+            formatFieldLabel(f) +
+            "</th>"
+        )
+
       ].join("");
 
-      body.innerHTML = toolEntries.map((entry, idx) => {
-        const linkUrl = getGotoUrl(entry);
-        const gotoButton = linkUrl
-          ? '<button class="goto-btn" data-idx="' + idx + '" title="Open tool link">Goto</button>'
-          : '<button class="goto-btn" disabled title="No link found">Goto</button>';
 
-        return (
-          "<tr>" +
-            '<td class="goto-column">' + gotoButton + "</td>" +
-            visibleFields.map(f => "<td>" + escapeHtml(getFieldDisplayValue(entry, f)) + "</td>").join("") +
-          "</tr>"
-        );
-      }).join("");
+      body.innerHTML =
+        toolEntries
+          .map((entry, idx) => {
 
-      dataTableInstance = $("#bibTable").DataTable({
-        paging: false,
-        info: false,
-        scrollY: "70vh",
-        scrollX: true,
-        scrollCollapse: true,
-        searching: true,
-        autoWidth: false,
-        destroy: true
-      });
+            const linkUrl =
+              getGotoUrl(entry);
 
-      bindGotoHandlers();
+            const gotoButton =
+              linkUrl
+
+                ? `
+                  <a
+                    class="goto-btn"
+                    href="${escapeHtml(linkUrl)}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Open tool"
+                  >↗</a>
+                `
+
+                : `
+                  <button
+                    class="goto-btn"
+                    disabled
+                    title="No link found"
+                  >—</button>
+                `;
+
+
+            const cells =
+              visibleFields
+                .map(field => {
+
+                  const value =
+                    getFieldDisplayValue(
+                      entry,
+                      field
+                    );
+
+                  let className = "";
+
+                  if (field === "title") {
+                    className =
+                      "title-cell";
+                  }
+
+                  if (field === "description") {
+                    className =
+                      "description-cell";
+                  }
+
+                  if (field === "author") {
+                    className =
+                      "author-cell";
+                  }
+
+                  if (field === "tags") {
+                    className =
+                      "tags-cell";
+                  }
+
+
+                  return `
+                    <td
+                      class="${className}"
+                      data-label="${formatFieldLabel(field)}"
+                    >
+                      ${formatFieldValue(
+                        field,
+                        value
+                      )}
+                    </td>
+                  `;
+
+                })
+                .join("");
+
+
+            return `
+              <tr>
+
+                <td
+                  class="goto-column"
+                  data-label="Open"
+                >
+                  ${gotoButton}
+                </td>
+
+                ${cells}
+
+              </tr>
+            `;
+
+          })
+          .join("");
+
+
+      dataTableInstance =
+        $("#bibTable").DataTable({
+
+          paging: false,
+
+          info: false,
+
+          searching: true,
+
+          ordering: true,
+
+          autoWidth: false,
+
+          scrollY: "70vh",
+
+          scrollX: true,
+
+          scrollCollapse: true,
+
+          destroy: true
+
+        });
+
 
       $("#bibTable")
         .off("draw.dt.colresize")
-        .on("draw.dt.colresize", () => {
-          requestAnimationFrame(enableColumnResize);
-        });
+        .on(
+          "draw.dt.colresize",
+          () => {
+            requestAnimationFrame(
+              enableColumnResize
+            );
+          }
+        );
+
 
       enableColumnResize();
+
+      applyFilters();
     }
 
-    function renderFieldMenu() {
-      const fieldMenu = document.getElementById("fieldMenu");
-      const resetBtn = document.getElementById("resetColumnsBtn");
-      const menuFields = sortByToolFieldOrder(
-        viewerConfig.availableFields.filter(f => TOOL_FIELDS_ORDER.includes(f))
+
+    /* ============================================================
+       SEARCH
+    ============================================================ */
+
+    document
+      .getElementById("searchInput")
+      .addEventListener(
+        "input",
+        function () {
+
+          const value =
+            this.value;
+
+          document.getElementById(
+            "clearSearch"
+          ).style.display =
+            value
+              ? "block"
+              : "none";
+
+
+          if (dataTableInstance) {
+
+            dataTableInstance
+              .search(value)
+              .draw();
+
+          }
+
+          updateSummary();
+
+        }
       );
 
-      fieldMenu.innerHTML = menuFields.map(field => {
-        const checked = visibleFields.includes(field) ? "checked" : "";
-        return '<label><input type="checkbox" value="' + field + '" ' + checked + "> " + formatFieldLabel(field) + "</label>";
-      }).join("");
 
-      fieldMenu.querySelectorAll('input[type="checkbox"]').forEach(input => {
-        input.addEventListener("change", () => {
-          visibleFields = Array.from(
-            fieldMenu.querySelectorAll('input[type="checkbox"]:checked')
+    document
+      .getElementById("clearSearch")
+      .addEventListener(
+        "click",
+        () => {
+
+          const input =
+            document.getElementById(
+              "searchInput"
+            );
+
+          input.value = "";
+
+          input.dispatchEvent(
+            new Event("input")
+          );
+
+        }
+      );
+
+
+    /* ============================================================
+       FILTERS
+    ============================================================ */
+
+    function buildFilters() {
+
+      const categorySelect =
+        document.getElementById(
+          "categoryFilter"
+        );
+
+      const authorSelect =
+        document.getElementById(
+          "authorFilter"
+        );
+
+
+      const categories =
+        [...new Set(
+          toolEntries
+            .map(entry =>
+              normalizeCategory(
+                entry.category,
+                entry.title
+              )
+            )
+            .filter(Boolean)
+        )].sort();
+
+
+      categories.forEach(category => {
+
+        const option =
+          document.createElement(
+            "option"
+          );
+
+        option.value =
+          category.toLowerCase();
+
+        option.textContent =
+          category;
+
+        categorySelect.appendChild(
+          option
+        );
+
+      });
+
+
+      const authors =
+        [...new Set(
+          toolEntries
+            .map(entry =>
+              String(
+                entry.author || ""
+              ).trim()
+            )
+            .filter(Boolean)
+        )].sort(
+          (a, b) =>
+            a.localeCompare(b)
+        );
+
+
+      authors.forEach(author => {
+
+        const option =
+          document.createElement(
+            "option"
+          );
+
+        option.value =
+          author.toLowerCase();
+
+        option.textContent =
+          author;
+
+        authorSelect.appendChild(
+          option
+        );
+
+      });
+
+
+      [
+        "categoryFilter",
+        "authorFilter",
+        "tagFilter",
+        "linkedOnly"
+      ].forEach(id => {
+
+        document
+          .getElementById(id)
+          .addEventListener(
+            "input",
+            readFilters
+          );
+
+        document
+          .getElementById(id)
+          .addEventListener(
+            "change",
+            readFilters
+          );
+
+      });
+
+    }
+
+
+    function readFilters() {
+
+      filters.category =
+        document
+          .getElementById(
+            "categoryFilter"
           )
-            .map(el => el.value)
-            .filter(f => TOOL_FIELDS_ORDER.includes(f));
-          visibleFields = sortByToolFieldOrder(visibleFields);
-          renderTable();
-        });
-      });
+          .value;
 
-      resetBtn.onclick = () => {
-        visibleFields = sortByToolFieldOrder([...viewerConfig.defaultFields]);
+
+      filters.author =
+        document
+          .getElementById(
+            "authorFilter"
+          )
+          .value;
+
+
+      filters.tags =
+        document
+          .getElementById(
+            "tagFilter"
+          )
+          .value
+          .trim()
+          .toLowerCase();
+
+
+      filters.linkedOnly =
+        document
+          .getElementById(
+            "linkedOnly"
+          )
+          .checked;
+
+
+      applyFilters();
+
+    }
+
+
+    function applyFilters() {
+
+      if (!dataTableInstance) {
+        return;
+      }
+
+
+      $.fn.dataTable.ext.search =
+        $.fn.dataTable.ext.search.filter(
+          fn => !fn._toolViewerFilter
+        );
+
+
+      const filterFn =
+        function(
+          settings,
+          data,
+          dataIndex
+        ) {
+
+          const entry =
+            toolEntries[dataIndex];
+
+          if (!entry) {
+            return true;
+          }
+
+
+          const category =
+            normalizeCategory(
+              entry.category,
+              entry.title
+            ).toLowerCase();
+
+
+          if (
+            filters.category &&
+            category !== filters.category
+          ) {
+
+            return false;
+          }
+
+
+          const author =
+            String(
+              entry.author || ""
+            )
+              .trim()
+              .toLowerCase();
+
+
+          if (
+            filters.author &&
+            author !== filters.author
+          ) {
+
+            return false;
+          }
+
+
+          if (filters.tags) {
+
+            const tags =
+              String(
+                entry.tags || ""
+              )
+                .toLowerCase();
+
+            if (
+              !tags.includes(
+                filters.tags
+              )
+            ) {
+
+              return false;
+            }
+
+          }
+
+
+          if (
+            filters.linkedOnly &&
+            !getGotoUrl(entry)
+          ) {
+
+            return false;
+          }
+
+
+          return true;
+
+        };
+
+
+      filterFn._toolViewerFilter =
+        true;
+
+
+      $.fn.dataTable.ext.search.push(
+        filterFn
+      );
+
+
+      dataTableInstance.draw();
+
+      renderActiveFilters();
+
+      updateSummary();
+
+    }
+
+
+    /* ============================================================
+       ACTIVE FILTER CHIPS
+    ============================================================ */
+
+    function renderActiveFilters() {
+
+      const container =
+        document.getElementById(
+          "activeFilters"
+        );
+
+      container.innerHTML =
+        `<span class="filter-label">Filters:</span>`;
+
+
+      let count = 0;
+
+
+      function addChip(
+        label,
+        callback
+      ) {
+
+        count++;
+
+        const chip =
+          document.createElement(
+            "span"
+          );
+
+        chip.className =
+          "chip";
+
+        chip.innerHTML =
+          escapeHtml(label) +
+          ' <button type="button">×</button>';
+
+
+        chip
+          .querySelector("button")
+          .onclick =
+            callback;
+
+
+        container.appendChild(
+          chip
+        );
+
+      }
+
+
+      if (filters.category) {
+
+        addChip(
+          "Category: " +
+            filters.category,
+
+          () => {
+
+            document.getElementById(
+              "categoryFilter"
+            ).value = "";
+
+            readFilters();
+
+          }
+        );
+
+      }
+
+
+      if (filters.author) {
+
+        const label =
+          document
+            .getElementById(
+              "authorFilter"
+            )
+            .selectedOptions[0]
+            ?.textContent ||
+          filters.author;
+
+
+        addChip(
+          "Author: " + label,
+
+          () => {
+
+            document.getElementById(
+              "authorFilter"
+            ).value = "";
+
+            readFilters();
+
+          }
+        );
+
+      }
+
+
+      if (filters.tags) {
+
+        addChip(
+          "Tag: " +
+            filters.tags,
+
+          () => {
+
+            document.getElementById(
+              "tagFilter"
+            ).value = "";
+
+            readFilters();
+
+          }
+        );
+
+      }
+
+
+      if (filters.linkedOnly) {
+
+        addChip(
+          "Has link",
+
+          () => {
+
+            document.getElementById(
+              "linkedOnly"
+            ).checked = false;
+
+            readFilters();
+
+          }
+        );
+
+      }
+
+
+      if (!count) {
+
+        const none =
+          document.createElement(
+            "span"
+          );
+
+        none.id =
+          "noFilters";
+
+        none.textContent =
+          "None";
+
+        container.appendChild(
+          none
+        );
+
+      }
+
+    }
+
+
+    /* ============================================================
+       COLUMNS
+    ============================================================ */
+
+    function renderFieldMenu() {
+
+      const fieldMenu =
+        document.getElementById(
+          "fieldMenu"
+        );
+
+
+      const menuFields =
+        sortByToolFieldOrder(
+          viewerConfig.availableFields
+            .filter(
+              f =>
+                TOOL_FIELDS_ORDER.includes(f)
+            )
+        );
+
+
+      fieldMenu.innerHTML =
+        menuFields
+          .map(field => {
+
+            const checked =
+              visibleFields.includes(
+                field
+              )
+                ? "checked"
+                : "";
+
+
+            return `
+              <label>
+                <input
+                  type="checkbox"
+                  value="${escapeHtml(field)}"
+                  ${checked}
+                />
+
+                ${escapeHtml(
+                  formatFieldLabel(field)
+                )}
+              </label>
+            `;
+
+          })
+          .join("");
+
+
+      fieldMenu
+        .querySelectorAll(
+          'input[type="checkbox"]'
+        )
+        .forEach(input => {
+
+          input.addEventListener(
+            "change",
+            () => {
+
+              visibleFields =
+                Array.from(
+                  fieldMenu.querySelectorAll(
+                    'input[type="checkbox"]:checked'
+                  )
+                )
+                  .map(
+                    el => el.value
+                  )
+                  .filter(
+                    f =>
+                      TOOL_FIELDS_ORDER.includes(
+                        f
+                      )
+                  );
+
+
+              visibleFields =
+                sortByToolFieldOrder(
+                  visibleFields
+                );
+
+
+              renderTable();
+
+            }
+          );
+
+        });
+
+    }
+
+
+    document
+      .getElementById("fieldSearch")
+      .addEventListener(
+        "input",
+        function () {
+
+          const query =
+            this.value.toLowerCase();
+
+
+          document
+            .querySelectorAll(
+              "#fieldMenu label"
+            )
+            .forEach(label => {
+
+              label.style.display =
+                label.textContent
+                  .toLowerCase()
+                  .includes(query)
+                    ? "flex"
+                    : "none";
+
+            });
+
+        }
+      );
+
+
+    /* ============================================================
+       DRAWER
+    ============================================================ */
+
+    const drawer =
+      document.getElementById(
+        "drawer"
+      );
+
+    const backdrop =
+      document.getElementById(
+        "drawerBackdrop"
+      );
+
+    const drawerTitle =
+      document.getElementById(
+        "drawerTitle"
+      );
+
+
+    function openDrawer(mode) {
+
+      const isColumns =
+        mode === "columns";
+
+
+      drawerTitle.textContent =
+        isColumns
+          ? "Visible columns"
+          : "Filters";
+
+
+      document.getElementById(
+        "filterPanel"
+      ).style.display =
+        isColumns
+          ? "none"
+          : "block";
+
+
+      document.getElementById(
+        "columnsPanel"
+      ).style.display =
+        isColumns
+          ? "block"
+          : "none";
+
+
+      drawer.classList.add(
+        "open"
+      );
+
+      backdrop.classList.add(
+        "open"
+      );
+
+    }
+
+
+    function closeDrawer() {
+
+      drawer.classList.remove(
+        "open"
+      );
+
+      backdrop.classList.remove(
+        "open"
+      );
+
+    }
+
+
+    document
+      .getElementById("filtersBtn")
+      .onclick =
+        () => openDrawer(
+          "filters"
+        );
+
+
+    document
+      .getElementById("columnsBtn")
+      .onclick =
+        () => openDrawer(
+          "columns"
+        );
+
+
+    document
+      .getElementById("closeDrawer")
+      .onclick =
+        closeDrawer;
+
+
+    document
+      .getElementById("closeDrawerBtn")
+      .onclick =
+        closeDrawer;
+
+
+    backdrop.onclick =
+      closeDrawer;
+
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (
+          event.key === "Escape"
+        ) {
+          closeDrawer();
+        }
+
+      }
+    );
+
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+
+    document
+      .getElementById("resetDrawerBtn")
+      .onclick = () => {
+
+        document.getElementById(
+          "categoryFilter"
+        ).value = "";
+
+        document.getElementById(
+          "authorFilter"
+        ).value = "";
+
+        document.getElementById(
+          "tagFilter"
+        ).value = "";
+
+        document.getElementById(
+          "linkedOnly"
+        ).checked = false;
+
+
+        filters = {
+          category: "",
+          author: "",
+          tags: "",
+          linkedOnly: false
+        };
+
+
+        visibleFields =
+          sortByToolFieldOrder(
+            [...viewerConfig.defaultFields]
+          );
+
+
         renderFieldMenu();
-        renderTable();
+
+        applyFilters();
+
       };
+
+
+    /* ============================================================
+       SUMMARY
+    ============================================================ */
+
+    function updateSummary() {
+
+      if (!dataTableInstance) {
+        return;
+      }
+
+
+      const total =
+        toolEntries.length;
+
+
+      const visible =
+        dataTableInstance
+          .rows({
+            search: "applied"
+          })
+          .count();
+
+
+      document.getElementById(
+        "toolCount"
+      ).textContent =
+        total +
+        (total === 1
+          ? " tool"
+          : " tools");
+
+
+      document.getElementById(
+        "resultSummary"
+      ).textContent =
+        visible +
+        " of " +
+        total +
+        " tools";
+
     }
 
-    function bindGotoHandlers() {
-      document.querySelectorAll(".goto-btn[data-idx]").forEach(btn => {
-        btn.addEventListener("click", () => {
-          const idx = Number(btn.getAttribute("data-idx"));
-          const url = getGotoUrl(toolEntries[idx]);
-          if (!url) return;
-          window.open(url, "_blank", "noopener");
-        });
-      });
-    }
+
+    /* ============================================================
+       DISPLAY HELPERS
+    ============================================================ */
 
     function getGotoUrl(entry) {
-      const rawLink = (findField(entry, "link") || findField(entry, "url") || "").trim();
-      if (!rawLink) return "";
 
-      const mdMatch = rawLink.match(/\[[^\]]+\]\(([^)]+)\)/);
-      const extracted = mdMatch ? mdMatch[1].trim() : rawLink;
+      const rawLink =
+        (
+          findField(
+            entry,
+            "link"
+          ) ||
+          findField(
+            entry,
+            "url"
+          ) ||
+          ""
+        )
+          .trim();
 
-      if (!extracted) return "";
-      if (/^https?:\/\//i.test(extracted)) return extracted;
-      return "https://" + extracted;
+
+      if (!rawLink) {
+        return "";
+      }
+
+
+      const mdMatch =
+        rawLink.match(
+          /\[[^\]]+\]\(([^)]+)\)/
+        );
+
+
+      const extracted =
+        mdMatch
+          ? mdMatch[1].trim()
+          : rawLink;
+
+
+      if (!extracted) {
+        return "";
+      }
+
+
+      if (
+        /^https?:\/\//i.test(
+          extracted
+        )
+      ) {
+        return extracted;
+      }
+
+
+      return (
+        "https://" +
+        extracted
+      );
+
     }
 
-    function getFieldDisplayValue(entry, fieldName) {
-      const value = String(findField(entry, fieldName) || "").replace(/\s+/g, " ").trim();
-      if (fieldName.toLowerCase() === "category") {
-        return normalizeCategory(value, entry.title || "");
-      }
+
+    function getFieldDisplayValue(
+      entry,
+      fieldName
+    ) {
+
+      const value =
+        String(
+          findField(
+            entry,
+            fieldName
+          ) || ""
+        )
+          .replace(/\s+/g, " ")
+          .trim();
+
+
       return value;
+
     }
 
-    function hydrateAvailableFields(discoveredHeaders) {
-      const discovered = uniqueLowercaseArray(discoveredHeaders || [])
-        .filter(f => TOOL_FIELDS_ORDER.includes(f));
 
-      const merged = mergeUnique(viewerConfig.availableFields, discovered)
-        .filter(f => TOOL_FIELDS_ORDER.includes(f));
+    function formatFieldValue(
+      field,
+      value
+    ) {
 
-      viewerConfig.availableFields = sortByToolFieldOrder(merged);
-
-      viewerConfig.defaultFields = viewerConfig.defaultFields
-        .filter(f => viewerConfig.availableFields.includes(f));
-
-      if (!viewerConfig.defaultFields.length) {
-        viewerConfig.defaultFields = [...FALLBACK_CONFIG.defaultFields];
+      if (!value) {
+        return "—";
       }
 
-      viewerConfig.defaultFields = sortByToolFieldOrder(viewerConfig.defaultFields);
+
+      if (field === "tags") {
+
+        return value
+          .split(",")
+          .map(
+            tag =>
+              `<span class="tag">${
+                escapeHtml(
+                  tag.trim()
+                )
+              }</span>`
+          )
+          .join("");
+
+      }
+
+
+      return escapeHtml(
+        value
+      );
+
     }
 
-    function sortByToolFieldOrder(fields) {
-      return [...new Set(fields)].sort((a, b) => TOOL_FIELDS_ORDER.indexOf(a) - TOOL_FIELDS_ORDER.indexOf(b));
-    }
 
-    function formatFieldLabel(fieldName) {
+    function formatFieldLabel(
+      fieldName
+    ) {
+
       return fieldName
-        .replace(/[_\-]+/g, " ")
-        .replace(/\b\w/g, c => c.toUpperCase());
+        .replace(
+          /[_\-]+/g,
+          " "
+        )
+        .replace(
+          /\b\w/g,
+          c => c.toUpperCase()
+        );
+
     }
 
-    function uniqueLowercaseArray(value) {
-      if (!Array.isArray(value)) return [];
-      const cleaned = value
-        .map(item => String(item).trim().toLowerCase())
-        .filter(Boolean);
-      return Array.from(new Set(cleaned));
-    }
 
-    function mergeUnique(primary, secondary) {
-      return Array.from(new Set([...(primary || []), ...(secondary || [])]));
-    }
+    /* ============================================================
+       PARSING
+    ============================================================ */
 
     function parseToolList(text) {
-      const blocks = String(text || "")
-        .split(/\r?\n\s*\r?\n+/)
-        .map(block => block.trim())
-        .filter(Boolean);
 
-      if (!blocks.length) return { headers: [], entries: [] };
+      const blocks =
+        String(text || "")
+          .split(
+            /\r?\n\s*\r?\n+/
+          )
+          .map(
+            block =>
+              block.trim()
+          )
+          .filter(Boolean);
 
-      const entries = blocks.map(parseBlock).filter(entry => entry.title);
+
+      if (!blocks.length) {
+
+        return {
+          headers: [],
+          entries: []
+        };
+
+      }
+
+
+      const entries =
+        blocks
+          .map(parseBlock)
+          .filter(
+            entry =>
+              entry.title
+          );
+
 
       return {
-        headers: [...TOOL_FIELDS_ORDER],
+        headers: [
+          ...TOOL_FIELDS_ORDER
+        ],
+
         entries
       };
+
     }
 
-    function parseBlock(blockText) {
+
+    function parseBlock(
+      blockText
+    ) {
+
       const entry = {};
+
 
       blockText
         .split(/\r?\n/)
-        .map(line => line.trim())
-        .filter(line => line && !line.startsWith("#"))
-        .forEach(line => {
-          const idx = line.indexOf("=");
-          if (idx <= 0) return;
+        .map(
+          line =>
+            line.trim()
+        )
+        .filter(
+          line =>
+            line &&
+            !line.startsWith("#")
+        )
+        .forEach(
+          line => {
 
-          const key = normalizeFieldName(line.slice(0, idx));
-          const value = line.slice(idx + 1).trim();
-          entry[key] = value;
-        });
+            const idx =
+              line.indexOf("=");
 
-      entry.title = String(entry.title || "").trim();
-      entry.description = String(entry.description || "").trim();
-      entry.author = String(entry.author || "").trim();
-      entry.tags = normalizeCommaList(entry.tags || "");
-      entry.link = String(entry.link || "").trim();
-      entry.category = normalizeCategory(entry.category || "", entry.title);
+
+            if (idx <= 0) {
+              return;
+            }
+
+
+            const key =
+              normalizeFieldName(
+                line.slice(
+                  0,
+                  idx
+                )
+              );
+
+
+            const value =
+              line
+                .slice(idx + 1)
+                .trim();
+
+
+            entry[key] =
+              value;
+
+          }
+        );
+
+
+      entry.title =
+        String(
+          entry.title || ""
+        ).trim();
+
+
+      entry.description =
+        String(
+          entry.description || ""
+        ).trim();
+
+
+      entry.author =
+        String(
+          entry.author || ""
+        ).trim();
+
+
+      entry.tags =
+        normalizeCommaList(
+          entry.tags || ""
+        );
+
+
+      entry.link =
+        String(
+          entry.link || ""
+        ).trim();
+
+
+      entry.category =
+        normalizeCategory(
+          entry.category || "",
+          entry.title
+        );
+
 
       return entry;
+
     }
 
-    function normalizeCategory(value, titleHint) {
-      const raw = String(value || "").trim();
+
+    /* ============================================================
+       CATEGORY LOGIC
+       Preserved from the original Tools page.
+    ============================================================ */
+
+    function normalizeCategory(
+      value,
+      titleHint
+    ) {
+
+      const raw =
+        String(
+          value || ""
+        ).trim();
+
+
       if (raw) {
-        const exact = TOOL_CATEGORIES.find(c => c.toLowerCase() === raw.toLowerCase());
-        if (exact) return exact;
+
+        const exact =
+          TOOL_CATEGORIES.find(
+            c =>
+              c.toLowerCase() ===
+              raw.toLowerCase()
+          );
+
+
+        if (exact) {
+          return exact;
+        }
+
       }
-      return inferCategoryFromTitle(titleHint || "");
+
+
+      return inferCategoryFromTitle(
+        titleHint || ""
+      );
+
     }
 
-    function inferCategoryFromTitle(title) {
-      const t = String(title || "").toLowerCase();
 
-      if (/(tutorial|guide|workflow|how to|intro|introduction|course|lesson|manual)/.test(t)) return "Guides";
-      if (/(dataset|database|atlas|catalog|catalogue|archive|index|directory|corpus|bibliograph|list)/.test(t)) return "Datasets";
-      if (/(library|libraries|package|sdk|module|api|framework)/.test(t)) return "Libraries";
-      if (/(specification|spec\b|standard|schema|ontology|protocol|vocabular|reference model)/.test(t)) return "Specifications";
-      if (/(script|scripts|\.r$|\.py$|calculator|converter)/.test(t)) return "Scripts";
-      if (/(app|portal|platform|dashboard|viewer|service|website|webapp|product)/.test(t)) return "Products";
-      if (/(tool|software|program|plugin|kit|suite|system|os)/.test(t)) return "Software";
+    function inferCategoryFromTitle(
+      title
+    ) {
+
+      const t =
+        String(
+          title || ""
+        ).toLowerCase();
+
+
+      if (
+        /(tutorial|guide|workflow|how to|intro|introduction|course|lesson|manual)/.test(t)
+      ) {
+        return "Guides";
+      }
+
+
+      if (
+        /(dataset|database|atlas|catalog|catalogue|archive|index|directory|corpus|bibliograph|list)/.test(t)
+      ) {
+        return "Datasets";
+      }
+
+
+      if (
+        /(library|libraries|package|sdk|module|api|framework)/.test(t)
+      ) {
+        return "Libraries";
+      }
+
+
+      if (
+        /(specification|spec\b|standard|schema|ontology|protocol|vocabular|reference model)/.test(t)
+      ) {
+        return "Specifications";
+      }
+
+
+      if (
+        /(script|scripts|\.r$|\.py$|calculator|converter)/.test(t)
+      ) {
+        return "Scripts";
+      }
+
+
+      if (
+        /(app|portal|platform|dashboard|viewer|service|website|webapp|product)/.test(t)
+      ) {
+        return "Products";
+      }
+
+
+      if (
+        /(tool|software|program|plugin|kit|suite|system|os)/.test(t)
+      ) {
+        return "Software";
+      }
+
 
       return "Others";
+
     }
 
-    function normalizeCommaList(value) {
-      return String(value || "")
+
+    function normalizeCommaList(
+      value
+    ) {
+
+      return String(
+        value || ""
+      )
         .split(",")
-        .map(part => part.trim())
+        .map(
+          part =>
+            part.trim()
+        )
         .filter(Boolean)
         .join(", ");
+
     }
 
-    function normalizeFieldName(name) {
-      return String(name || "").trim().toLowerCase();
+
+    function normalizeFieldName(
+      name
+    ) {
+
+      return String(
+        name || ""
+      )
+        .trim()
+        .toLowerCase();
+
     }
 
-    function findField(entry, name) {
-      const target = String(name || "").toLowerCase();
-      const keys = Object.keys(entry || {});
-      const exact = keys.find(k => k.toLowerCase() === target);
-      if (exact) return entry[exact];
 
-      const partial = keys.find(k => k.toLowerCase().includes(target));
-      return partial ? entry[partial] : "";
+    function findField(
+      entry,
+      name
+    ) {
+
+      const target =
+        String(
+          name || ""
+        ).toLowerCase();
+
+
+      const keys =
+        Object.keys(
+          entry || {}
+        );
+
+
+      const exact =
+        keys.find(
+          k =>
+            k.toLowerCase() ===
+            target
+        );
+
+
+      if (exact) {
+        return entry[exact];
+      }
+
+
+      const partial =
+        keys.find(
+          k =>
+            k.toLowerCase()
+              .includes(target)
+        );
+
+
+      return partial
+        ? entry[partial]
+        : "";
+
     }
 
-    function escapeHtml(value) {
-      return String(value)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
+
+    function hydrateAvailableFields(
+      discoveredHeaders
+    ) {
+
+      const discovered =
+        uniqueLowercaseArray(
+          discoveredHeaders || []
+        )
+          .filter(
+            f =>
+              TOOL_FIELDS_ORDER.includes(
+                f
+              )
+          );
+
+
+      const merged =
+        mergeUnique(
+          viewerConfig.availableFields,
+          discovered
+        )
+          .filter(
+            f =>
+              TOOL_FIELDS_ORDER.includes(
+                f
+              )
+          );
+
+
+      viewerConfig.availableFields =
+        sortByToolFieldOrder(
+          merged
+        );
+
+
+      viewerConfig.defaultFields =
+        viewerConfig.defaultFields
+          .filter(
+            f =>
+              viewerConfig.availableFields.includes(
+                f
+              )
+          );
+
+
+      if (
+        !viewerConfig.defaultFields.length
+      ) {
+
+        viewerConfig.defaultFields =
+          [
+            ...FALLBACK_CONFIG.defaultFields
+          ];
+
+      }
+
+
+      viewerConfig.defaultFields =
+        sortByToolFieldOrder(
+          viewerConfig.defaultFields
+        );
+
     }
+
+
+    function sortByToolFieldOrder(
+      fields
+    ) {
+
+      return [
+        ...new Set(fields)
+      ].sort(
+        (a, b) =>
+          TOOL_FIELDS_ORDER.indexOf(a) -
+          TOOL_FIELDS_ORDER.indexOf(b)
+      );
+
+    }
+
+
+    function uniqueLowercaseArray(
+      value
+    ) {
+
+      if (!Array.isArray(value)) {
+        return [];
+      }
+
+
+      const cleaned =
+        value
+          .map(
+            item =>
+              String(item)
+                .trim()
+                .toLowerCase()
+          )
+          .filter(Boolean);
+
+
+      return Array.from(
+        new Set(cleaned)
+      );
+
+    }
+
+
+    function mergeUnique(
+      primary,
+      secondary
+    ) {
+
+      return Array.from(
+        new Set([
+          ...(primary || []),
+          ...(secondary || [])
+        ])
+      );
+
+    }
+
+
+    function escapeHtml(
+      value
+    ) {
+
+      return String(
+        value
+      )
+        .replace(
+          /&/g,
+          "&amp;"
+        )
+        .replace(
+          /</g,
+          "&lt;"
+        )
+        .replace(
+          />/g,
+          "&gt;"
+        )
+        .replace(
+          /"/g,
+          "&quot;"
+        )
+        .replace(
+          /'/g,
+          "&#39;"
+        );
+
+    }
+
+
+    /* ============================================================
+       COLUMN RESIZE
+       Preserved from the original Tools page.
+    ============================================================ */
 
     function enableColumnResize() {
-      const wrapper = document.querySelector("#bibTable")?.closest(".dataTables_wrapper");
-      if (!wrapper) return;
 
-      const headThs = wrapper.querySelectorAll(".dataTables_scrollHead thead th");
-      if (!headThs.length) return;
+      const wrapper =
+        document
+          .querySelector(
+            "#bibTable"
+          )
+          ?.closest(
+            ".dataTables_wrapper"
+          );
 
-      wrapper.querySelectorAll(".col-resize-handle").forEach(h => h.remove());
 
-      headThs.forEach((th, colIndex) => {
-        if (th.classList.contains("goto-column")) return;
+      if (!wrapper) {
+        return;
+      }
 
-        th.classList.add("resizable");
 
-        const handle = document.createElement("div");
-        handle.className = "col-resize-handle";
+      const headThs =
+        wrapper.querySelectorAll(
+          ".dataTables_scrollHead thead th"
+        );
 
-        let startX = 0;
-        let startWidth = 0;
-        let dragging = false;
 
-        const onMouseMove = (e) => {
-          if (!dragging) return;
-          const delta = e.clientX - startX;
-          const next = Math.max(80, startWidth + delta);
-          setColumnWidth(wrapper, colIndex, next);
-        };
+      if (!headThs.length) {
+        return;
+      }
 
-        const onMouseUp = () => {
-          dragging = false;
-          document.body.style.cursor = "";
-          document.body.style.userSelect = "";
-          document.removeEventListener("mousemove", onMouseMove);
-          document.removeEventListener("mouseup", onMouseUp);
-        };
 
-        handle.addEventListener("mousedown", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
+      wrapper
+        .querySelectorAll(
+          ".col-resize-handle"
+        )
+        .forEach(
+          h => h.remove()
+        );
 
-          dragging = true;
-          startX = e.clientX;
-          startWidth = th.getBoundingClientRect().width;
 
-          document.body.style.cursor = "col-resize";
-          document.body.style.userSelect = "none";
+      headThs.forEach(
+        (th, colIndex) => {
 
-          document.addEventListener("mousemove", onMouseMove);
-          document.addEventListener("mouseup", onMouseUp);
-        });
+          if (
+            th.classList.contains(
+              "goto-column"
+            )
+          ) {
+            return;
+          }
 
-        handle.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-        });
 
-        th.appendChild(handle);
-      });
+          th.classList.add(
+            "resizable"
+          );
+
+
+          const handle =
+            document.createElement(
+              "div"
+            );
+
+          handle.className =
+            "col-resize-handle";
+
+
+          let startX = 0;
+          let startWidth = 0;
+          let dragging = false;
+
+
+          const onMouseMove =
+            e => {
+
+              if (!dragging) {
+                return;
+              }
+
+
+              const delta =
+                e.clientX -
+                startX;
+
+
+              const next =
+                Math.max(
+                  80,
+                  startWidth + delta
+                );
+
+
+              setColumnWidth(
+                wrapper,
+                colIndex,
+                next
+              );
+
+            };
+
+
+          const onMouseUp =
+            () => {
+
+              dragging = false;
+
+              document.body.style.cursor =
+                "";
+
+              document.body.style.userSelect =
+                "";
+
+              document.removeEventListener(
+                "mousemove",
+                onMouseMove
+              );
+
+              document.removeEventListener(
+                "mouseup",
+                onMouseUp
+              );
+
+            };
+
+
+          handle.addEventListener(
+            "mousedown",
+            e => {
+
+              e.preventDefault();
+              e.stopPropagation();
+
+              dragging = true;
+
+              startX =
+                e.clientX;
+
+              startWidth =
+                th.getBoundingClientRect()
+                  .width;
+
+
+              document.body.style.cursor =
+                "col-resize";
+
+              document.body.style.userSelect =
+                "none";
+
+
+              document.addEventListener(
+                "mousemove",
+                onMouseMove
+              );
+
+              document.addEventListener(
+                "mouseup",
+                onMouseUp
+              );
+
+            }
+          );
+
+
+          handle.addEventListener(
+            "click",
+            e => {
+
+              e.preventDefault();
+              e.stopPropagation();
+
+            }
+          );
+
+
+          th.appendChild(
+            handle
+          );
+
+        }
+      );
+
     }
 
-    function setColumnWidth(wrapper, colIndex, widthPx) {
-      const px = widthPx + "px";
-      const col = colIndex + 1;
+
+    function setColumnWidth(
+      wrapper,
+      colIndex,
+      widthPx
+    ) {
+
+      const px =
+        widthPx + "px";
+
+      const col =
+        colIndex + 1;
+
 
       const selectors = [
-        ".dataTables_scrollHead thead th:nth-child(" + col + ")",
-        ".dataTables_scrollBody tbody tr td:nth-child(" + col + ")"
+
+        ".dataTables_scrollHead thead th:nth-child(" +
+          col +
+          ")",
+
+        ".dataTables_scrollBody tbody tr td:nth-child(" +
+          col +
+          ")"
+
       ];
 
-      selectors.forEach(sel => {
-        wrapper.querySelectorAll(sel).forEach(cell => {
-          cell.style.width = px;
-          cell.style.minWidth = px;
-          cell.style.maxWidth = px;
-        });
-      });
 
-      if (dataTableInstance && typeof dataTableInstance.columns === "function") {
-        dataTableInstance.columns.adjust();
+      selectors.forEach(
+        selector => {
+
+          wrapper
+            .querySelectorAll(
+              selector
+            )
+            .forEach(
+              cell => {
+
+                cell.style.width =
+                  px;
+
+                cell.style.minWidth =
+                  px;
+
+                cell.style.maxWidth =
+                  px;
+
+              }
+            );
+
+        }
+      );
+
+
+      if (
+        dataTableInstance &&
+        typeof dataTableInstance.columns ===
+          "function"
+      ) {
+
+        dataTableInstance
+          .columns()
+          .adjust();
+
       }
+
     }
 
+
+    /* ============================================================
+       START
+    ============================================================ */
+
     loadTools();
+
   </script>
+
 </body>
 </html>
